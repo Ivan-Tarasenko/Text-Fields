@@ -13,6 +13,13 @@
 		1A03A2E426F5B406007113E5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A03A2E226F5B406007113E5 /* Main.storyboard */; };
 		1A03A2E626F5B407007113E5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A03A2E526F5B407007113E5 /* Assets.xcassets */; };
 		1A03A2E926F5B407007113E5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A03A2E726F5B407007113E5 /* LaunchScreen.storyboard */; };
+		1A03A2F726F6EA0E007113E5 /* CustomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A03A2F626F6EA0E007113E5 /* CustomView.xib */; };
+		1A03A2FA26F6EE53007113E5 /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A03A2F926F6EE53007113E5 /* CustomView.swift */; };
+		1A03A2FE26F6F4C2007113E5 /* SFProDisplay-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1A03A2FC26F6F4C2007113E5 /* SFProDisplay-Regular.ttf */; };
+		1A03A2FF26F6F4C2007113E5 /* SFProDisplay-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1A03A2FD26F6F4C2007113E5 /* SFProDisplay-Bold.ttf */; };
+		1A03A30226FC543E007113E5 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A03A30126FC543E007113E5 /* View.swift */; };
+		1A03A30526FDA596007113E5 /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A03A30426FDA596007113E5 /* TextField.swift */; };
+		1A03A30726FDA6A9007113E5 /* SetInitTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A03A30626FDA6A9007113E5 /* SetInitTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +31,13 @@
 		1A03A2E526F5B407007113E5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1A03A2E826F5B407007113E5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1A03A2EA26F5B407007113E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1A03A2F626F6EA0E007113E5 /* CustomView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomView.xib; sourceTree = "<group>"; };
+		1A03A2F926F6EE53007113E5 /* CustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
+		1A03A2FC26F6F4C2007113E5 /* SFProDisplay-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFProDisplay-Regular.ttf"; sourceTree = "<group>"; };
+		1A03A2FD26F6F4C2007113E5 /* SFProDisplay-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFProDisplay-Bold.ttf"; sourceTree = "<group>"; };
+		1A03A30126FC543E007113E5 /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
+		1A03A30426FDA596007113E5 /* TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
+		1A03A30626FDA6A9007113E5 /* SetInitTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetInitTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +55,9 @@
 			isa = PBXGroup;
 			children = (
 				1A03A2DB26F5B406007113E5 /* Text Fields */,
+				1A03A30026FC53FE007113E5 /* Extensions */,
+				1A03A2F826F6EDF4007113E5 /* XIB Files */,
+				1A03A2F326F5B4A4007113E5 /* Supporting */,
 				1A03A2DA26F5B406007113E5 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -56,15 +73,75 @@
 		1A03A2DB26F5B406007113E5 /* Text Fields */ = {
 			isa = PBXGroup;
 			children = (
-				1A03A2DC26F5B406007113E5 /* AppDelegate.swift */,
-				1A03A2DE26F5B406007113E5 /* SceneDelegate.swift */,
-				1A03A2E026F5B406007113E5 /* ViewController.swift */,
-				1A03A2E226F5B406007113E5 /* Main.storyboard */,
-				1A03A2E526F5B407007113E5 /* Assets.xcassets */,
-				1A03A2E726F5B407007113E5 /* LaunchScreen.storyboard */,
-				1A03A2EA26F5B407007113E5 /* Info.plist */,
+				1A03A2F226F5B477007113E5 /* Models */,
+				1A03A2F126F5B465007113E5 /* Views */,
+				1A03A2F026F5B444007113E5 /* Controllers */,
 			);
 			path = "Text Fields";
+			sourceTree = "<group>";
+		};
+		1A03A2F026F5B444007113E5 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				1A03A2E026F5B406007113E5 /* ViewController.swift */,
+				1A03A30626FDA6A9007113E5 /* SetInitTextField.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		1A03A2F126F5B465007113E5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1A03A2E226F5B406007113E5 /* Main.storyboard */,
+				1A03A2F626F6EA0E007113E5 /* CustomView.xib */,
+				1A03A2E726F5B407007113E5 /* LaunchScreen.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		1A03A2F226F5B477007113E5 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		1A03A2F326F5B4A4007113E5 /* Supporting */ = {
+			isa = PBXGroup;
+			children = (
+				1A03A2FB26F6F3C0007113E5 /* Fonts */,
+				1A03A2EA26F5B407007113E5 /* Info.plist */,
+				1A03A2E526F5B407007113E5 /* Assets.xcassets */,
+				1A03A2DE26F5B406007113E5 /* SceneDelegate.swift */,
+				1A03A2DC26F5B406007113E5 /* AppDelegate.swift */,
+			);
+			path = Supporting;
+			sourceTree = "<group>";
+		};
+		1A03A2F826F6EDF4007113E5 /* XIB Files */ = {
+			isa = PBXGroup;
+			children = (
+				1A03A2F926F6EE53007113E5 /* CustomView.swift */,
+			);
+			path = "XIB Files";
+			sourceTree = "<group>";
+		};
+		1A03A2FB26F6F3C0007113E5 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				1A03A2FD26F6F4C2007113E5 /* SFProDisplay-Bold.ttf */,
+				1A03A2FC26F6F4C2007113E5 /* SFProDisplay-Regular.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		1A03A30026FC53FE007113E5 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				1A03A30126FC543E007113E5 /* View.swift */,
+				1A03A30426FDA596007113E5 /* TextField.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -77,6 +154,7 @@
 				1A03A2D526F5B406007113E5 /* Sources */,
 				1A03A2D626F5B406007113E5 /* Frameworks */,
 				1A03A2D726F5B406007113E5 /* Resources */,
+				1A03A30326FC94F1007113E5 /* Swift lint */,
 			);
 			buildRules = (
 			);
@@ -127,10 +205,34 @@
 				1A03A2E926F5B407007113E5 /* LaunchScreen.storyboard in Resources */,
 				1A03A2E626F5B407007113E5 /* Assets.xcassets in Resources */,
 				1A03A2E426F5B406007113E5 /* Main.storyboard in Resources */,
+				1A03A2FF26F6F4C2007113E5 /* SFProDisplay-Bold.ttf in Resources */,
+				1A03A2FE26F6F4C2007113E5 /* SFProDisplay-Regular.ttf in Resources */,
+				1A03A2F726F6EA0E007113E5 /* CustomView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1A03A30326FC94F1007113E5 /* Swift lint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Swift lint";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"error: SwiftLint does not exist, download it from https://github.com/realm/SwiftLint\"\n  exit 1\nfi\n\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		1A03A2D526F5B406007113E5 /* Sources */ = {
@@ -139,7 +241,11 @@
 			files = (
 				1A03A2E126F5B406007113E5 /* ViewController.swift in Sources */,
 				1A03A2DD26F5B406007113E5 /* AppDelegate.swift in Sources */,
+				1A03A30226FC543E007113E5 /* View.swift in Sources */,
+				1A03A30726FDA6A9007113E5 /* SetInitTextField.swift in Sources */,
+				1A03A30526FDA596007113E5 /* TextField.swift in Sources */,
 				1A03A2DF26F5B406007113E5 /* SceneDelegate.swift in Sources */,
+				1A03A2FA26F6EE53007113E5 /* CustomView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -288,7 +394,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2TFP9B86SX;
-				INFOPLIST_FILE = "Text Fields/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Supporting/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -307,7 +413,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2TFP9B86SX;
-				INFOPLIST_FILE = "Text Fields/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Supporting/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
