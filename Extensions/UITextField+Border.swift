@@ -1,5 +1,5 @@
 //
-//  TextField.swift
+//  UITextField+Border.swift
 //  Text Fields
 //
 //  Created by Иван Тарасенко on 24.09.2021.
@@ -18,8 +18,8 @@ extension UITextField {
         }
     }
 
-    func cornerRadius(value: CGFloat, color: UIColor) {
-        self.layer.cornerRadius = value
+    func setBorder(radius: CGFloat, color: UIColor) {
+        self.layer.cornerRadius = radius
         self.layer.borderWidth = 1.0
         self.layer.borderColor = color.cgColor
         self.layer.masksToBounds = true

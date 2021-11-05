@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SnapKit
 
 class ViewController: UIViewController {
 
@@ -17,23 +18,14 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        noDigitsView.textField.delegate = self
-        inputLimitView.textField.delegate = self
-        onlyCharactersView.textField.delegate = self
-        linkView.textField.delegate = self
-        validationRulesView.textField.delegate = self
 
-        setTitleForView()
         addsTapToScrollview()
 
-    }
-
-    func setTitleForView() {
-        noDigitsView.textTitle = "NO Digits field"
-        inputLimitView.textTitle = "Input limit"
-        onlyCharactersView.textTitle = "Only characters"
-        linkView.textTitle = "Link"
-        validationRulesView.textTitle = "Validation rules"
+        noDigitsView.settingView(type: .noDigits)
+        inputLimitView.settingView(type: .inputLimit)
+        onlyCharactersView.settingView(type: .onlyCharacters)
+        linkView.settingView(type: .link)
+        validationRulesView.settingView(type: .validationRules)
     }
 
     // MARK: - Adds a tap on the scrollview to hide the keyboard outside the textfield
@@ -44,31 +36,4 @@ class ViewController: UIViewController {
                 action: #selector(UIView.endEditing(_:)))
         )
     }
-}
-
-extension ViewController: UITextFieldDelegate {
-
-    // MARK: - Perform reverse by button "Return"
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        self.view.endEditing(true)
-        return true
-    }
-
-    // MARK: - Input tracking
-    func textFieldDidBeginEditing(_ textField: UITextField) {
-    textField.cornerRadius(value: 10, color: UIColor.systemBlue)
-    }
-
-    func textFieldDidEndEditing(_ textField: UITextField) {
-    textField.cornerRadius(value: 10, color: UIColor.systemGray6)
-    }
-
-    func textField(_ textField: UITextField,
-                   shouldChangeCharactersIn range: NSRange,
-                   replacementString string: String
-    ) -> Bool {
-        let allowedCharacters = CharacterSet.decimalDigits.inverted
-        let characterSet = CharacterSet(charactersIn: string)
-        return allowedCharacters.isSuperset(of: characterSet)
-      }
 }

@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1A03868E272325CF00C281A4 /* ModelFields.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A03868D272325CF00C281A4 /* ModelFields.swift */; };
 		1A03A2DD26F5B406007113E5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A03A2DC26F5B406007113E5 /* AppDelegate.swift */; };
 		1A03A2DF26F5B406007113E5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A03A2DE26F5B406007113E5 /* SceneDelegate.swift */; };
 		1A03A2E126F5B406007113E5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A03A2E026F5B406007113E5 /* ViewController.swift */; };
@@ -17,12 +18,18 @@
 		1A03A2FA26F6EE53007113E5 /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A03A2F926F6EE53007113E5 /* CustomView.swift */; };
 		1A03A2FE26F6F4C2007113E5 /* SFProDisplay-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1A03A2FC26F6F4C2007113E5 /* SFProDisplay-Regular.ttf */; };
 		1A03A2FF26F6F4C2007113E5 /* SFProDisplay-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1A03A2FD26F6F4C2007113E5 /* SFProDisplay-Bold.ttf */; };
-		1A03A30226FC543E007113E5 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A03A30126FC543E007113E5 /* View.swift */; };
-		1A03A30526FDA596007113E5 /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A03A30426FDA596007113E5 /* TextField.swift */; };
-		1A03A30726FDA6A9007113E5 /* SetInitTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A03A30626FDA6A9007113E5 /* SetInitTextField.swift */; };
+		1A03A30226FC543E007113E5 /* UIView+NibLoading+Border.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A03A30126FC543E007113E5 /* UIView+NibLoading+Border.swift */; };
+		1A03A30526FDA596007113E5 /* UITextField+Border.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A03A30426FDA596007113E5 /* UITextField+Border.swift */; };
+		1A471EDA271B4D440066CCB5 /* UILabel+SafeText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A471ED9271B4D440066CCB5 /* UILabel+SafeText.swift */; };
+		1AA344DE2732622600F8F6BA /* String+NSDataDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AA344DD2732622600F8F6BA /* String+NSDataDetector.swift */; };
+		1AD0C8912726BB79003F17C5 /* LimitCharacters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AD0C8902726BB79003F17C5 /* LimitCharacters.swift */; };
+		1AD28DB22726C0A20033E1B2 /* PasswordValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AD28DB12726C0A20033E1B2 /* PasswordValidation.swift */; };
+		1AD28DB62727EE950033E1B2 /* TextForView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AD28DB52727EE950033E1B2 /* TextForView.swift */; };
+		4997663B80940D9A7E64E254 /* Pods_Text_Fields.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 98F835EF893B7EA92357512D /* Pods_Text_Fields.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1A03868D272325CF00C281A4 /* ModelFields.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelFields.swift; sourceTree = "<group>"; };
 		1A03A2D926F5B406007113E5 /* Text Fields.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Text Fields.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A03A2DC26F5B406007113E5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1A03A2DE26F5B406007113E5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -35,9 +42,16 @@
 		1A03A2F926F6EE53007113E5 /* CustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
 		1A03A2FC26F6F4C2007113E5 /* SFProDisplay-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFProDisplay-Regular.ttf"; sourceTree = "<group>"; };
 		1A03A2FD26F6F4C2007113E5 /* SFProDisplay-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFProDisplay-Bold.ttf"; sourceTree = "<group>"; };
-		1A03A30126FC543E007113E5 /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
-		1A03A30426FDA596007113E5 /* TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
-		1A03A30626FDA6A9007113E5 /* SetInitTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetInitTextField.swift; sourceTree = "<group>"; };
+		1A03A30126FC543E007113E5 /* UIView+NibLoading+Border.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+NibLoading+Border.swift"; sourceTree = "<group>"; };
+		1A03A30426FDA596007113E5 /* UITextField+Border.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Border.swift"; sourceTree = "<group>"; };
+		1A471ED9271B4D440066CCB5 /* UILabel+SafeText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+SafeText.swift"; sourceTree = "<group>"; };
+		1AA344DD2732622600F8F6BA /* String+NSDataDetector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+NSDataDetector.swift"; sourceTree = "<group>"; };
+		1AD0C8902726BB79003F17C5 /* LimitCharacters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LimitCharacters.swift; sourceTree = "<group>"; };
+		1AD28DB12726C0A20033E1B2 /* PasswordValidation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordValidation.swift; sourceTree = "<group>"; };
+		1AD28DB52727EE950033E1B2 /* TextForView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextForView.swift; sourceTree = "<group>"; };
+		98F835EF893B7EA92357512D /* Pods_Text_Fields.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Text_Fields.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CCC8C73A26850CED292C1E43 /* Pods-Text Fields.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Text Fields.release.xcconfig"; path = "Target Support Files/Pods-Text Fields/Pods-Text Fields.release.xcconfig"; sourceTree = "<group>"; };
+		D94EB36A461526E9999CB28F /* Pods-Text Fields.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Text Fields.debug.xcconfig"; path = "Target Support Files/Pods-Text Fields/Pods-Text Fields.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4997663B80940D9A7E64E254 /* Pods_Text_Fields.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,6 +74,8 @@
 				1A03A2F826F6EDF4007113E5 /* XIB Files */,
 				1A03A2F326F5B4A4007113E5 /* Supporting */,
 				1A03A2DA26F5B406007113E5 /* Products */,
+				EA50B4596736FCD4CB242708 /* Pods */,
+				1FF03A75C22B41C84F892071 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -84,7 +101,6 @@
 			isa = PBXGroup;
 			children = (
 				1A03A2E026F5B406007113E5 /* ViewController.swift */,
-				1A03A30626FDA6A9007113E5 /* SetInitTextField.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -102,6 +118,10 @@
 		1A03A2F226F5B477007113E5 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				1A03868D272325CF00C281A4 /* ModelFields.swift */,
+				1AD0C8902726BB79003F17C5 /* LimitCharacters.swift */,
+				1AD28DB12726C0A20033E1B2 /* PasswordValidation.swift */,
+				1AD28DB52727EE950033E1B2 /* TextForView.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -138,10 +158,29 @@
 		1A03A30026FC53FE007113E5 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				1A03A30126FC543E007113E5 /* View.swift */,
-				1A03A30426FDA596007113E5 /* TextField.swift */,
+				1A03A30126FC543E007113E5 /* UIView+NibLoading+Border.swift */,
+				1A03A30426FDA596007113E5 /* UITextField+Border.swift */,
+				1A471ED9271B4D440066CCB5 /* UILabel+SafeText.swift */,
+				1AA344DD2732622600F8F6BA /* String+NSDataDetector.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		1FF03A75C22B41C84F892071 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				98F835EF893B7EA92357512D /* Pods_Text_Fields.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EA50B4596736FCD4CB242708 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D94EB36A461526E9999CB28F /* Pods-Text Fields.debug.xcconfig */,
+				CCC8C73A26850CED292C1E43 /* Pods-Text Fields.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -151,10 +190,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1A03A2ED26F5B407007113E5 /* Build configuration list for PBXNativeTarget "Text Fields" */;
 			buildPhases = (
+				57CCD65585E4BF4E78F0FA43 /* [CP] Check Pods Manifest.lock */,
 				1A03A2D526F5B406007113E5 /* Sources */,
 				1A03A2D626F5B406007113E5 /* Frameworks */,
 				1A03A2D726F5B406007113E5 /* Resources */,
 				1A03A30326FC94F1007113E5 /* Swift lint */,
+				B92A2348F7BFF7897FD8F580 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -232,6 +273,45 @@
 			shellPath = /bin/sh;
 			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"error: SwiftLint does not exist, download it from https://github.com/realm/SwiftLint\"\n  exit 1\nfi\n\n";
 		};
+		57CCD65585E4BF4E78F0FA43 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Text Fields-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B92A2348F7BFF7897FD8F580 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Text Fields/Pods-Text Fields-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Text Fields/Pods-Text Fields-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Text Fields/Pods-Text Fields-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -241,11 +321,16 @@
 			files = (
 				1A03A2E126F5B406007113E5 /* ViewController.swift in Sources */,
 				1A03A2DD26F5B406007113E5 /* AppDelegate.swift in Sources */,
-				1A03A30226FC543E007113E5 /* View.swift in Sources */,
-				1A03A30726FDA6A9007113E5 /* SetInitTextField.swift in Sources */,
-				1A03A30526FDA596007113E5 /* TextField.swift in Sources */,
+				1A03A30226FC543E007113E5 /* UIView+NibLoading+Border.swift in Sources */,
+				1A03A30526FDA596007113E5 /* UITextField+Border.swift in Sources */,
+				1AD0C8912726BB79003F17C5 /* LimitCharacters.swift in Sources */,
+				1AA344DE2732622600F8F6BA /* String+NSDataDetector.swift in Sources */,
 				1A03A2DF26F5B406007113E5 /* SceneDelegate.swift in Sources */,
+				1AD28DB62727EE950033E1B2 /* TextForView.swift in Sources */,
+				1AD28DB22726C0A20033E1B2 /* PasswordValidation.swift in Sources */,
+				1A471EDA271B4D440066CCB5 /* UILabel+SafeText.swift in Sources */,
 				1A03A2FA26F6EE53007113E5 /* CustomView.swift in Sources */,
+				1A03868E272325CF00C281A4 /* ModelFields.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -389,6 +474,7 @@
 		};
 		1A03A2EE26F5B407007113E5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D94EB36A461526E9999CB28F /* Pods-Text Fields.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -408,6 +494,7 @@
 		};
 		1A03A2EF26F5B407007113E5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CCC8C73A26850CED292C1E43 /* Pods-Text Fields.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
