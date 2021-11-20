@@ -9,14 +9,21 @@ import UIKit
 
 class Limit {
     
-    func limitCharacter(textField: UITextField, label: UILabel) {
-        let countCharacter = textField.string.count
-        if countCharacter <= 10 {
-            label.textTitle = "\(countCharacter)/10"
-            textField.setBorder(radius: 10, color: UIColor.systemBlue)
-        } else {
-            label.textTitle = "\(10 - countCharacter)/10"
-            textField.setBorder(radius: 10, color: UIColor.systemRed)
-        }
+var limit = 10
+    
+func getLimit (string: String, limit: Int) -> String {
+    var countLimit = String()
+
+    switch string.count {
+    case nil:
+        countLimit = "0/\(limit)"
+    case 0...limit:
+        countLimit = "\(string.count)/\(limit)"
+    case limit...string.count:
+        countLimit = "\(limit - string.count)/\(limit)"
+    default:
+        break
     }
+    return countLimit
+}
 }

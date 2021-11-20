@@ -21,11 +21,10 @@ class PasswordValidation {
     var minOneLowercaseText = "- Min 1 lowercase."
     var minCapitalRequiredText = "- Min 1 capital required."
 
-    let checkDigit = "(?=.*\\d)"
-    let checkLowercase = "(?=.*[a-z])"
-    let checkCapitalRequired = "(?=.*[A-Z])"
-
-    let limitCharacter = 8
+    let checkMinChar = "[A-Za-z0-9]{8}"
+    let checkDigit = "[0-9]"
+    let checkLowercase = "[a-z]"
+    let checkCapitalRequired = "[A-Z]"
     
     // MARK: - Setting for label.
     func setLabel(label: inout UILabel, text: String) {
@@ -34,24 +33,6 @@ class PasswordValidation {
         label.font = UIFont(name: "SF Pro Display", size: 13)
     }
     
-    // MARK: - Minimum 8 characters
-    func checkNumberCharacter(
-        textField: UITextField,
-        label: inout UILabel,
-        progressBar: UIProgressView,
-        text: String,
-        limitChar: Int
-    ) {
-        if textField.string.count >= limitCharacter {
-            label.textColor = .systemGreen
-            progressBar.progress += 0.25
-            label.textTitle = text.replacingOccurrences(of: "-", with: "✓")
-        } else {
-            label.textColor = .black
-            label.textTitle = text.replacingOccurrences(of: "✓", with: "-")
-        }
-    }
-
     // MARK: - Minimum one digit.
     func checkCharacters(
         textField: UITextField,
@@ -73,13 +54,13 @@ class PasswordValidation {
     // MARK: - Setting  progressBar.
     func progressBar(progressBar: UIProgressView) {
         switch progressBar.progress {
-        case 0.25:
+        case 0...0.25:
             progressBar.tintColor = .systemRed
-        case 0.5:
+        case 0.25...0.5:
             progressBar.tintColor = .systemOrange
-        case 0.75:
+        case 0.5...0.75:
             progressBar.tintColor = .systemYellow
-        case 1:
+        case 0.75...1:
             progressBar.tintColor = .systemGreen
         default:
             break

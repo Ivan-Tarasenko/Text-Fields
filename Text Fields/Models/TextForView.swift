@@ -16,7 +16,6 @@ class Text {
 
     let inputLimit = "Input limit"
     let inputLimitPlaceholder = "Type here"
-    var limitCount = "0/10"
 
     // MARK: - Only characters.
     let onlyCharacters = "Only characters"

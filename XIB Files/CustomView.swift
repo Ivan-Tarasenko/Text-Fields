@@ -7,6 +7,7 @@
 
 import UIKit
 import SnapKit
+import Rswift
 
 class CustomView: UIView {
 
@@ -19,6 +20,7 @@ class CustomView: UIView {
     let limitChar = Limit()
     let passwordValidation = PasswordValidation()
     let text = Text()
+    let model = Model()
 
     required init?(coder: NSCoder) {
         super.init(coder: coder)
@@ -36,21 +38,37 @@ class CustomView: UIView {
         passwordValidation.minOneLowercase.isHidden = true
         passwordValidation.minCapitalRequired.isHidden = true
         passwordValidation.progressInputPass.isHidden = true
-  }
+    }
 
     @IBAction func actionTextField(_ sender: UITextField) {
         switch switchTextField {
         case .inputLimit:
-            limitChar.limitCharacter(textField: sender, label: limitLabel)
-
+            let limit = limitChar.limit
+            limitLabel.textTitle = limitChar.getLimit(string: sender.string, limit: limit)
+            if sender.string.count > limit {
+                textField.setBorder(radius: 10, color: UIColor.systemRed)
+            } else {
+                textField.setBorder(radius: 10, color: UIColor.systemBlue)
+            }
+            //            let range = (sender.string as NSString).range(of: sender.string)
+            //            var atributedString = NSMutableAttributedString(string: sender.string)
+            //            atributedString.addAttribute(NSAttributedString.Key.foregroundColor, value: UIColor.red, range: range)
+            //
+            //            if sender.string.count >= 10 {
+            //                sender.attributedText = atributedString
+            //            }
+        case .onlyCharacters:
+            if !model.isSeparatorAddad, sender.string.count == model.separatorIndex {
+                sender.string.append(model.separator)
+            }
         case .validationRules:
             passwordValidation.progressInputPass.progress = 0
-            passwordValidation.checkNumberCharacter(
+            passwordValidation.checkCharacters(
                 textField: sender,
                 label: &passwordValidation.minLengthChar,
                 progressBar: passwordValidation.progressInputPass,
                 text: passwordValidation.minLengthCharText,
-                limitChar: passwordValidation.limitCharacter
+                check: passwordValidation.checkMinChar
             )
             passwordValidation.checkCharacters(
                 textField: sender,
@@ -156,9 +174,9 @@ class CustomView: UIView {
             title.textTitle = text.noDigit
             textField.placeholder = text.noDigitPlaceholder
         case .inputLimit:
+            limitLabel.textTitle = "0/\(limitChar.limit)"
             textField.setDefaultBorder()
             title.textTitle = text.inputLimit
-            limitLabel.textTitle = text.limitCount
             textField.placeholder = text.inputLimitPlaceholder
         case .onlyCharacters:
             textField.setDefaultBorder()
@@ -187,6 +205,19 @@ class CustomView: UIView {
         UIApplication.shared.open(url, options: [:], completionHandler: nil)
 
     }
+
+    func detectedLink (string: String) -> String {
+        let detector = try! NSDataDetector(types: NSTextCheckingResult.CheckingType.link.rawValue)
+        let matches = detector.matches(in: string, options: [], range: NSRange(location: 0, length: string.utf16.count))
+        var urlLink = String()
+        for match in matches {
+            guard let range = Range(match.range, in: string) else { continue }
+            let url = string[range]
+            urlLink = String(url)
+            print(url)
+        }
+        return urlLink
+    }
 }
 
 extension CustomView: UITextFieldDelegate {
@@ -194,9 +225,7 @@ extension CustomView: UITextFieldDelegate {
     // MARK: - Perform reverse by button "Return"
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         if switchTextField == .link {
-            if textField.string.isValidURL {
-                linkUrl(url: textField.string)
-            }
+            linkUrl(url: detectedLink(string: textField.string))
         }
         self.endEditing(true)
         return false
@@ -221,35 +250,13 @@ extension CustomView: UITextFieldDelegate {
                    shouldChangeCharactersIn range: NSRange,
                    replacementString string: String
     ) -> Bool {
-
-        let countCharacter = textField.string.count
-
         switch switchTextField {
         case .noDigits:
             let forbiddenCharacters = CharacterSet.decimalDigits.inverted
             let characterSet = CharacterSet(charactersIn: string)
             return forbiddenCharacters.isSuperset(of: characterSet)
-
         case .onlyCharacters:
-            guard let textFieldText = textField.text,
-                  let rangeOfTextToReplace = Range(range, in: textFieldText) else {
-                return false
-            }
-            if countCharacter <= 12 {
-                if countCharacter >= 5 {
-                    let allowedCharacters = CharacterSet.decimalDigits
-                    let characterSet = CharacterSet(charactersIn: string)
-                    return allowedCharacters.isSuperset(of: characterSet)
-
-                } else {
-                    let allowedCharacters = CharacterSet.letters
-                    let characterSet = CharacterSet(charactersIn: string)
-                    return allowedCharacters.isSuperset(of: characterSet)
-                }
-            }
-            let substringToReplace = textFieldText[rangeOfTextToReplace]
-            let count = textFieldText.count - substringToReplace.count + string.count
-            return count <= 12
+            return model.isAllowedCharacter(text: textField.string + string, replacement: string)
         default:
             break
         }

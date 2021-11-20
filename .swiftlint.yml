@@ -1,10 +1,11 @@
 disabled_rules:
 - trailing_whitespace
+- force_try
 opt_in_rules:
 - empty_count
 - empty_string
 excluded:
-- Extensions/String+NSDataDetector.swift
+- R.generated.swift
 - Carthage
 - Pods
 - SwiftLint/Common/3rdPartyLib

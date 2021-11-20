@@ -12,5 +12,5 @@ target 'Text Fields' do
 
  pod 'IQKeyboardManagerSwift'
  pod 'SnapKit'
-
+ pod 'R.swift'
 end
