@@ -22,10 +22,9 @@
 		1A03A30526FDA596007113E5 /* UITextField+Border.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A03A30426FDA596007113E5 /* UITextField+Border.swift */; };
 		1A471EDA271B4D440066CCB5 /* UILabel+SafeText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A471ED9271B4D440066CCB5 /* UILabel+SafeText.swift */; };
 		1A553FB7273CB345001A03AF /* RegularXpression+Matches.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A553FB6273CB345001A03AF /* RegularXpression+Matches.swift */; };
+		1A772607274923D500851677 /* ValidationPassLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A772606274923D500851677 /* ValidationPassLabel.swift */; };
 		1A7C75F82737F32B002634F1 /* Pods_Text_Fields.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 98F835EF893B7EA92357512D /* Pods_Text_Fields.framework */; };
 		1AA344DE2732622600F8F6BA /* String+NSDataDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AA344DD2732622600F8F6BA /* String+NSDataDetector.swift */; };
-		1AD0C8912726BB79003F17C5 /* LimitCharacters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AD0C8902726BB79003F17C5 /* LimitCharacters.swift */; };
-		1AD28DB22726C0A20033E1B2 /* PasswordValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AD28DB12726C0A20033E1B2 /* PasswordValidation.swift */; };
 		1AD28DB62727EE950033E1B2 /* TextForView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AD28DB52727EE950033E1B2 /* TextForView.swift */; };
 /* End PBXBuildFile section */
 
@@ -47,9 +46,8 @@
 		1A03A30426FDA596007113E5 /* UITextField+Border.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Border.swift"; sourceTree = "<group>"; };
 		1A471ED9271B4D440066CCB5 /* UILabel+SafeText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+SafeText.swift"; sourceTree = "<group>"; };
 		1A553FB6273CB345001A03AF /* RegularXpression+Matches.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RegularXpression+Matches.swift"; sourceTree = "<group>"; };
+		1A772606274923D500851677 /* ValidationPassLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationPassLabel.swift; sourceTree = "<group>"; };
 		1AA344DD2732622600F8F6BA /* String+NSDataDetector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+NSDataDetector.swift"; sourceTree = "<group>"; };
-		1AD0C8902726BB79003F17C5 /* LimitCharacters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LimitCharacters.swift; sourceTree = "<group>"; };
-		1AD28DB12726C0A20033E1B2 /* PasswordValidation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordValidation.swift; sourceTree = "<group>"; };
 		1AD28DB52727EE950033E1B2 /* TextForView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextForView.swift; sourceTree = "<group>"; };
 		98F835EF893B7EA92357512D /* Pods_Text_Fields.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Text_Fields.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCC8C73A26850CED292C1E43 /* Pods-Text Fields.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Text Fields.release.xcconfig"; path = "Target Support Files/Pods-Text Fields/Pods-Text Fields.release.xcconfig"; sourceTree = "<group>"; };
@@ -121,8 +119,6 @@
 			isa = PBXGroup;
 			children = (
 				1A03868D272325CF00C281A4 /* ModelFields.swift */,
-				1AD0C8902726BB79003F17C5 /* LimitCharacters.swift */,
-				1AD28DB12726C0A20033E1B2 /* PasswordValidation.swift */,
 				1AD28DB52727EE950033E1B2 /* TextForView.swift */,
 			);
 			path = Models;
@@ -144,6 +140,7 @@
 			isa = PBXGroup;
 			children = (
 				1A03A2F926F6EE53007113E5 /* CustomView.swift */,
+				1A772606274923D500851677 /* ValidationPassLabel.swift */,
 			);
 			path = "XIB Files";
 			sourceTree = "<group>";
@@ -348,11 +345,10 @@
 				1A03A30226FC543E007113E5 /* UIView+NibLoading+Border.swift in Sources */,
 				1A553FB7273CB345001A03AF /* RegularXpression+Matches.swift in Sources */,
 				1A03A30526FDA596007113E5 /* UITextField+Border.swift in Sources */,
-				1AD0C8912726BB79003F17C5 /* LimitCharacters.swift in Sources */,
+				1A772607274923D500851677 /* ValidationPassLabel.swift in Sources */,
 				1AA344DE2732622600F8F6BA /* String+NSDataDetector.swift in Sources */,
 				1A03A2DF26F5B406007113E5 /* SceneDelegate.swift in Sources */,
 				1AD28DB62727EE950033E1B2 /* TextForView.swift in Sources */,
-				1AD28DB22726C0A20033E1B2 /* PasswordValidation.swift in Sources */,
 				1A471EDA271B4D440066CCB5 /* UILabel+SafeText.swift in Sources */,
 				1A03A2FA26F6EE53007113E5 /* CustomView.swift in Sources */,
 				1A03868E272325CF00C281A4 /* ModelFields.swift in Sources */,

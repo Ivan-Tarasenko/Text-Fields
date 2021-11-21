@@ -13,7 +13,6 @@ class Text {
     let noDigitPlaceholder = "Type here"
 
     // MARK: - Input limit.
-
     let inputLimit = "Input limit"
     let inputLimitPlaceholder = "Type here"
 

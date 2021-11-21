@@ -17,10 +17,10 @@ class CustomView: UIView {
 
     var switchTextField: TextFields = .noDigits
 
-    let limitChar = Limit()
-    let passwordValidation = PasswordValidation()
-    let text = Text()
     let model = Model()
+
+    let text = Text()
+    let labelValidation = LabelValidation()
 
     required init?(coder: NSCoder) {
         super.init(coder: coder)
@@ -33,19 +33,22 @@ class CustomView: UIView {
         setLabelMinOneCapital()
         setProgressBar()
 
-        passwordValidation.minLengthChar.isHidden = true
-        passwordValidation.minOneDigit.isHidden = true
-        passwordValidation.minOneLowercase.isHidden = true
-        passwordValidation.minCapitalRequired.isHidden = true
-        passwordValidation.progressInputPass.isHidden = true
+        labelValidation.minLengthChar.isHidden = true
+        labelValidation.minOneDigit.isHidden = true
+        labelValidation.minOneLowercase.isHidden = true
+        labelValidation.minCapitalRequired.isHidden = true
+        labelValidation.progressView.isHidden = true
     }
 
     @IBAction func actionTextField(_ sender: UITextField) {
+        let countCharacters = sender.string.count
+        var text = sender.string
+
         switch switchTextField {
         case .inputLimit:
-            let limit = limitChar.limit
-            limitLabel.textTitle = limitChar.getLimit(string: sender.string, limit: limit)
-            if sender.string.count > limit {
+            let limit = model.limitChar
+            limitLabel.textTitle = model.getLimit(string: text, limit: limit)
+            if countCharacters > limit {
                 textField.setBorder(radius: 10, color: UIColor.systemRed)
             } else {
                 textField.setBorder(radius: 10, color: UIColor.systemBlue)
@@ -58,40 +61,60 @@ class CustomView: UIView {
             //                sender.attributedText = atributedString
             //            }
         case .onlyCharacters:
-            if !model.isSeparatorAddad, sender.string.count == model.separatorIndex {
-                sender.string.append(model.separator)
+            if !model.addSeparator, countCharacters == model.separatorIndex {
+                text.append(model.separator)
             }
         case .validationRules:
-            passwordValidation.progressInputPass.progress = 0
-            passwordValidation.checkCharacters(
-                textField: sender,
-                label: &passwordValidation.minLengthChar,
-                progressBar: passwordValidation.progressInputPass,
-                text: passwordValidation.minLengthCharText,
-                check: passwordValidation.checkMinChar
-            )
-            passwordValidation.checkCharacters(
-                textField: sender,
-                label: &passwordValidation.minOneDigit,
-                progressBar: passwordValidation.progressInputPass,
-                text: passwordValidation.minOneDigitText,
-                check: passwordValidation.checkDigit
-            )
-            passwordValidation.checkCharacters(
-                textField: sender,
-                label: &passwordValidation.minOneLowercase,
-                progressBar: passwordValidation.progressInputPass,
-                text: passwordValidation.minOneLowercaseText,
-                check: passwordValidation.checkLowercase
-            )
-            passwordValidation.checkCharacters(
-                textField: sender,
-                label: &passwordValidation.minCapitalRequired,
-                progressBar: passwordValidation.progressInputPass,
-                text: passwordValidation.minCapitalRequiredText,
-                check: passwordValidation.checkCapitalRequired
-            )
-            passwordValidation.progressBar(progressBar: passwordValidation.progressInputPass)
+            labelValidation.progressView.progress = 0
+
+            // Check count character in string.
+            if model.check(strung: text, checkCharacters: model.checkMinChar) {
+                labelValidation.minLengthChar.textColor = .systemGreen
+                labelValidation.progressView.progress += 0.25
+                labelValidation.minLengthChar.textTitle =
+                labelValidation.minLengthCharText.replacingOccurrences(of: "-", with: "✓")
+            } else {
+                labelValidation.minLengthChar.textColor = .black
+                labelValidation.minLengthChar.textTitle =
+                labelValidation.minLengthCharText.replacingOccurrences(of: "✓", with: "-")
+            }
+            // Check minimum one digit.
+            if model.check(strung: text, checkCharacters: model.checkDigit) {
+                labelValidation.minOneDigit.textColor = .systemGreen
+                labelValidation.progressView.progress += 0.25
+                labelValidation.minOneDigit.textTitle =
+                labelValidation.minOneDigitText.replacingOccurrences(of: "-", with: "✓")
+            } else {
+                labelValidation.minOneDigit.textColor = .black
+                labelValidation.minLengthChar.textTitle =
+                labelValidation.minOneDigitText.replacingOccurrences(of: "✓", with: "-")
+            }
+
+            // Check minimum one lowercase character.
+            if model.check(strung: text, checkCharacters: model.checkLowercase) {
+                labelValidation.minOneLowercase.textColor = .systemGreen
+                labelValidation.progressView.progress += 0.25
+                labelValidation.minOneLowercase.textTitle =
+                labelValidation.minOneLowercaseText.replacingOccurrences(of: "-", with: "✓")
+            } else {
+                labelValidation.minOneLowercase.textColor = .black
+                labelValidation.minLengthChar.textTitle =
+                labelValidation.minOneLowercaseText.replacingOccurrences(of: "✓", with: "-")
+            }
+
+            // Check minimum one capital required.
+            if model.check(strung: text, checkCharacters: model.checkCapitalRequired) {
+                labelValidation.minCapitalRequired.textColor = .systemGreen
+                labelValidation.progressView.progress += 0.25
+                labelValidation.minCapitalRequired.textTitle =
+                labelValidation.minCapitalRequiredText.replacingOccurrences(of: "-", with: "✓")
+            } else {
+                labelValidation.minCapitalRequired.textColor = .black
+                labelValidation.minLengthChar.textTitle =
+                labelValidation.minCapitalRequiredText.replacingOccurrences(of: "✓", with: "-")
+            }
+
+            model.progressBar(progressBar: labelValidation.progressView)
         default:
             break
         }
@@ -109,57 +132,57 @@ class CustomView: UIView {
     }
     // MARK: - add label to view: - Min length 8 characters.
     func setLabelMinimumChar() {
-        passwordValidation.setLabel(
-            label: &passwordValidation.minLengthChar,
-            text: passwordValidation.minLengthCharText
+        labelValidation.setLabel(
+            label: &labelValidation.minLengthChar,
+            text: labelValidation.minLengthCharText
         )
-        addSubview(passwordValidation.minLengthChar)
-        passwordValidation.minLengthChar.snp.makeConstraints { maker in
+        addSubview(labelValidation.minLengthChar)
+        labelValidation.minLengthChar.snp.makeConstraints { maker in
             maker.left.equalToSuperview().inset(10)
             maker.top.equalTo(textField).inset(45)
         }
     }
     // MARK: - add label to view: - Min 1 digit.
     func setLabelMinOneDigit() {
-        passwordValidation.setLabel(
-            label: &passwordValidation.minOneDigit,
-            text: passwordValidation.minOneDigitText
+        labelValidation.setLabel(
+            label: &labelValidation.minOneDigit,
+            text: labelValidation.minOneDigitText
         )
-        addSubview(passwordValidation.minOneDigit)
-        passwordValidation.minOneDigit.snp.makeConstraints { maker in
+        addSubview(labelValidation.minOneDigit)
+        labelValidation.minOneDigit.snp.makeConstraints { maker in
             maker.left.equalToSuperview().inset(10)
-            maker.top.equalTo(passwordValidation.minLengthChar).inset(22)
+            maker.top.equalTo(labelValidation.minLengthChar).inset(22)
         }
     }
     // MARK: - add label to view: - Min 1 lowercase.
     func setLabelMinOneLowercase() {
-        passwordValidation.setLabel(
-            label: &passwordValidation.minOneLowercase,
-            text: passwordValidation.minOneLowercaseText
+        labelValidation.setLabel(
+            label: &labelValidation.minOneLowercase,
+            text: labelValidation.minOneLowercaseText
         )
-        addSubview(passwordValidation.minOneLowercase)
-        passwordValidation.minOneLowercase.snp.makeConstraints { maker in
+        addSubview(labelValidation.minOneLowercase)
+        labelValidation.minOneLowercase.snp.makeConstraints { maker in
             maker.left.equalToSuperview().inset(10)
-            maker.top.equalTo(passwordValidation.minOneDigit).inset(22)
+            maker.top.equalTo(labelValidation.minOneDigit).inset(22)
         }
     }
     // MARK: - add label to view: - Min 1 capital required.
     func setLabelMinOneCapital() {
-        passwordValidation.setLabel(
-            label: &passwordValidation.minCapitalRequired,
-            text: passwordValidation.minCapitalRequiredText
+        labelValidation.setLabel(
+            label: &labelValidation.minCapitalRequired,
+            text: labelValidation.minCapitalRequiredText
         )
-        addSubview(passwordValidation.minCapitalRequired)
-        passwordValidation.minCapitalRequired.snp.makeConstraints { maker in
+        addSubview(labelValidation.minCapitalRequired)
+        labelValidation.minCapitalRequired.snp.makeConstraints { maker in
             maker.left.equalToSuperview().inset(10)
-            maker.top.equalTo(passwordValidation.minOneLowercase).inset(22)
+            maker.top.equalTo(labelValidation.minOneLowercase).inset(22)
         }
     }
 
     // MARK: - add progressBar to view.
     func setProgressBar() {
-        addSubview(passwordValidation.progressInputPass)
-        passwordValidation.progressInputPass.snp.makeConstraints { maker in
+        addSubview(labelValidation.progressView)
+        labelValidation.progressView.snp.makeConstraints { maker in
             maker.left.equalToSuperview().inset(2)
             maker.right.equalToSuperview().inset(2)
             maker.bottom.equalToSuperview().inset(0)
@@ -174,7 +197,7 @@ class CustomView: UIView {
             title.textTitle = text.noDigit
             textField.placeholder = text.noDigitPlaceholder
         case .inputLimit:
-            limitLabel.textTitle = "0/\(limitChar.limit)"
+            limitLabel.textTitle = "0/\(model.limitChar)"
             textField.setDefaultBorder()
             title.textTitle = text.inputLimit
             textField.placeholder = text.inputLimitPlaceholder
@@ -193,10 +216,10 @@ class CustomView: UIView {
             textField.placeholder = text.validationRulesPlaceholder
             textField.textContentType = .password
             textField.isSecureTextEntry = true
-            passwordValidation.minLengthChar.isHidden = false
-            passwordValidation.minOneDigit.isHidden = false
-            passwordValidation.minOneLowercase.isHidden = false
-            passwordValidation.minCapitalRequired.isHidden = false
+            labelValidation.minLengthChar.isHidden = false
+            labelValidation.minOneDigit.isHidden = false
+            labelValidation.minOneLowercase.isHidden = false
+            labelValidation.minCapitalRequired.isHidden = false
 
         }
     }
@@ -235,14 +258,14 @@ extension CustomView: UITextFieldDelegate {
     func textFieldDidBeginEditing(_ textField: UITextField) {
         textField.setBorder(radius: 10, color: UIColor.systemBlue)
         if switchTextField == .validationRules {
-            passwordValidation.progressInputPass.isHidden = false
+            labelValidation.progressView.isHidden = false
         }
     }
 
     func textFieldDidEndEditing(_ textField: UITextField) {
         textField.setBorder(radius: 10, color: UIColor.systemGray6)
-        if passwordValidation.progressInputPass.progress == 0 {
-            passwordValidation.progressInputPass.isHidden = true
+        if labelValidation.progressView.progress == 0 {
+            labelValidation.progressView.isHidden = true
         }
     }
     // MARK: - Working with regular expressions.
@@ -256,7 +279,9 @@ extension CustomView: UITextFieldDelegate {
             let characterSet = CharacterSet(charactersIn: string)
             return forbiddenCharacters.isSuperset(of: characterSet)
         case .onlyCharacters:
-            return model.isAllowedCharacter(text: textField.string + string, replacement: string)
+            return model.validCharacter(text: textField.string + string,
+                                        replacement: string
+            )
         default:
             break
         }
