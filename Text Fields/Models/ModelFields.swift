@@ -69,16 +69,16 @@ class Model {
 
     // MARK: - Setting  progressBar.
 
-    func progressBar(progressBar: UIProgressView) {
-        switch progressBar.progress {
+    func progressBar(setProgressBar: UIProgressView) {
+        switch setProgressBar.progress {
         case 0...0.25:
-            progressBar.tintColor = .systemRed
+            setProgressBar.tintColor = .systemRed
         case 0.25...0.5:
-            progressBar.tintColor = .systemOrange
+            setProgressBar.tintColor = .systemOrange
         case 0.5...0.75:
-            progressBar.tintColor = .systemYellow
+            setProgressBar.tintColor = .systemYellow
         case 0.75...1:
-            progressBar.tintColor = .systemGreen
+            setProgressBar.tintColor = .systemGreen
         default:
             break
         }
