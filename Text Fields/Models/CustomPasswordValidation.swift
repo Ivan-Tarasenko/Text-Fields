@@ -139,8 +139,4 @@ class CustomPassValid {
             make.top.equalTo(minOneLowercase).inset(constraintY)
         }
     }
-
-    func testValid() {
-        
-    }
 }

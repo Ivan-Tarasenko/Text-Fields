@@ -18,22 +18,10 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        addsTapToScrollview()
-
         noDigitsView.settingView(type: .noDigits)
         inputLimitView.settingView(type: .inputLimit)
         onlyCharactersView.settingView(type: .onlyCharacters)
         linkView.settingView(type: .link)
         validationRulesView.settingView(type: .validationRules)
-    }
-
-    // MARK: - Adds a tap on the scrollview to hide the keyboard outside the textfield
-    func addsTapToScrollview() {
-        self.view.addGestureRecognizer(
-            UITapGestureRecognizer(
-                target: self.view,
-                action: #selector(UIView.endEditing(_:)))
-        )
     }
 }

@@ -1,5 +1,5 @@
 //
-//  ModelFields.swift
+//  Models.swift
 //  Text Fields
 //
 //  Created by Иван Тарасенко on 22.10.2021.
@@ -17,6 +17,13 @@ enum TextFields {
 }
 
 class Model {
+
+    // MARK: - No digits character
+    func noDigit(string: String) -> Bool {
+        let forbiddenCharacters = CharacterSet.decimalDigits.inverted
+        let characterSet = CharacterSet(charactersIn: string)
+        return forbiddenCharacters.isSuperset(of: characterSet)
+    }
 
     // MARK: - Limit characters
     var limitChar = 10
@@ -56,19 +63,27 @@ class Model {
         return sting.isEmpty || NSPredicate(format: format, regex).evaluate(with: text)
     }
 
-    // MARK: - Password validatin.
-    let checkMinChar = "[A-Za-z0-9]{8}"
-    let checkDigit = "[0-9]"
-    let checkLowercase = "[a-z]"
-    let checkCapitalRequired = "[A-Z]"
+    // MARK: - link validaty check and transition on it
+    func linkUrl(url: String) {
+        guard let url = URL(string: url) else { return }
+        UIApplication.shared.open(url, options: [:], completionHandler: nil)
 
-    func check(strung: String, checkCharacters: String) -> Bool {
-        let regex = NSRegularExpression(checkCharacters)
-        return regex.matches(strung)
     }
 
-    // MARK: - Setting  progressBar.
-
+    func detectedLink (string: String) -> String {
+        let detector = try! NSDataDetector(types: NSTextCheckingResult.CheckingType.link.rawValue)
+        let matches = detector.matches(in: string, options: [], range: NSRange(location: 0, length: string.utf16.count))
+        var urlLink = String()
+        for match in matches {
+            guard let range = Range(match.range, in: string) else { continue }
+            let url = string[range]
+            urlLink = String(url)
+            print(url)
+        }
+        return urlLink
+    }
+    
+    // MARK: - Tuneing  progressBar.
     func progressBar(setProgressBar: UIProgressView) {
         switch setProgressBar.progress {
         case 0...0.25:

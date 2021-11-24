@@ -15,10 +15,31 @@ class CustomView: UIView {
     @IBOutlet weak var limitLabel: UILabel!
 
     var switchTextField: TextFields = .noDigits
-
     let model = Model()
     let text = Text()
     let customPassValid = CustomPassValid()
+
+    private let checkMinChar = "[A-Za-z0-9]{8}"
+    private  let checkDigit = "[0-9]"
+    private  let checkLowercase = "[a-z]"
+    private  let checkCapitalRequired = "[A-Z]"
+
+    private var tuneBorderForTextField: Bool = false {
+        didSet {
+            tuneBorderForTextField ?
+            textField.setBorder(radius: 10, color: UIColor.systemBlue) :
+            textField.setBorder(radius: 10, color: UIColor.systemGray6)
+
+        }
+    }
+
+    private var tuneBorderFromFieldLimitChar: Bool = false {
+        didSet {
+            tuneBorderFromFieldLimitChar ?
+            textField.setBorder(radius: 10, color: UIColor.systemRed) :
+            textField.setBorder(radius: 10, color: UIColor.systemBlue)
+        }
+    }
 
     required init?(coder: NSCoder) {
         super.init(coder: coder)
@@ -31,55 +52,49 @@ class CustomView: UIView {
         customPassValid.progressView.isHidden = true
     }
 
-    var setBorderForTextField: Bool = false {
-       didSet {
-           if setBorderForTextField {
-               textField.setBorder(radius: 10, color: UIColor.systemBlue)
-           } else {
-               textField.setBorder(radius: 10, color: UIColor.systemGray6)
-           }
-       }
-   }
-
+// MARK: - Action for textField conected as editing changed
     @IBAction func actionTextField(_ sender: UITextField) {
-        let countCharacters = sender.string.count
+        let countCharactersInString = sender.string.count
         var text = sender.string
 
         switch switchTextField {
+            // MARK: - Rules for limit character and change border
         case .inputLimit:
             let limit = model.limitChar
             limitLabel.textTitle = model.getLimit(string: text, limit: limit)
-            if countCharacters > limit {
-                textField.setBorder(radius: 10, color: UIColor.systemRed)
+            if countCharactersInString > limit {
+                tuneBorderFromFieldLimitChar = true
             } else {
-                textField.setBorder(radius: 10, color: UIColor.systemBlue)
+                tuneBorderFromFieldLimitChar = false
             }
+            // MARK: - Add character "-"
         case .onlyCharacters:
-            if !model.addSeparator, countCharacters == model.separatorIndex {
+            if !model.addSeparator, countCharactersInString == model.separatorIndex {
                 text.append(model.separator)
             }
         case .validationRules:
+            // MARK: - Checking the rules password validatin.
             customPassValid.progressView.progress = 0
-                                                                                // Check count character in string.
-            if model.check(strung: text, checkCharacters: model.checkMinChar) {
+            // Check count character in string.
+            if text ~= checkMinChar {
                 customPassValid.switchForMinChar = true
             } else {
                 customPassValid.switchForMinChar = false
             }
-                                                                                // Check minimum one digit.
-            if model.check(strung: text, checkCharacters: model.checkDigit) {
+            // Check minimum one digit.
+            if text ~= checkDigit {
                 customPassValid.switchForMinOneDigit = true
             } else {
                 customPassValid.switchForMinOneDigit = false
             }
-                                                                                // Check minimum one lowercase character.
-            if model.check(strung: text, checkCharacters: model.checkLowercase) {
+            // Check minimum one lowercase character.
+            if text ~= checkLowercase {
                 customPassValid.switchForMinOneLowercase = true
             } else {
                 customPassValid.switchForMinOneLowercase = false
             }
-                                                                                // Check minimum one capital required.
-            if model.check(strung: text, checkCharacters: model.checkCapitalRequired) {
+            // Check minimum one capital required.
+            if text ~= checkCapitalRequired {
                 customPassValid.switchForMinCapitalRequired = true
             } else {
                 customPassValid.switchForMinCapitalRequired = false
@@ -101,7 +116,7 @@ class CustomView: UIView {
         switchTextField = type
         configureTextFields()
     }
-
+    // MARK: - Added label for password validation
     func addLabelPasswordValidation() {
         addSubview(customPassValid.minLengthChar)
         addSubview(customPassValid.minOneDigit)
@@ -146,25 +161,6 @@ class CustomView: UIView {
             customPassValid.showLabelForPasswordValidetion = false
         }
     }
-
-    func linkUrl(url: String) {
-        guard let url = URL(string: url) else { return }
-        UIApplication.shared.open(url, options: [:], completionHandler: nil)
-
-    }
-
-    func detectedLink (string: String) -> String {
-        let detector = try! NSDataDetector(types: NSTextCheckingResult.CheckingType.link.rawValue)
-        let matches = detector.matches(in: string, options: [], range: NSRange(location: 0, length: string.utf16.count))
-        var urlLink = String()
-        for match in matches {
-            guard let range = Range(match.range, in: string) else { continue }
-            let url = string[range]
-            urlLink = String(url)
-            print(url)
-        }
-        return urlLink
-    }
 }
 
 extension CustomView: UITextFieldDelegate {
@@ -172,7 +168,7 @@ extension CustomView: UITextFieldDelegate {
     // MARK: - Perform reverse by button "Return"
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         if switchTextField == .link {
-            linkUrl(url: detectedLink(string: textField.string))
+            model.linkUrl(url: model.detectedLink(string: textField.string))
         }
         self.endEditing(true)
         return false
@@ -180,14 +176,14 @@ extension CustomView: UITextFieldDelegate {
 
     // MARK: - Input tracking
     func textFieldDidBeginEditing(_ textField: UITextField) {
-        setBorderForTextField = true
+        tuneBorderForTextField = true
         if switchTextField == .validationRules {
             customPassValid.progressView.isHidden = false
         }
     }
 
     func textFieldDidEndEditing(_ textField: UITextField) {
-        setBorderForTextField = false
+        tuneBorderForTextField = false
         if customPassValid.progressView.progress == 0 {
             customPassValid.progressView.isHidden = true
         }
@@ -199,9 +195,7 @@ extension CustomView: UITextFieldDelegate {
     ) -> Bool {
         switch switchTextField {
         case .noDigits:
-            let forbiddenCharacters = CharacterSet.decimalDigits.inverted
-            let characterSet = CharacterSet(charactersIn: string)
-            return forbiddenCharacters.isSuperset(of: characterSet)
+            return model.noDigit(string: string)
         case .onlyCharacters:
             return model.validCharacter(text: textField.string + string,
                                         replacement: string

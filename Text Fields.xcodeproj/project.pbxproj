@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1A03868E272325CF00C281A4 /* ModelFields.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A03868D272325CF00C281A4 /* ModelFields.swift */; };
+		1A03868E272325CF00C281A4 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A03868D272325CF00C281A4 /* Models.swift */; };
 		1A03A2DD26F5B406007113E5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A03A2DC26F5B406007113E5 /* AppDelegate.swift */; };
 		1A03A2DF26F5B406007113E5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A03A2DE26F5B406007113E5 /* SceneDelegate.swift */; };
 		1A03A2E126F5B406007113E5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A03A2E026F5B406007113E5 /* ViewController.swift */; };
@@ -23,13 +23,14 @@
 		1A471EDA271B4D440066CCB5 /* UILabel+SafeText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A471ED9271B4D440066CCB5 /* UILabel+SafeText.swift */; };
 		1A553FB7273CB345001A03AF /* RegularXpression+Matches.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A553FB6273CB345001A03AF /* RegularXpression+Matches.swift */; };
 		1A772609274BBE4E00851677 /* CustomPasswordValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A772608274BBE4E00851677 /* CustomPasswordValidation.swift */; };
+		1A77260B274DD26600851677 /* String+StringComparison.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A77260A274DD26600851677 /* String+StringComparison.swift */; };
 		1A7C75F82737F32B002634F1 /* Pods_Text_Fields.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 98F835EF893B7EA92357512D /* Pods_Text_Fields.framework */; };
 		1AA344DE2732622600F8F6BA /* String+NSDataDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AA344DD2732622600F8F6BA /* String+NSDataDetector.swift */; };
 		1AD28DB62727EE950033E1B2 /* TextForView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AD28DB52727EE950033E1B2 /* TextForView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		1A03868D272325CF00C281A4 /* ModelFields.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelFields.swift; sourceTree = "<group>"; };
+		1A03868D272325CF00C281A4 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
 		1A03A2D926F5B406007113E5 /* Text Fields.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Text Fields.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A03A2DC26F5B406007113E5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1A03A2DE26F5B406007113E5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -47,6 +48,7 @@
 		1A471ED9271B4D440066CCB5 /* UILabel+SafeText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+SafeText.swift"; sourceTree = "<group>"; };
 		1A553FB6273CB345001A03AF /* RegularXpression+Matches.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RegularXpression+Matches.swift"; sourceTree = "<group>"; };
 		1A772608274BBE4E00851677 /* CustomPasswordValidation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPasswordValidation.swift; sourceTree = "<group>"; };
+		1A77260A274DD26600851677 /* String+StringComparison.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+StringComparison.swift"; sourceTree = "<group>"; };
 		1AA344DD2732622600F8F6BA /* String+NSDataDetector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+NSDataDetector.swift"; sourceTree = "<group>"; };
 		1AD28DB52727EE950033E1B2 /* TextForView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextForView.swift; sourceTree = "<group>"; };
 		98F835EF893B7EA92357512D /* Pods_Text_Fields.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Text_Fields.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -107,7 +109,7 @@
 		1A03A2F126F5B465007113E5 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				1A03A2F826F6EDF4007113E5 /* XIB Files */,
+				1A03A2F826F6EDF4007113E5 /* Custom View */,
 				1A03A2E226F5B406007113E5 /* Main.storyboard */,
 				1A03A2F626F6EA0E007113E5 /* CustomView.xib */,
 				1A03A2E726F5B407007113E5 /* LaunchScreen.storyboard */,
@@ -118,7 +120,7 @@
 		1A03A2F226F5B477007113E5 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				1A03868D272325CF00C281A4 /* ModelFields.swift */,
+				1A03868D272325CF00C281A4 /* Models.swift */,
 				1AD28DB52727EE950033E1B2 /* TextForView.swift */,
 				1A772608274BBE4E00851677 /* CustomPasswordValidation.swift */,
 			);
@@ -137,12 +139,12 @@
 			path = Supporting;
 			sourceTree = "<group>";
 		};
-		1A03A2F826F6EDF4007113E5 /* XIB Files */ = {
+		1A03A2F826F6EDF4007113E5 /* Custom View */ = {
 			isa = PBXGroup;
 			children = (
 				1A03A2F926F6EE53007113E5 /* CustomView.swift */,
 			);
-			path = "XIB Files";
+			path = "Custom View";
 			sourceTree = "<group>";
 		};
 		1A03A2FB26F6F3C0007113E5 /* Fonts */ = {
@@ -162,6 +164,7 @@
 				1A471ED9271B4D440066CCB5 /* UILabel+SafeText.swift */,
 				1AA344DD2732622600F8F6BA /* String+NSDataDetector.swift */,
 				1A553FB6273CB345001A03AF /* RegularXpression+Matches.swift */,
+				1A77260A274DD26600851677 /* String+StringComparison.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -346,12 +349,13 @@
 				1A03A30226FC543E007113E5 /* UIView+NibLoading+Border.swift in Sources */,
 				1A553FB7273CB345001A03AF /* RegularXpression+Matches.swift in Sources */,
 				1A03A30526FDA596007113E5 /* UITextField+Border.swift in Sources */,
+				1A77260B274DD26600851677 /* String+StringComparison.swift in Sources */,
 				1AA344DE2732622600F8F6BA /* String+NSDataDetector.swift in Sources */,
 				1A03A2DF26F5B406007113E5 /* SceneDelegate.swift in Sources */,
 				1AD28DB62727EE950033E1B2 /* TextForView.swift in Sources */,
 				1A471EDA271B4D440066CCB5 /* UILabel+SafeText.swift in Sources */,
 				1A03A2FA26F6EE53007113E5 /* CustomView.swift in Sources */,
-				1A03868E272325CF00C281A4 /* ModelFields.swift in Sources */,
+				1A03868E272325CF00C281A4 /* Models.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
