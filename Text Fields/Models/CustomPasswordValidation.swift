@@ -7,6 +7,7 @@
 
 import UIKit
 import SnapKit
+import Rswift
 
 class CustomPassValid {
 
@@ -109,8 +110,8 @@ class CustomPassValid {
     func setLabelPasswordValidation () {
         let constraintX = 10
         let constraintY = 22
-        let labelFont = UIFont(name: "SF Pro Display Regular", size: 13)
 
+        let labelFont = R.font.sfProDisplayRegular(size: 13)
         minLengthChar.font = labelFont
         minLengthChar.textTitle = minLengthCharText
         minLengthChar.snp.makeConstraints { make in

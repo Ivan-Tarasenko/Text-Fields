@@ -1,0 +1,28 @@
+/*
+ Localizable.strings
+  Text Fields
+
+  Created by Иван Тарасенко on 25.11.2021.
+
+ // No Digtits.
+ "NO Digits field"
+ "Type here"
+ 
+ //Imput Limit.
+ "Input limit"
+ "Type here"
+ 
+ // Only characters.
+ 
+ "Only characters"
+ "wwwww-ddddd"
+ 
+ // Link.
+ "Link"
+ "www.example.com"
+ 
+ // Validation rules.
+ "Validation rules"
+ "Password"
+*/
+

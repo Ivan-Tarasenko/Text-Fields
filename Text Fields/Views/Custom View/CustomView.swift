@@ -18,6 +18,7 @@ class CustomView: UIView {
     let model = Model()
     let text = Text()
     let customPassValid = CustomPassValid()
+    let localization = Localozation()
 
     private let checkMinChar = "[A-Za-z0-9]{8}"
     private  let checkDigit = "[0-9]"
@@ -61,6 +62,7 @@ class CustomView: UIView {
             // MARK: - Rules for limit character and change border
         case .inputLimit:
             let limit = model.limitChar
+
             limitLabel.textTitle = model.getLimit(string: text, limit: limit)
             if countCharactersInString > limit {
                 tuneBorderFromFieldLimitChar = true
@@ -75,25 +77,21 @@ class CustomView: UIView {
         case .validationRules:
             // MARK: - Checking the rules password validatin.
             customPassValid.progressView.progress = 0
-            // Check count character in string.
             if text ~= checkMinChar {
                 customPassValid.switchForMinChar = true
             } else {
                 customPassValid.switchForMinChar = false
             }
-            // Check minimum one digit.
             if text ~= checkDigit {
                 customPassValid.switchForMinOneDigit = true
             } else {
                 customPassValid.switchForMinOneDigit = false
             }
-            // Check minimum one lowercase character.
             if text ~= checkLowercase {
                 customPassValid.switchForMinOneLowercase = true
             } else {
                 customPassValid.switchForMinOneLowercase = false
             }
-            // Check minimum one capital required.
             if text ~= checkCapitalRequired {
                 customPassValid.switchForMinCapitalRequired = true
             } else {

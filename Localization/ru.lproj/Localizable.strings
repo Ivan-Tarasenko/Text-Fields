@@ -1,0 +1,27 @@
+/* 
+  File.strings
+  Text Fields
+
+  Created by Иван Тарасенко on 25.11.2021.
+  
+ 
+*/
+// No Digtits.
+"Только не цыфры";
+"Пишите здесь";
+
+//Imput Limit.
+"Предел ввода";
+"Пишите здесь";
+
+// Only characters.
+"Только символы";
+"ввввв-ддддд";
+
+// Link.
+"Ссылка";
+"www.example.ru";
+
+// Validation rules.
+"Проверка пароля";
+ "Пароль";
