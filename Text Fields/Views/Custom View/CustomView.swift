@@ -16,9 +16,9 @@ class CustomView: UIView {
 
     var switchTextField: TextFields = .noDigits
     let model = Model()
-    let text = Text()
+//    let text = Text()
     let customPassValid = CustomPassValid()
-    let localization = Localozation()
+    let localizatoin = Localization()
 
     private let checkMinChar = "[A-Za-z0-9]{8}"
     private  let checkDigit = "[0-9]"
@@ -134,26 +134,26 @@ class CustomView: UIView {
         switch switchTextField {
         case .noDigits:
             textField.setDefaultBorder()
-            title.textTitle = text.noDigit
-            textField.placeholder = text.noDigitPlaceholder
+            title.textTitle = localizatoin.noDigit
+            textField.placeholder = localizatoin.noDigitPlaceholder
         case .inputLimit:
             limitLabel.textTitle = "0/\(model.limitChar)"
             textField.setDefaultBorder()
-            title.textTitle = text.inputLimit
-            textField.placeholder = text.inputLimitPlaceholder
+            title.textTitle = localizatoin.limitChar
+            textField.placeholder = localizatoin.limitCharPlaceholder
         case .onlyCharacters:
             textField.setDefaultBorder()
-            title.textTitle = text.onlyCharacters
-            textField.placeholder = text.onlyCharactersPlaceholder
+            title.textTitle = localizatoin.onlyChar
+            textField.placeholder = localizatoin.onlyCharPlaceholder
             textField.autocapitalizationType = .words
         case .link:
             textField.setDefaultBorder()
-            title.textTitle = text.link
-            textField.placeholder = text.linkPlaceholder
+            title.textTitle = localizatoin.link
+            textField.placeholder = localizatoin.linkPlaceholder
         case .validationRules:
             textField.setDefaultBorder()
-            title.textTitle = text.validationRules
-            textField.placeholder = text.validationRulesPlaceholder
+            title.textTitle = localizatoin.password
+            textField.placeholder = localizatoin.passwordPlaceholder
             textField.textContentType = .password
             textField.isSecureTextEntry = true
             customPassValid.showLabelForPasswordValidetion = false

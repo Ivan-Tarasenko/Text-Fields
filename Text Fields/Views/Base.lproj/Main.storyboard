@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -68,6 +68,20 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FgA-72-hpS">
+                                                <rect key="frame" x="16" y="710" width="67" height="31"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                                <connections>
+                                                    <action selector="pressChangeLanguege:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uaY-Ix-rUc"/>
+                                                </connections>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pez-10-XcO">
+                                                <rect key="frame" x="317" y="720" width="42" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
@@ -76,7 +90,10 @@
                                             <constraint firstAttribute="bottom" secondItem="cxl-NB-McR" secondAttribute="bottom" constant="235" id="9Lx-sJ-8ER"/>
                                             <constraint firstAttribute="trailing" secondItem="3Fb-3a-eaK" secondAttribute="trailing" constant="16" id="Cnk-7k-ZRg"/>
                                             <constraint firstItem="fqq-jX-cHa" firstAttribute="top" secondItem="lFG-fH-3nO" secondAttribute="bottom" constant="24" id="FF2-lO-pdH"/>
+                                            <constraint firstAttribute="trailing" secondItem="pez-10-XcO" secondAttribute="trailing" constant="16" id="JsN-GD-XSo"/>
                                             <constraint firstAttribute="trailing" secondItem="fqq-jX-cHa" secondAttribute="trailing" constant="16" id="K0P-xP-uhc"/>
+                                            <constraint firstItem="pez-10-XcO" firstAttribute="leading" secondItem="FgA-72-hpS" secondAttribute="trailing" constant="234" id="MNS-QM-f9t"/>
+                                            <constraint firstItem="pez-10-XcO" firstAttribute="top" secondItem="cxl-NB-McR" secondAttribute="bottom" constant="137" id="MgL-st-rz5"/>
                                             <constraint firstItem="3Fb-3a-eaK" firstAttribute="leading" secondItem="lVr-1D-FhD" secondAttribute="leading" constant="16" id="PpH-0h-MRc"/>
                                             <constraint firstItem="cxl-NB-McR" firstAttribute="leading" secondItem="lVr-1D-FhD" secondAttribute="leading" constant="16" id="Spt-2g-1cK"/>
                                             <constraint firstItem="390-VM-9Xv" firstAttribute="top" secondItem="3Fb-3a-eaK" secondAttribute="bottom" constant="24.329999999999998" id="VuB-hX-hNf"/>
@@ -84,9 +101,11 @@
                                             <constraint firstAttribute="trailing" secondItem="FVI-XQ-GE5" secondAttribute="trailing" constant="16" id="ZaR-Qp-UEp"/>
                                             <constraint firstAttribute="trailing" secondItem="lFG-fH-3nO" secondAttribute="trailing" constant="16" id="bAO-0Q-8pT"/>
                                             <constraint firstAttribute="trailing" secondItem="cxl-NB-McR" secondAttribute="trailing" constant="16" id="e9S-ea-Fpg"/>
+                                            <constraint firstItem="FgA-72-hpS" firstAttribute="leading" secondItem="lVr-1D-FhD" secondAttribute="leading" constant="16" id="gCv-v6-RiH"/>
                                             <constraint firstAttribute="trailing" secondItem="390-VM-9Xv" secondAttribute="trailing" constant="16" id="gdy-Z5-utH"/>
                                             <constraint firstItem="fqq-jX-cHa" firstAttribute="leading" secondItem="lVr-1D-FhD" secondAttribute="leading" constant="16" id="gsG-B9-lkm"/>
                                             <constraint firstItem="390-VM-9Xv" firstAttribute="leading" secondItem="lVr-1D-FhD" secondAttribute="leading" constant="16" id="h9J-lq-PG7"/>
+                                            <constraint firstItem="FgA-72-hpS" firstAttribute="top" secondItem="cxl-NB-McR" secondAttribute="bottom" constant="127" id="k5Y-gt-Bcq"/>
                                             <constraint firstItem="3Fb-3a-eaK" firstAttribute="top" secondItem="lVr-1D-FhD" secondAttribute="top" constant="92" id="pHy-D2-5fr"/>
                                             <constraint firstItem="lFG-fH-3nO" firstAttribute="top" secondItem="390-VM-9Xv" secondAttribute="bottom" constant="24" id="wdj-PI-1T7"/>
                                             <constraint firstItem="lFG-fH-3nO" firstAttribute="leading" secondItem="lVr-1D-FhD" secondAttribute="leading" constant="16" id="yBi-S7-Mu6"/>
@@ -115,7 +134,9 @@
                     <navigationItem key="navigationItem" id="SqA-fI-7VQ"/>
                     <size key="freeformSize" width="375" height="812"/>
                     <connections>
+                        <outlet property="bottonChangeLanguege" destination="FgA-72-hpS" id="eib-YW-JzE"/>
                         <outlet property="inputLimitView" destination="lFG-fH-3nO" id="laL-CC-H4f"/>
+                        <outlet property="languege" destination="pez-10-XcO" id="Han-pq-nbE"/>
                         <outlet property="linkView" destination="FVI-XQ-GE5" id="lfx-QI-ZFB"/>
                         <outlet property="noDigitsView" destination="390-VM-9Xv" id="jS2-LW-aHx"/>
                         <outlet property="onlyCharactersView" destination="fqq-jX-cHa" id="W5v-V5-iUf"/>
@@ -138,7 +159,7 @@
             <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemTealColor">
-            <color red="0.35294117647058826" green="0.78431372549019607" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.18823529411764706" green="0.69019607843137254" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

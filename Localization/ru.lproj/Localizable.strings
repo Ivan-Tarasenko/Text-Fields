@@ -1,27 +1,25 @@
-/* 
-  File.strings
-  Text Fields
-
-  Created by Иван Тарасенко on 25.11.2021.
-  
- 
-*/
 // No Digtits.
-"Только не цыфры";
-"Пишите здесь";
+"NO_Digits_field" = "БЕЗ цифр";
+"Type_here" = "Пишите здесь";
 
 //Imput Limit.
-"Предел ввода";
-"Пишите здесь";
+"Input_limit" = "Предел ввода";
+"Type_here" = "Пишите здесь";
 
 // Only characters.
-"Только символы";
-"ввввв-ддддд";
+"Only_characters" = "Только символы";
+"wwwww_ddddd" = "ввввв-ддддд";
 
 // Link.
-"Ссылка";
-"www.example.ru";
+"Link" = "Ссылка";
+"www.example.com" = "www.example.ru";
 
 // Validation rules.
-"Проверка пароля";
- "Пароль";
+"Validation_rules" = "Проверка пароля";
+"Password" = "Пароль";
+
+// Localization label password validation.
+"Min_length_characters." = "- Мин 8 символов.";
+"Min_1_digit." = "- Мин 1 цыфра.";
+"Min_1_lowercase." = "- Мин 1 строчный символ.";
+"Min_1_capital_required." = "- Мин 1 заглавный символ.";

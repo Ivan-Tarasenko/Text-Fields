@@ -16,6 +16,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var linkView: CustomView!
     @IBOutlet weak var validationRulesView: CustomView!
 
+    @IBOutlet weak var bottonChangeLanguege: UIButton!
+    @IBOutlet weak var languege: UILabel!
+
     override func viewDidLoad() {
         super.viewDidLoad()
         noDigitsView.settingView(type: .noDigits)
@@ -24,4 +27,9 @@ class ViewController: UIViewController {
         linkView.settingView(type: .link)
         validationRulesView.settingView(type: .validationRules)
     }
+
+    @IBAction func pressChangeLanguege(_ sender: UIButton) {
+        sender.tintColor = .red
+    }
+
 }
