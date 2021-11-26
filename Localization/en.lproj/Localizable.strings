@@ -1,0 +1,24 @@
+// No Digtits.
+"NO_Digits_field" = "NO Digits field";
+"Type_here" = "Type here";
+
+//Imput Limit.
+"Input_limit" = "Input limit";
+
+// Only characters.
+"Only_characters" = "Only characters";
+"wwwww_ddddd" =  "wwwww-ddddd";
+
+// Link.
+"Link" = "Link";
+"www.example.com" = "www.example.com";
+
+// Validation rules.
+"Validation_rules" = "Validation rules";
+"Password" = "Password";
+
+// Localization label password validation.
+"Min_length_characters." = "- Min length 8 characters.";
+"Min_1_digit." = "- Min 1 digit.";
+"Min_1_lowercase." = "- Min 1 lowercase.";
+"Min_1_capital_required." = "- Min 1 capital required.";

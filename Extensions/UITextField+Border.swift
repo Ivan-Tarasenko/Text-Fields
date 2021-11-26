@@ -19,9 +19,9 @@ extension UITextField {
     }
 
     func setBorder(radius: CGFloat, color: UIColor) {
-        self.layer.cornerRadius = radius
-        self.layer.borderWidth = 1.0
-        self.layer.borderColor = color.cgColor
-        self.layer.masksToBounds = true
+        layer.cornerRadius = radius
+        layer.borderWidth = 1.0
+        layer.borderColor = color.cgColor
+        layer.masksToBounds = true
     }
 }

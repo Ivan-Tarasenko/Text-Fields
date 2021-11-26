@@ -16,11 +16,11 @@ class ViewController: UIViewController {
     @IBOutlet weak var linkView: CustomView!
     @IBOutlet weak var validationRulesView: CustomView!
 
+    @IBOutlet weak var bottonChangeLanguege: UIButton!
+    @IBOutlet weak var languege: UILabel!
+
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        addsTapToScrollview()
-
         noDigitsView.settingView(type: .noDigits)
         inputLimitView.settingView(type: .inputLimit)
         onlyCharactersView.settingView(type: .onlyCharacters)
@@ -28,12 +28,8 @@ class ViewController: UIViewController {
         validationRulesView.settingView(type: .validationRules)
     }
 
-    // MARK: - Adds a tap on the scrollview to hide the keyboard outside the textfield
-    func addsTapToScrollview() {
-        self.view.addGestureRecognizer(
-            UITapGestureRecognizer(
-                target: self.view,
-                action: #selector(UIView.endEditing(_:)))
-        )
+    @IBAction func pressChangeLanguege(_ sender: UIButton) {
+        sender.tintColor = .red
     }
+
 }

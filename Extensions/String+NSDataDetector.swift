@@ -13,6 +13,6 @@ extension String {
         if let match = detector.firstMatch(in: self, options: [], range: NSRange(location: 0, length: self.utf16.count)) {
             return match.range.length == self.utf16.count
         }
-        return true
+        return false
     }
 }

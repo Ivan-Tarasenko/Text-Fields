@@ -1,0 +1,25 @@
+// No Digtits.
+"NO_Digits_field" = "БЕЗ цифр";
+"Type_here" = "Пишите здесь";
+
+//Imput Limit.
+"Input_limit" = "Предел ввода";
+"Type_here" = "Пишите здесь";
+
+// Only characters.
+"Only_characters" = "Только символы";
+"wwwww_ddddd" = "ввввв-ддддд";
+
+// Link.
+"Link" = "Ссылка";
+"www.example.com" = "www.example.ru";
+
+// Validation rules.
+"Validation_rules" = "Проверка пароля";
+"Password" = "Пароль";
+
+// Localization label password validation.
+"Min_length_characters." = "- Мин 8 символов.";
+"Min_1_digit." = "- Мин 1 цыфра.";
+"Min_1_lowercase." = "- Мин 1 строчный символ.";
+"Min_1_capital_required." = "- Мин 1 заглавный символ.";
