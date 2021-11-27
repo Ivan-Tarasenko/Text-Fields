@@ -1,3 +1,6 @@
+// Localization title label.
+"Text_Fields" = "Text Fields";
+
 // No Digtits.
 "NO_Digits_field" = "NO Digits field";
 "Type_here" = "Type here";
@@ -22,3 +25,7 @@
 "Min_1_digit." = "- Min 1 digit.";
 "Min_1_lowercase." = "- Min 1 lowercase.";
 "Min_1_capital_required." = "- Min 1 capital required.";
+
+//Localization label and button changer laguage.
+"Change_languange" = "Change laguange";
+"Label_Change" = "EN";

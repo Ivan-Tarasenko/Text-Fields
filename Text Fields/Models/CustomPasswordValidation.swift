@@ -18,12 +18,7 @@ class CustomPassValid {
 
     var progressView = UIProgressView()
 
-    let local = Localization()
-
-//    var minLengthCharText = "- Min length 8 characters."
-//    var minOneDigitText = "- Min 1 digit."
-//    var minOneLowercaseText = "- Min 1 lowercase."
-//    var minCapitalRequiredText = "- Min 1 capital required."
+    let localizator = Localization()
 
     var switchForMinChar: Bool = false {
         didSet {
@@ -31,11 +26,11 @@ class CustomPassValid {
                 progressView.progress += 0.25
                 minLengthChar.textColor = .systemGreen
                 minLengthChar.textTitle =
-                local.minChar.replacingOccurrences(of: "-", with: "✓")
+                localizator.minChar.replacingOccurrences(of: "-", with: "✓")
             } else {
                 minLengthChar.textColor = .black
                 minLengthChar.textTitle =
-                local.minChar.replacingOccurrences(of: "✓", with: "-")
+                localizator.minChar.replacingOccurrences(of: "✓", with: "-")
             }
         }
     }
@@ -46,11 +41,11 @@ class CustomPassValid {
                 progressView.progress += 0.25
                 minOneDigit.textColor = .systemGreen
                 minOneDigit.textTitle =
-                local.minOneDigit.replacingOccurrences(of: "-", with: "✓")
+                localizator.minOneDigit.replacingOccurrences(of: "-", with: "✓")
             } else {
                 minOneDigit.textColor = .black
                 minOneDigit.textTitle =
-                local.minOneDigit.replacingOccurrences(of: "✓", with: "-")
+                localizator.minOneDigit.replacingOccurrences(of: "✓", with: "-")
             }
         }
     }
@@ -61,11 +56,11 @@ class CustomPassValid {
                 progressView.progress += 0.25
                 minOneLowercase.textColor = .systemGreen
                 minOneLowercase.textTitle =
-                local.minOneLowercase.replacingOccurrences(of: "-", with: "✓")
+                localizator.minOneLowercase.replacingOccurrences(of: "-", with: "✓")
             } else {
                 minOneLowercase.textColor = .black
                 minOneLowercase.textTitle =
-                local.minOneLowercase.replacingOccurrences(of: "✓", with: "-")
+                localizator.minOneLowercase.replacingOccurrences(of: "✓", with: "-")
             }
         }
     }
@@ -76,11 +71,11 @@ class CustomPassValid {
                 progressView.progress += 0.25
                 minCapitalRequired.textColor = .systemGreen
                 minCapitalRequired.textTitle =
-                local.minOneCapitalRequired.replacingOccurrences(of: "-", with: "✓")
+                localizator.minOneCapitalRequired.replacingOccurrences(of: "-", with: "✓")
             } else {
                 minCapitalRequired.textColor = .black
                 minCapitalRequired.textTitle =
-                local.minOneCapitalRequired.replacingOccurrences(of: "✓", with: "-")
+                localizator.minOneCapitalRequired.replacingOccurrences(of: "✓", with: "-")
             }
         }
     }
@@ -115,28 +110,28 @@ class CustomPassValid {
 
         let labelFont = R.font.sfProDisplayRegular(size: 13)
         minLengthChar.font = labelFont
-        minLengthChar.textTitle = local.minChar
+        minLengthChar.textTitle = localizator.minChar
         minLengthChar.snp.makeConstraints { make in
             make.left.equalToSuperview().inset(constraintX)
             make.top.equalToSuperview().inset(85)
         }
 
         minOneDigit.font = labelFont
-        minOneDigit.textTitle = local.minOneDigit
+        minOneDigit.textTitle = localizator.minOneDigit
         minOneDigit.snp.makeConstraints { make in
             make.left.equalToSuperview().inset(constraintX)
             make.top.equalTo(minLengthChar).inset(constraintY)
         }
 
         minOneLowercase.font = labelFont
-        minOneLowercase.textTitle = local.minOneLowercase
+        minOneLowercase.textTitle = localizator.minOneLowercase
         minOneLowercase.snp.makeConstraints { make in
             make.left.equalToSuperview().inset(constraintX)
             make.top.equalTo(minOneDigit).inset(constraintY)
         }
 
         minCapitalRequired.font = labelFont
-        minCapitalRequired.textTitle = local.minOneCapitalRequired
+        minCapitalRequired.textTitle = localizator.minOneCapitalRequired
         minCapitalRequired.snp.makeConstraints { make in
             make.left.equalToSuperview().inset(constraintX)
             make.top.equalTo(minOneLowercase).inset(constraintY)

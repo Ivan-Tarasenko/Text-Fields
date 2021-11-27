@@ -1,0 +1,31 @@
+// Localization title label.
+"Text_Fields" = "文本字段";
+
+// No Digtits.
+"NO_Digits_field" = "無數字字段";
+"Type_here" = "在此處輸入";
+
+//Imput Limit.
+"Input_limit" = "輸入限制";
+
+// Only characters.
+"Only_characters" = "只有字符";
+"wwwww_ddddd" =  "wwwww-ddddd";
+
+// Link.
+"Link" = "Link";
+"www.example.com" = "www.example.cn";
+
+// Validation rules.
+"Validation_rules" = "驗證規則";
+"Password" = "密碼";
+
+// Localization label password validation.
+"Min_length_characters." = "- 最小長度為 8 個字符。.";
+"Min_1_digit." = "- 最少 1 位數字。.";
+"Min_1_lowercase." = "- 最少 1 個小寫字母。.";
+"Min_1_capital_required." = "- 最少需要 1 個資本。.";
+
+//Localization label and button changer laguage.
+"Change_languange" = "改變語言";
+"Label_Change" = "CN";
