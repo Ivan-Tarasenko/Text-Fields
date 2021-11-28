@@ -1,3 +1,6 @@
+// Localization title label.
+"Text_Fields" = "Текстовые поля";
+
 // No Digtits.
 "NO_Digits_field" = "БЕЗ цифр";
 "Type_here" = "Пишите здесь";
@@ -23,3 +26,7 @@
 "Min_1_digit." = "- Мин 1 цыфра.";
 "Min_1_lowercase." = "- Мин 1 строчный символ.";
 "Min_1_capital_required." = "- Мин 1 заглавный символ.";
+
+//Localization label and button changer laguage.
+"Change_languange" = "Сменить язык";
+"Label_Change" = "RU";

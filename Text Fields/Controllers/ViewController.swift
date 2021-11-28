@@ -16,8 +16,10 @@ class ViewController: UIViewController {
     @IBOutlet weak var linkView: CustomView!
     @IBOutlet weak var validationRulesView: CustomView!
 
-    @IBOutlet weak var bottonChangeLanguege: UIButton!
-    @IBOutlet weak var languege: UILabel!
+    @IBOutlet weak var titleLabel: UILabel!
+
+    let localizator = Localization()
+    let changeLanguage = ChangeLanguage()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,10 +28,25 @@ class ViewController: UIViewController {
         onlyCharactersView.settingView(type: .onlyCharacters)
         linkView.settingView(type: .link)
         validationRulesView.settingView(type: .validationRules)
+
+        setingChangeLanguage()
     }
 
-    @IBAction func pressChangeLanguege(_ sender: UIButton) {
-        sender.tintColor = .red
+    func localizationTitle() {
+        titleLabel.textTitle = localizator.titleLabel
     }
 
+    func setingChangeLanguage() {
+        view.addSubview(changeLanguage.changeButton)
+        view.addSubview(changeLanguage.changeLabel)
+        changeLanguage.changeButton.snp.makeConstraints { make in
+            make.top.equalTo(validationRulesView).inset(170)
+            make.left.equalToSuperview().inset(30)
+        }
+        changeLanguage.changeLabel.snp.makeConstraints { make in
+            make.top.top.equalTo(validationRulesView).inset(172)
+            make.left.equalTo(changeLanguage.changeButton).inset(160)
+        }
+        changeLanguage.buttonAction(sender: changeLanguage.changeButton)
+    }
 }

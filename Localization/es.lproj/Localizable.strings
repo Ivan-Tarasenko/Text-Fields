@@ -1,0 +1,32 @@
+// Localization title label.
+"Text_Fields" = "Campos de texto";
+
+// No Digtits.
+"NO_Digits_field" = "Sin campo de dígitos";
+"Type_here" = "Escriba aquí";
+
+//Imput Limit.
+"Input_limit" = "Límite de entrada";
+
+// Only characters.
+"Only_characters" = "Solo personajes";
+"wwwww_ddddd" =  "wwwww-ddddd";
+
+// Link.
+"Link" = "Enlace";
+"www.example.com" = "www.example.es";
+
+// Validation rules.
+"Validation_rules" = "Reglas de validación";
+"Password" = "Contraseña";
+
+// Localization label password validation.
+"Min_length_characters." = "- Longitud mínima 8 caracteres.";
+"Min_1_digit." = "- Mínimo 1 dígito.";
+"Min_1_lowercase." = "- Min 1 minúscula.";
+"Min_1_capital_required." = "- Mínimo 1 capital requerido.";
+
+//Localization label and button changer laguage.
+"Change_languange" = "Skipta um tungumál";
+"Label_Change" = "ES";
+
