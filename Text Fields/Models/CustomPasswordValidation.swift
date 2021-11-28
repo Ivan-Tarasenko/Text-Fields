@@ -138,10 +138,3 @@ class CustomPassValid {
         }
     }
 }
-
-
-
-// изменения файла для проверки git
-func test() {
-    print("ghjdthrf")
-}
