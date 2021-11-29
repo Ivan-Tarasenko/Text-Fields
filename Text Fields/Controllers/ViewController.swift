@@ -30,6 +30,7 @@ class ViewController: UIViewController {
         validationRulesView.settingView(type: .validationRules)
 
         setingChangeLanguage()
+        localizationTitle()
     }
 
     func localizationTitle() {
@@ -64,7 +65,5 @@ class ViewController: UIViewController {
             make.top.equalTo(validationRulesView).inset(170)
             make.left.equalTo(changeLanguage.ukrainianButton).inset(constraintX)
         }
-
-//        changeLanguage.buttonAction(sender: changeLanguage.russianButton)
     }
 }

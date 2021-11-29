@@ -7,17 +7,9 @@
 
 import UIKit
 
-enum BandlLang {
-    case rus
-    case end
-    case span
-    case ukr
-    case chin
-}
-
 class ChangeLanguage {
 
-    let switchLanguage: BandlLang = .rus
+    let test = "ru"
 
     lazy var russianButton: UIButton = {
         let button = UIButton()
@@ -64,35 +56,37 @@ class ChangeLanguage {
         return button
     }()
 
-    @objc func buttonAction(sender: UIButton!) -> String {
-//
-//        switch switchLanguage {
-//        case .rus:
-//            <#code#>
-//        case .end:
-//            <#code#>
-//        case .span:
-//            <#code#>
-//        case .uk:
-//            <#code#>
-//        case .chin:
-//            <#code#>
-//        }
+    @objc func buttonAction(sender: UIButton!) {
 
-        func switchLanguage() -> String {
-            switch sender.tag {
-            case 1:
-                return "ru"
-            case 2:
-                return "en"
-            case 3:
-                return "es"
-            case 4:
-                return "uk"
-            default:
-                return "zh"
-            }
-        }
-        return switchLanguage()
+        //        var testVar: String {
+        //            switch sender.tag {
+        //            case 1:
+        //                return "ru"
+        //            case 2:
+        //                return "en"
+        //            case 3:
+        //                return "es"
+        //            case 4:
+        //                return "uk"
+        //            default:
+        //                return "zh"
+        //            }
+        //        }
+                    func switchLanguage() -> String {
+                        switch sender.tag {
+                        case 1:
+                            return "ru"
+                        case 2:
+                            return "en"
+                        case 3:
+                            return "es"
+                        case 4:
+                            return "uk"
+                        default:
+                            return "zh-HK"
+                        }
+                    }
+                print(switchLanguage())
+        //        print(testVar)
     }
 }

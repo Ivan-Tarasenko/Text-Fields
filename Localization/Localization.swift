@@ -4,40 +4,43 @@
 //
 //  Created by Иван Тарасенко on 26.11.2021.
 //
-
-import Foundation
 import UIKit
 
-class Localization {
+protocol ChangeLanguageDelegate: AnyObject {
+    func getData () -> String
+}
 
-    let language = ChangeLanguage()
+class Localization {
+    weak var changeLanguageDelegate: ChangeLanguageDelegate?
+    
+//    let language = ChangeLanguage()
 
     // Localization title.
-    let titleLabel  = R.string.localizable.text_Fields(preferredLanguages: [])
+    var titleLabel  = R.string.localizable.text_Fields(preferredLanguages: [""])
 
     // Localization Text Fields.
-    let noDigit = R.string.localizable.no_Digits_field()
-    let noDigitPlaceholder = R.string.localizable.type_here()
+    let noDigit = R.string.localizable.no_Digits_field(preferredLanguages: [""])
+    let noDigitPlaceholder = R.string.localizable.type_here(preferredLanguages: [""])
 
-    let limitChar = R.string.localizable.input_limit()
-    let limitCharPlaceholder = R.string.localizable.type_here()
+    let limitChar = R.string.localizable.input_limit(preferredLanguages: [""])
+    let limitCharPlaceholder = R.string.localizable.type_here(preferredLanguages: [""])
 
-    let onlyChar = R.string.localizable.only_characters()
-    let onlyCharPlaceholder = R.string.localizable.wwwww_ddddd()
+    let onlyChar = R.string.localizable.only_characters(preferredLanguages: [""])
+    let onlyCharPlaceholder = R.string.localizable.wwwww_ddddd(preferredLanguages: [""])
 
-    let link = R.string.localizable.link()
-    let linkPlaceholder = R.string.localizable.wwwExampleCom()
+    let link = R.string.localizable.link(preferredLanguages: [""])
+    let linkPlaceholder = R.string.localizable.wwwExampleCom(preferredLanguages: [""])
 
-    let password = R.string.localizable.validation_rules()
-    let passwordPlaceholder = R.string.localizable.password()
+    let password = R.string.localizable.validation_rules(preferredLanguages: [""])
+    let passwordPlaceholder = R.string.localizable.password(preferredLanguages: [""])
 
     // Localization label password validation.
-    let minChar = R.string.localizable.min_length_characters()
-    let minOneDigit = R.string.localizable.min_1_digit()
-    let minOneLowercase = R.string.localizable.min_1_lowercase()
-    let minOneCapitalRequired = R.string.localizable.min_1_capital_required()
+    let minChar = R.string.localizable.min_length_characters(preferredLanguages: [""])
+    let minOneDigit = R.string.localizable.min_1_digit(preferredLanguages: [""])
+    let minOneLowercase = R.string.localizable.min_1_lowercase(preferredLanguages: [""])
+    let minOneCapitalRequired = R.string.localizable.min_1_capital_required(preferredLanguages: [""])
 
     // Localization label and button changer laguage.
-    let changeButton = R.string.localizable.change_languange()
-    let changeLabel = R.string.localizable.label_Change()
+    let changeButton = R.string.localizable.change_languange(preferredLanguages: [""])
+    let changeLabel = R.string.localizable.label_Change(preferredLanguages: [""])
 }
