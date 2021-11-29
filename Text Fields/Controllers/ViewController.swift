@@ -37,16 +37,34 @@ class ViewController: UIViewController {
     }
 
     func setingChangeLanguage() {
-        view.addSubview(changeLanguage.changeButton)
-        view.addSubview(changeLanguage.changeLabel)
-        changeLanguage.changeButton.snp.makeConstraints { make in
+        let constraintX = 50
+        view.addSubview(changeLanguage.englishButton)
+        view.addSubview(changeLanguage.russianButton)
+        view.addSubview(changeLanguage.spanishButton)
+        view.addSubview(changeLanguage.ukrainianButton)
+        view.addSubview(changeLanguage.chineseButton)
+
+        changeLanguage.englishButton.snp.makeConstraints { make in
             make.top.equalTo(validationRulesView).inset(170)
-            make.left.equalToSuperview().inset(30)
+            make.left.equalToSuperview().inset(constraintX)
         }
-        changeLanguage.changeLabel.snp.makeConstraints { make in
-            make.top.top.equalTo(validationRulesView).inset(172)
-            make.left.equalTo(changeLanguage.changeButton).inset(160)
+        changeLanguage.russianButton.snp.makeConstraints { make in
+            make.top.equalTo(validationRulesView).inset(170)
+            make.left.equalTo(changeLanguage.englishButton).inset(constraintX)
         }
-        changeLanguage.buttonAction(sender: changeLanguage.changeButton)
+        changeLanguage.spanishButton.snp.makeConstraints { make in
+            make.top.equalTo(validationRulesView).inset(170)
+            make.left.equalTo(changeLanguage.russianButton).inset(constraintX)
+        }
+        changeLanguage.ukrainianButton.snp.makeConstraints { make in
+            make.top.equalTo(validationRulesView).inset(170)
+            make.left.equalTo(changeLanguage.spanishButton).inset(constraintX)
+        }
+        changeLanguage.chineseButton.snp.makeConstraints { make in
+            make.top.equalTo(validationRulesView).inset(170)
+            make.left.equalTo(changeLanguage.ukrainianButton).inset(constraintX)
+        }
+
+//        changeLanguage.buttonAction(sender: changeLanguage.russianButton)
     }
 }

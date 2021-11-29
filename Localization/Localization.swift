@@ -9,32 +9,35 @@ import Foundation
 import UIKit
 
 class Localization {
+
+    let language = ChangeLanguage()
+
     // Localization title.
-    let titleLabel  = NSLocalizedString(R.string.localizable.text_Fields(), comment: "")
+    let titleLabel  = R.string.localizable.text_Fields(preferredLanguages: [])
 
     // Localization Text Fields.
-    let noDigit = NSLocalizedString(R.string.localizable.no_Digits_field(), comment: "")
-    let noDigitPlaceholder = NSLocalizedString(R.string.localizable.type_here(), comment: "")
+    let noDigit = R.string.localizable.no_Digits_field()
+    let noDigitPlaceholder = R.string.localizable.type_here()
 
-    let limitChar = NSLocalizedString(R.string.localizable.input_limit(), comment: "")
-    let limitCharPlaceholder = NSLocalizedString(R.string.localizable.type_here(), comment: "")
+    let limitChar = R.string.localizable.input_limit()
+    let limitCharPlaceholder = R.string.localizable.type_here()
 
-    let onlyChar = NSLocalizedString(R.string.localizable.only_characters(), comment: "")
-    let onlyCharPlaceholder = NSLocalizedString(R.string.localizable.wwwww_ddddd(), comment: "")
+    let onlyChar = R.string.localizable.only_characters()
+    let onlyCharPlaceholder = R.string.localizable.wwwww_ddddd()
 
-    let link = NSLocalizedString(R.string.localizable.link(), comment: "")
-    let linkPlaceholder = NSLocalizedString(R.string.localizable.wwwExampleCom(), comment: "")
+    let link = R.string.localizable.link()
+    let linkPlaceholder = R.string.localizable.wwwExampleCom()
 
-    let password = NSLocalizedString(R.string.localizable.validation_rules(), comment: "")
-    let passwordPlaceholder = NSLocalizedString(R.string.localizable.password(), comment: "")
+    let password = R.string.localizable.validation_rules()
+    let passwordPlaceholder = R.string.localizable.password()
 
     // Localization label password validation.
-    let minChar = NSLocalizedString(R.string.localizable.min_length_characters(), comment: "")
-    let minOneDigit = NSLocalizedString(R.string.localizable.min_1_digit(), comment: "")
-    let minOneLowercase = NSLocalizedString(R.string.localizable.min_1_lowercase(), comment: "")
-    let minOneCapitalRequired = NSLocalizedString(R.string.localizable.min_1_capital_required(), comment: "")
+    let minChar = R.string.localizable.min_length_characters()
+    let minOneDigit = R.string.localizable.min_1_digit()
+    let minOneLowercase = R.string.localizable.min_1_lowercase()
+    let minOneCapitalRequired = R.string.localizable.min_1_capital_required()
 
     // Localization label and button changer laguage.
-    let changeButton = NSLocalizedString(R.string.localizable.change_languange(), comment: "")
-    let changeLabel = NSLocalizedString(R.string.localizable.label_Change(), comment: "")
+    let changeButton = R.string.localizable.change_languange()
+    let changeLabel = R.string.localizable.label_Change()
 }

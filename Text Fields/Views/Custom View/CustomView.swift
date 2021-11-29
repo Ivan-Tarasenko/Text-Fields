@@ -16,7 +16,6 @@ class CustomView: UIView {
 
     var switchTextField: TextFields = .noDigits
     let model = Model()
-//    let text = Text()
     let customPassValid = CustomPassValid()
     let localizatoin = Localization()
 
