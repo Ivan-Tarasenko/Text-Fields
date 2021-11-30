@@ -17,7 +17,7 @@ class CustomView: UIView {
     var switchTextField: TextFields = .noDigits
     let model = Model()
     let customPassValid = CustomPassValid()
-    let localizatoin = Localization()
+    let localizator = Localization()
 
     private let checkMinChar = "[A-Za-z0-9]{8}"
     private  let checkDigit = "[0-9]"
@@ -133,26 +133,26 @@ class CustomView: UIView {
         switch switchTextField {
         case .noDigits:
             textField.setDefaultBorder()
-            title.textTitle = localizatoin.noDigit
-            textField.placeholder = localizatoin.noDigitPlaceholder
+            title.textTitle = localizator.noDigit
+            textField.placeholder = localizator.noDigitPlaceholder
         case .inputLimit:
             limitLabel.textTitle = "0/\(model.limitChar)"
             textField.setDefaultBorder()
-            title.textTitle = localizatoin.limitChar
-            textField.placeholder = localizatoin.limitCharPlaceholder
+            title.textTitle = localizator.limitChar
+            textField.placeholder = localizator.limitCharPlaceholder
         case .onlyCharacters:
             textField.setDefaultBorder()
-            title.textTitle = localizatoin.onlyChar
-            textField.placeholder = localizatoin.onlyCharPlaceholder
+            title.textTitle = localizator.onlyChar
+            textField.placeholder = localizator.onlyCharPlaceholder
             textField.autocapitalizationType = .words
         case .link:
             textField.setDefaultBorder()
-            title.textTitle = localizatoin.link
-            textField.placeholder = localizatoin.linkPlaceholder
+            title.textTitle = localizator.link
+            textField.placeholder = localizator.linkPlaceholder
         case .validationRules:
             textField.setDefaultBorder()
-            title.textTitle = localizatoin.password
-            textField.placeholder = localizatoin.passwordPlaceholder
+            title.textTitle = localizator.password
+            textField.placeholder = localizator.passwordPlaceholder
             textField.textContentType = .password
             textField.isSecureTextEntry = true
             customPassValid.showLabelForPasswordValidetion = false

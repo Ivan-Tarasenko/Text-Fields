@@ -13,7 +13,7 @@
 "wwwww_ddddd" =  "wwwww-ddddd";
 
 // Link.
-"Link" = "Link";
+"Link" = "连结";
 "www.example.com" = "www.example.cn";
 
 // Validation rules.
@@ -25,7 +25,3 @@
 "Min_1_digit." = "- 最少 1 位數字。.";
 "Min_1_lowercase." = "- 最少 1 個小寫字母。.";
 "Min_1_capital_required." = "- 最少需要 1 個資本。.";
-
-//Localization label and button changer laguage.
-"Change_languange" = "改變語言";
-"Label_Change" = "CN";

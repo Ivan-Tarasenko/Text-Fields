@@ -27,6 +27,3 @@
 "Min_1_lowercase." = "- Мин 1 строчный символ.";
 "Min_1_capital_required." = "- Мин 1 заглавный символ.";
 
-//Localization label and button changer laguage.
-"Change_languange" = "Сменить язык";
-"Label_Change" = "RU";

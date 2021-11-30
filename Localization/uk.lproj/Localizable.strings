@@ -25,7 +25,3 @@
 "Min_1_digit." = "- Мін. 1 цифра.";
 "Min_1_lowercase." = "- Мін. 1 нижній регістр.";
 "Min_1_capital_required." = "- Мінімальний потрібен капітал.";
-
-//Localization label and button changer laguage.
-"Change_languange" = "Змінити мову";
-"Label_Change" = "UK";

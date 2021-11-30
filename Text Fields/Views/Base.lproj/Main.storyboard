@@ -16,7 +16,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Text_Fields" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="vc" id="BYZ-38-t0r" customClass="ViewController" customModule="Text_Fields" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -68,6 +68,14 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xaU-p9-NS5">
+                                                <rect key="frame" x="159" y="728" width="57" height="31"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="reset"/>
+                                                <connections>
+                                                    <action selector="resetVC:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0Nq-AE-1Un"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
@@ -75,6 +83,7 @@
                                             <constraint firstItem="FVI-XQ-GE5" firstAttribute="top" secondItem="fqq-jX-cHa" secondAttribute="bottom" constant="24" id="9BF-zp-PWT"/>
                                             <constraint firstAttribute="bottom" secondItem="cxl-NB-McR" secondAttribute="bottom" constant="235" id="9Lx-sJ-8ER"/>
                                             <constraint firstAttribute="trailing" secondItem="3Fb-3a-eaK" secondAttribute="trailing" constant="16" id="Cnk-7k-ZRg"/>
+                                            <constraint firstAttribute="bottom" secondItem="xaU-p9-NS5" secondAttribute="bottom" constant="59" id="DgE-aS-nj4"/>
                                             <constraint firstItem="fqq-jX-cHa" firstAttribute="top" secondItem="lFG-fH-3nO" secondAttribute="bottom" constant="24" id="FF2-lO-pdH"/>
                                             <constraint firstAttribute="trailing" secondItem="fqq-jX-cHa" secondAttribute="trailing" constant="16" id="K0P-xP-uhc"/>
                                             <constraint firstItem="3Fb-3a-eaK" firstAttribute="leading" secondItem="lVr-1D-FhD" secondAttribute="leading" constant="16" id="PpH-0h-MRc"/>
@@ -84,10 +93,12 @@
                                             <constraint firstAttribute="trailing" secondItem="FVI-XQ-GE5" secondAttribute="trailing" constant="16" id="ZaR-Qp-UEp"/>
                                             <constraint firstAttribute="trailing" secondItem="lFG-fH-3nO" secondAttribute="trailing" constant="16" id="bAO-0Q-8pT"/>
                                             <constraint firstAttribute="trailing" secondItem="cxl-NB-McR" secondAttribute="trailing" constant="16" id="e9S-ea-Fpg"/>
+                                            <constraint firstAttribute="trailing" secondItem="xaU-p9-NS5" secondAttribute="trailing" constant="159" id="ffB-F1-hB5"/>
                                             <constraint firstAttribute="trailing" secondItem="390-VM-9Xv" secondAttribute="trailing" constant="16" id="gdy-Z5-utH"/>
                                             <constraint firstItem="fqq-jX-cHa" firstAttribute="leading" secondItem="lVr-1D-FhD" secondAttribute="leading" constant="16" id="gsG-B9-lkm"/>
                                             <constraint firstItem="390-VM-9Xv" firstAttribute="leading" secondItem="lVr-1D-FhD" secondAttribute="leading" constant="16" id="h9J-lq-PG7"/>
                                             <constraint firstItem="3Fb-3a-eaK" firstAttribute="top" secondItem="lVr-1D-FhD" secondAttribute="top" constant="92" id="pHy-D2-5fr"/>
+                                            <constraint firstItem="xaU-p9-NS5" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="lVr-1D-FhD" secondAttribute="leading" constant="20" symbolic="YES" id="wEg-6F-lPK"/>
                                             <constraint firstItem="lFG-fH-3nO" firstAttribute="top" secondItem="390-VM-9Xv" secondAttribute="bottom" constant="24" id="wdj-PI-1T7"/>
                                             <constraint firstItem="lFG-fH-3nO" firstAttribute="leading" secondItem="lVr-1D-FhD" secondAttribute="leading" constant="16" id="yBi-S7-Mu6"/>
                                         </constraints>

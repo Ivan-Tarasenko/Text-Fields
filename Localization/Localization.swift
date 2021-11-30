@@ -6,14 +6,7 @@
 //
 import UIKit
 
-protocol ChangeLanguageDelegate: AnyObject {
-    func getData () -> String
-}
-
 class Localization {
-    weak var changeLanguageDelegate: ChangeLanguageDelegate?
-    
-//    let language = ChangeLanguage()
 
     // Localization title.
     var titleLabel  = R.string.localizable.text_Fields(preferredLanguages: [""])
@@ -39,8 +32,4 @@ class Localization {
     let minOneDigit = R.string.localizable.min_1_digit(preferredLanguages: [""])
     let minOneLowercase = R.string.localizable.min_1_lowercase(preferredLanguages: [""])
     let minOneCapitalRequired = R.string.localizable.min_1_capital_required(preferredLanguages: [""])
-
-    // Localization label and button changer laguage.
-    let changeButton = R.string.localizable.change_languange(preferredLanguages: [""])
-    let changeLabel = R.string.localizable.label_Change(preferredLanguages: [""])
 }

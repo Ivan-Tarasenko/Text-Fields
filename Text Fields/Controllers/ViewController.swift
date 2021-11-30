@@ -17,9 +17,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var validationRulesView: CustomView!
 
     @IBOutlet weak var titleLabel: UILabel!
-
-    let localizator = Localization()
+    
     let changeLanguage = ChangeLanguage()
+    let localString = Localization()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,10 +31,12 @@ class ViewController: UIViewController {
 
         setingChangeLanguage()
         localizationTitle()
+
     }
 
     func localizationTitle() {
-        titleLabel.textTitle = localizator.titleLabel
+        titleLabel.textTitle = localString.titleLabel
+
     }
 
     func setingChangeLanguage() {
@@ -65,5 +67,13 @@ class ViewController: UIViewController {
             make.top.equalTo(validationRulesView).inset(170)
             make.left.equalTo(changeLanguage.ukrainianButton).inset(constraintX)
         }
+    }
+
+    @IBAction func resetVC(_ sender: Any) {
+
+        let vc1 = self.storyboard?.instantiateViewController(withIdentifier: "vc") as! ViewController
+        let appDlg = UIApplication.shared.delegate as? AppDelegate
+        appDlg?.window?.rootViewController = vc1
+        print("push reset")
     }
 }
