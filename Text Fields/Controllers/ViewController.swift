@@ -69,8 +69,8 @@ class ViewController: UIViewController {
         }
     }
 
+    // Restart button view.
     @IBAction func resetVC(_ sender: Any) {
-
         let vc1 = self.storyboard?.instantiateViewController(withIdentifier: "vc") as! ViewController
         let appDlg = UIApplication.shared.delegate as? AppDelegate
         appDlg?.window?.rootViewController = vc1

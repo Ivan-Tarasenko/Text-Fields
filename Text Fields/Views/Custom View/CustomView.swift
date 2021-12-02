@@ -54,50 +54,27 @@ class CustomView: UIView {
 
 // MARK: - Action for textField conected as editing changed
     @IBAction func actionTextField(_ sender: UITextField) {
-        let countCharactersInString = sender.string.count
-        var text = sender.string
+        let text = sender.string
 
         switch switchTextField {
-            // MARK: - Rules for limit character and change border
+            //  - Rules for limit character and change border
         case .inputLimit:
-            let limit = model.limitChar
-
-            limitLabel.textTitle = model.getLimit(string: text, limit: limit)
-            if countCharactersInString > limit {
+            limitLabel.textTitle = model.getLimit(string: text, limit: model.limitChar)
+            if text.count > model.limitChar {
                 tuneBorderFromFieldLimitChar = true
             } else {
                 tuneBorderFromFieldLimitChar = false
             }
-            // MARK: - Add character "-"
+            sender.attributedText = model.changeColorAfterLimit(string: sender.string)
+
+            //  - Add character "-"
         case .onlyCharacters:
-            if !model.addSeparator, countCharactersInString == model.separatorIndex {
-                text.append(model.separator)
+            if !model.addSeparator, text.count == model.separatorIndex {
+                sender.string.append(model.separator)
             }
         case .validationRules:
-            // MARK: - Checking the rules password validatin.
-            customPassValid.progressView.progress = 0
-            if text ~= checkMinChar {
-                customPassValid.switchForMinChar = true
-            } else {
-                customPassValid.switchForMinChar = false
-            }
-            if text ~= checkDigit {
-                customPassValid.switchForMinOneDigit = true
-            } else {
-                customPassValid.switchForMinOneDigit = false
-            }
-            if text ~= checkLowercase {
-                customPassValid.switchForMinOneLowercase = true
-            } else {
-                customPassValid.switchForMinOneLowercase = false
-            }
-            if text ~= checkCapitalRequired {
-                customPassValid.switchForMinCapitalRequired = true
-            } else {
-                customPassValid.switchForMinCapitalRequired = false
-            }
-            
-            model.progressBar(setProgressBar: customPassValid.progressView)
+            //  - Checking the rules password validatin.
+            passwordRules()
         default:
             break
         }
@@ -157,6 +134,33 @@ class CustomView: UIView {
             textField.isSecureTextEntry = true
             customPassValid.showLabelForPasswordValidetion = false
         }
+    }
+
+    func passwordRules() {
+        let text = textField.string
+        customPassValid.progressView.progress = 0
+        if text ~= checkMinChar {
+            customPassValid.switchForMinChar = true
+        } else {
+            customPassValid.switchForMinChar = false
+        }
+        if text ~= checkDigit {
+            customPassValid.switchForMinOneDigit = true
+        } else {
+            customPassValid.switchForMinOneDigit = false
+        }
+        if text ~= checkLowercase {
+            customPassValid.switchForMinOneLowercase = true
+        } else {
+            customPassValid.switchForMinOneLowercase = false
+        }
+        if text ~= checkCapitalRequired {
+            customPassValid.switchForMinCapitalRequired = true
+        } else {
+            customPassValid.switchForMinCapitalRequired = false
+        }
+
+        model.progressBar(setProgressBar: customPassValid.progressView)
     }
 }
 

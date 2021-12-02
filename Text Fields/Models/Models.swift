@@ -44,6 +44,15 @@ class Model {
         return countLimit
     }
 
+    func changeColorAfterLimit(string: String) -> NSMutableAttributedString {
+        let mutableString = NSMutableAttributedString(string: string)
+        if string.count > limitChar {
+            mutableString.addAttribute(.foregroundColor, value: UIColor.black, range: NSRange(location: 0, length: limitChar))
+            mutableString.addAttribute(.foregroundColor, value: UIColor.red, range: NSRange(location: limitChar, length: string.count - limitChar))
+        }
+        return mutableString
+    }
+
     // MARK: - Only characters
     let separator = "-"
     let separatorIndex = 5
