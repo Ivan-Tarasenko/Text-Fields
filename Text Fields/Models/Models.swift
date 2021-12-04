@@ -47,8 +47,14 @@ class Model {
     func changeColorAfterLimit(string: String) -> NSMutableAttributedString {
         let mutableString = NSMutableAttributedString(string: string)
         if string.count > limitChar {
-            mutableString.addAttribute(.foregroundColor, value: UIColor.black, range: NSRange(location: 0, length: limitChar))
-            mutableString.addAttribute(.foregroundColor, value: UIColor.red, range: NSRange(location: limitChar, length: string.count - limitChar))
+            mutableString.addAttribute(.foregroundColor,
+                                       value: UIColor.black,
+                                       range: NSRange(location: 0, length: limitChar)
+            )
+            mutableString.addAttribute(.foregroundColor,
+                                       value: UIColor.red,
+                                       range: NSRange(location: limitChar, length: string.count - limitChar)
+            )
         }
         return mutableString
     }
@@ -76,7 +82,6 @@ class Model {
     func linkUrl(url: String) {
         guard let url = URL(string: url) else { return }
         UIApplication.shared.open(url, options: [:], completionHandler: nil)
-
     }
 
     func detectedLink (string: String) -> String {
