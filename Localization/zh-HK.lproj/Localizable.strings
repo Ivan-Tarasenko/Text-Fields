@@ -1,11 +1,11 @@
 // Localization title label.
 "Text_Fields" = "文本字段";
 
-// No Digtits.
+// No Digits.
 "NO_Digits_field" = "無數字字段";
 "Type_here" = "在此處輸入";
 
-//Imput Limit.
+//Input Limit.
 "Input_limit" = "輸入限制";
 
 // Only characters.

@@ -2,7 +2,7 @@
 //  Models.swift
 //  Text Fields
 //
-//  Created by Иван Тарасенко on 22.10.2021.
+//  Created by Иван Тарасенко on 22.10.T2021.
 //
 
 import UIKit
@@ -33,9 +33,9 @@ class Model {
 
         switch string.count {
         case nil:
-            countLimit = "0/\(limit)"
+            countLimit = "\(limit)/\(limit)"
         case 0...limit:
-            countLimit = "\(string.count)/\(limit)"
+            countLimit = "\(limit - string.count)/\(limit)"
         case limit...string.count:
             countLimit = "\(limit - string.count)/\(limit)"
         default:
@@ -78,7 +78,7 @@ class Model {
         return sting.isEmpty || NSPredicate(format: format, regex).evaluate(with: text)
     }
 
-    // MARK: - link validaty check and transition on it
+    // MARK: - link validity check and transition on it
     func linkUrl(url: String) {
         guard let url = URL(string: url) else { return }
         UIApplication.shared.open(url, options: [:], completionHandler: nil)
@@ -96,8 +96,13 @@ class Model {
         }
         return urlLink
     }
+
+    // MARK: - Rules password validation.
+    func checkingPasswordRules(string: String, rule: String) -> Bool {
+        string ~= rule
+    }
     
-    // MARK: - Tuneing  progressBar.
+    // MARK: - Tuning  progressBar.
     func progressBar(setProgressBar: UIProgressView) {
         switch setProgressBar.progress {
         case 0...0.25:

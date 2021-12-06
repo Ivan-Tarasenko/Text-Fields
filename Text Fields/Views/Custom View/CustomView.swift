@@ -9,30 +9,30 @@ import UIKit
 import SnapKit
 
 class CustomView: UIView {
-
+    
     @IBOutlet weak var title: UILabel!
     @IBOutlet weak var textField: UITextField!
     @IBOutlet weak var limitLabel: UILabel!
-
+    
     var switchTextField: TextFields = .noDigits
     let model = Model()
     let customPassValid = CustomPassValid()
-    let localizator = Localization()
-
+    let localizing = Localization()
+    
     private let checkMinChar = "[A-Za-z0-9]{8}"
-    private  let checkDigit = "[0-9]"
-    private  let checkLowercase = "[a-z]"
-    private  let checkCapitalRequired = "[A-Z]"
-
+    private let checkDigit = "[0-9]"
+    private let checkLowercase = "[a-z]"
+    private let checkCapitalRequired = "[A-Z]"
+    
     private var tuneBorderForTextField: Bool = false {
         didSet {
             tuneBorderForTextField ?
             textField.setBorder(radius: 10, color: UIColor.systemBlue) :
             textField.setBorder(radius: 10, color: UIColor.systemGray6)
-
+            
         }
     }
-
+    
     private var tuneBorderFromFieldLimitChar: Bool = false {
         didSet {
             tuneBorderFromFieldLimitChar ?
@@ -40,22 +40,22 @@ class CustomView: UIView {
             textField.setBorder(radius: 10, color: UIColor.systemBlue)
         }
     }
-
+    
     required init?(coder: NSCoder) {
         super.init(coder: coder)
         configureView()
         textField.delegate = self
-
+        
         addLabelPasswordValidation()
         addProgressBar()
-        customPassValid.showLabelForPasswordValidetion = true
+        customPassValid.showLabelForPasswordValidation = true
         customPassValid.progressView.isHidden = true
     }
-
-// MARK: - Action for textField conected as editing changed
+    
+    // MARK: - Action for textField connected as editing changed
     @IBAction func actionTextField(_ sender: UITextField) {
         let text = sender.string
-
+        
         switch switchTextField {
             //  - Rules for limit character and change border
         case .inputLimit:
@@ -66,14 +66,14 @@ class CustomView: UIView {
                 tuneBorderFromFieldLimitChar = false
             }
             sender.attributedText = model.changeColorAfterLimit(string: sender.string)
-
-            //  - Add character "-"
+            
         case .onlyCharacters:
+            //  - Add character "-"
             if !model.addSeparator, text.count == model.separatorIndex {
                 sender.string.append(model.separator)
             }
         case .validationRules:
-            //  - Checking the rules password validatin.
+            //  - Checking the rules password validation.
             passwordRules()
         default:
             break
@@ -98,83 +98,88 @@ class CustomView: UIView {
         addSubview(customPassValid.minCapitalRequired)
         customPassValid.setLabelPasswordValidation()
     }
-
+    
     // MARK: - add progressBar to view.
     func addProgressBar() {
         addSubview(customPassValid.progressView)
         customPassValid.setProgressView()
     }
-
+    
     // MARK: - configuration of individual views.
     func configureTextFields() {
         switch switchTextField {
         case .noDigits:
             textField.setDefaultBorder()
-            title.textTitle = localizator.noDigit
-            textField.placeholder = localizator.noDigitPlaceholder
+            title.textTitle = localizing.noDigit
+            textField.placeholder = localizing.noDigitPlaceholder
         case .inputLimit:
-            limitLabel.textTitle = "0/\(model.limitChar)"
+            limitLabel.textTitle = "\(model.limitChar)/\(model.limitChar)"
             textField.setDefaultBorder()
-            title.textTitle = localizator.limitChar
-            textField.placeholder = localizator.limitCharPlaceholder
+            title.textTitle = localizing.limitChar
+            textField.placeholder = localizing.limitCharPlaceholder
         case .onlyCharacters:
             textField.setDefaultBorder()
-            title.textTitle = localizator.onlyChar
-            textField.placeholder = localizator.onlyCharPlaceholder
+            title.textTitle = localizing.onlyChar
+            textField.placeholder = localizing.onlyCharPlaceholder
             textField.autocapitalizationType = .words
         case .link:
             textField.setDefaultBorder()
-            title.textTitle = localizator.link
-            textField.placeholder = localizator.linkPlaceholder
+            title.textTitle = localizing.link
+            textField.placeholder = localizing.linkPlaceholder
         case .validationRules:
             textField.setDefaultBorder()
-            title.textTitle = localizator.password
-            textField.placeholder = localizator.passwordPlaceholder
+            title.textTitle = localizing.password
+            textField.placeholder = localizing.passwordPlaceholder
             textField.textContentType = .password
             textField.isSecureTextEntry = true
-            customPassValid.showLabelForPasswordValidetion = false
+            customPassValid.showLabelForPasswordValidation = false
         }
     }
-
+    
     func passwordRules() {
         let text = textField.string
         customPassValid.progressView.progress = 0
-        if text ~= checkMinChar {
+
+        if model.checkingPasswordRules(string: text, rule: checkMinChar) {
             customPassValid.switchForMinChar = true
         } else {
             customPassValid.switchForMinChar = false
         }
-        if text ~= checkDigit {
+
+        if model.checkingPasswordRules(string: text, rule: checkDigit) {
             customPassValid.switchForMinOneDigit = true
         } else {
             customPassValid.switchForMinOneDigit = false
         }
-        if text ~= checkLowercase {
+
+        if model.checkingPasswordRules(string: text, rule: checkLowercase) {
             customPassValid.switchForMinOneLowercase = true
         } else {
             customPassValid.switchForMinOneLowercase = false
         }
-        if text ~= checkCapitalRequired {
+
+        if model.checkingPasswordRules(string: text, rule: checkCapitalRequired) {
             customPassValid.switchForMinCapitalRequired = true
         } else {
             customPassValid.switchForMinCapitalRequired = false
         }
-
+        
         model.progressBar(setProgressBar: customPassValid.progressView)
     }
 }
 
 extension CustomView: UITextFieldDelegate {
-
+    
     // MARK: - Perform reverse by button "Return"
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         if switchTextField == .link {
+            print(model.linkUrl(url: model.detectedLink(string: textField.string)))
             model.linkUrl(url: model.detectedLink(string: textField.string))
         }
         self.endEditing(true)
         return false
     }
-
+    
     // MARK: - Input tracking
     func textFieldDidBeginEditing(_ textField: UITextField) {
         tuneBorderForTextField = true
@@ -182,7 +187,7 @@ extension CustomView: UITextFieldDelegate {
             customPassValid.progressView.isHidden = false
         }
     }
-
+    
     func textFieldDidEndEditing(_ textField: UITextField) {
         tuneBorderForTextField = false
         if customPassValid.progressView.progress == 0 {

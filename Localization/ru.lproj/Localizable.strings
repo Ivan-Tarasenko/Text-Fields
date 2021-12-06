@@ -1,11 +1,11 @@
 // Localization title label.
 "Text_Fields" = "Текстовые поля";
 
-// No Digtits.
+// No Digits.
 "NO_Digits_field" = "БЕЗ цифр";
 "Type_here" = "Пишите здесь";
 
-//Imput Limit.
+//Input Limit.
 "Input_limit" = "Предел ввода";
 "Type_here" = "Пишите здесь";
 

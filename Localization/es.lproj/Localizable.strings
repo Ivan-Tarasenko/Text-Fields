@@ -1,11 +1,11 @@
 // Localization title label.
 "Text_Fields" = "Campos de texto";
 
-// No Digtits.
+// No Digits.
 "NO_Digits_field" = "Sin campo de dígitos";
 "Type_here" = "Escriba aquí";
 
-//Imput Limit.
+//Input Limit.
 "Input_limit" = "Límite de entrada";
 
 // Only characters.

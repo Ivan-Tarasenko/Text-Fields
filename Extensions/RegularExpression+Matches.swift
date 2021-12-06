@@ -1,5 +1,5 @@
 //
-//  RegularXpression+Matches.swift
+//  RegularExpression+Matches.swift
 //  Text Fields
 //
 //  Created by Иван Тарасенко on 11.11.2021.
@@ -12,7 +12,7 @@ extension NSRegularExpression {
         do {
             try self.init(pattern: pattern)
         } catch {
-            preconditionFailure("I llegal regular expression \(pattern).")
+            preconditionFailure("I legal regular expression \(pattern).")
         }
     }
 

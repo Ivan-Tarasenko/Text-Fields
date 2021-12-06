@@ -1,11 +1,11 @@
 // Localization title label.
 "Text_Fields" = "Текстові поля";
 
-// No Digtits.
+// No Digits.
 "NO_Digits_field" = "БЕЗ цифр";
 "Type_here" = "Введіть тут";
 
-//Imput Limit.
+//Input Limit.
 "Input_limit" = "Обмеження введення";
 
 // Only characters.
