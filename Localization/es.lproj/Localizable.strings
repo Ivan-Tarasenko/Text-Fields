@@ -25,4 +25,5 @@
 "Min_1_digit." = "- Mínimo 1 dígito.";
 "Min_1_lowercase." = "- Min 1 minúscula.";
 "Min_1_capital_required." = "- Mínimo 1 capital requerido.";
-
+"special_characters_are_not_allowed" = "❌ No se permiten caracteres especiales";
+"only English characters" = "❌ Solo Caracteres en inglés";

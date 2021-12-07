@@ -23,6 +23,8 @@ class CustomView: UIView {
     private let checkDigit = "[0-9]"
     private let checkLowercase = "[a-z]"
     private let checkCapitalRequired = "[A-Z]"
+    private let checkSpecialChar = "[!-)@^*]"
+    private let checkEnglishChar = "[а-яА-Я]"
     
     private var tuneBorderForTextField: Bool = false {
         didSet {
@@ -50,6 +52,7 @@ class CustomView: UIView {
         addProgressBar()
         customPassValid.showLabelForPasswordValidation = true
         customPassValid.progressView.isHidden = true
+        customPassValid.showLabelForbiddenChar = true
     }
     
     // MARK: - Action for textField connected as editing changed
@@ -96,6 +99,8 @@ class CustomView: UIView {
         addSubview(customPassValid.minOneDigit)
         addSubview(customPassValid.minOneLowercase)
         addSubview(customPassValid.minCapitalRequired)
+        addSubview(customPassValid.notSpecialChar)
+        addSubview(customPassValid.onlyEnglishChar)
         customPassValid.setLabelPasswordValidation()
     }
     
@@ -135,7 +140,7 @@ class CustomView: UIView {
             customPassValid.showLabelForPasswordValidation = false
         }
     }
-    
+    // MARK: - Rules for check password input.
     func passwordRules() {
         let text = textField.string
         customPassValid.progressView.progress = 0
@@ -162,6 +167,18 @@ class CustomView: UIView {
             customPassValid.switchForMinCapitalRequired = true
         } else {
             customPassValid.switchForMinCapitalRequired = false
+        }
+
+        if model.checkingPasswordRules(string: text, rule: checkSpecialChar) {
+            customPassValid.notSpecialChar.isHidden = false
+        } else {
+            customPassValid.notSpecialChar.isHidden = true
+        }
+
+        if model.checkingPasswordRules(string: text, rule: checkEnglishChar) {
+            customPassValid.onlyEnglishChar.isHidden = false
+        } else {
+            customPassValid.onlyEnglishChar.isHidden = true
         }
         
         model.progressBar(setProgressBar: customPassValid.progressView)

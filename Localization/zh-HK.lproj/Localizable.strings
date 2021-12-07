@@ -25,3 +25,6 @@
 "Min_1_digit." = "- 最少 1 位數字。.";
 "Min_1_lowercase." = "- 最少 1 個小寫字母。.";
 "Min_1_capital_required." = "- 最少需要 1 個資本。.";
+"special_characters_are_not_allowed" = "❌ 不允许使用特殊字符";
+"only English characters" = "❌ 只有英文字符";
+
