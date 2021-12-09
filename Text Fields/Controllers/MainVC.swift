@@ -17,9 +17,11 @@ class ViewController: UIViewController {
     @IBOutlet weak var validationRulesView: CustomView!
 
     @IBOutlet weak var titleLabel: UILabel!
-    
+    @IBOutlet weak var goTabBar: UIButton!
+
     //    let changeLanguage = ChangeLanguage()
     let localString = Localization()
+    let customPassValid = CustomPassValid()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,14 +31,9 @@ class ViewController: UIViewController {
         linkView.settingView(type: .link)
         validationRulesView.settingView(type: .validationRules)
 
-        //        settingChangeLanguage()
-        localizationTitle()
-
-    }
-
-    func localizationTitle() {
         titleLabel.textTitle = localString.titleLabel
-
+        //        settingChangeLanguage()
+        createAccesibilityIdentifiersMainVC()
     }
 
     //    func settingChangeLanguage() {

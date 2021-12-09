@@ -25,5 +25,5 @@
 "Min_1_digit." = "- Min 1 digit.";
 "Min_1_lowercase." = "- Min 1 lowercase.";
 "Min_1_capital_required." = "- Min 1 capital required.";
-"special_characters_are_not_allowed" = "❌ Special characters are not allowed";
-"only English characters" = "❌ Only English characters";
+"special_characters_are_not_allowed" = "✘ Special characters are not allowed";
+"only English characters" = "✘ Only English characters";

@@ -31,6 +31,11 @@
 		1A37ED69275A38E500653E29 /* Link.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A37ED68275A38E500653E29 /* Link.storyboard */; };
 		1A37ED6B275A38F600653E29 /* Password.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A37ED6A275A38F600653E29 /* Password.storyboard */; };
 		1A471EDA271B4D440066CCB5 /* UILabel+SafeText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A471ED9271B4D440066CCB5 /* UILabel+SafeText.swift */; };
+		1A553854275F81370056D3A5 /* Text_FieldsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A553853275F81370056D3A5 /* Text_FieldsUITests.swift */; };
+		1A553856275F81370056D3A5 /* Text_FieldsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A553855275F81370056D3A5 /* Text_FieldsUITestsLaunchTests.swift */; };
+		1A55385E2760C7CF0056D3A5 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A55385D2760C7CF0056D3A5 /* MainViewController.swift */; };
+		1A5538612761B2FC0056D3A5 /* CustomPassValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5538602761B2FC0056D3A5 /* CustomPassValidation.swift */; };
+		1A5538632761D49C0056D3A5 /* IDElements.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5538622761D49C0056D3A5 /* IDElements.swift */; };
 		1A553FB7273CB345001A03AF /* RegularExpression+Matches.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A553FB6273CB345001A03AF /* RegularExpression+Matches.swift */; };
 		1A772609274BBE4E00851677 /* CustomPasswordValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A772608274BBE4E00851677 /* CustomPasswordValidation.swift */; };
 		1A77260B274DD26600851677 /* String+StringComparison.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A77260A274DD26600851677 /* String+StringComparison.swift */; };
@@ -44,6 +49,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		1A553857275F81370056D3A5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1A03A2D126F5B406007113E5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1A03A2D826F5B406007113E5;
+			remoteInfo = "Text Fields";
+		};
 		1A9A63E3275C7FD200C32557 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 1A03A2D126F5B406007113E5 /* Project object */;
@@ -80,6 +92,12 @@
 		1A37ED68275A38E500653E29 /* Link.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Link.storyboard; sourceTree = "<group>"; };
 		1A37ED6A275A38F600653E29 /* Password.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Password.storyboard; sourceTree = "<group>"; };
 		1A471ED9271B4D440066CCB5 /* UILabel+SafeText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+SafeText.swift"; sourceTree = "<group>"; };
+		1A553851275F81370056D3A5 /* Text FieldsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Text FieldsUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1A553853275F81370056D3A5 /* Text_FieldsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Text_FieldsUITests.swift; sourceTree = "<group>"; };
+		1A553855275F81370056D3A5 /* Text_FieldsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Text_FieldsUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		1A55385D2760C7CF0056D3A5 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		1A5538602761B2FC0056D3A5 /* CustomPassValidation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPassValidation.swift; sourceTree = "<group>"; };
+		1A5538622761D49C0056D3A5 /* IDElements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IDElements.swift; sourceTree = "<group>"; };
 		1A553FB6273CB345001A03AF /* RegularExpression+Matches.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RegularExpression+Matches.swift"; sourceTree = "<group>"; };
 		1A772608274BBE4E00851677 /* CustomPasswordValidation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPasswordValidation.swift; sourceTree = "<group>"; };
 		1A77260A274DD26600851677 /* String+StringComparison.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+StringComparison.swift"; sourceTree = "<group>"; };
@@ -109,6 +127,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		1A55384E275F81370056D3A5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		1A9A63DC275C7FD200C32557 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -127,6 +152,7 @@
 				1A03A2F326F5B4A4007113E5 /* Supporting */,
 				1AD11E91274FBC4700D255A2 /* Localization */,
 				1A9A63E0275C7FD200C32557 /* Text FieldsUnitTests */,
+				1A553852275F81370056D3A5 /* Text FieldsUITests */,
 				1A03A2DA26F5B406007113E5 /* Products */,
 				EA50B4596736FCD4CB242708 /* Pods */,
 				1FF03A75C22B41C84F892071 /* Frameworks */,
@@ -138,6 +164,7 @@
 			children = (
 				1A03A2D926F5B406007113E5 /* Text Fields.app */,
 				1A9A63DF275C7FD200C32557 /* Text FieldsUnitTests.xctest */,
+				1A553851275F81370056D3A5 /* Text FieldsUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -217,6 +244,7 @@
 		1A03A30026FC53FE007113E5 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				1A55385C2760C7480056D3A5 /* Accessibility */,
 				1A03A30126FC543E007113E5 /* UIView+NibLoading+Border.swift */,
 				1A03A30426FDA596007113E5 /* UITextField+Border.swift */,
 				1A471ED9271B4D440066CCB5 /* UILabel+SafeText.swift */,
@@ -240,6 +268,25 @@
 				1A03A2E726F5B407007113E5 /* LaunchScreen.storyboard */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		1A553852275F81370056D3A5 /* Text FieldsUITests */ = {
+			isa = PBXGroup;
+			children = (
+				1A553853275F81370056D3A5 /* Text_FieldsUITests.swift */,
+				1A553855275F81370056D3A5 /* Text_FieldsUITestsLaunchTests.swift */,
+				1A5538622761D49C0056D3A5 /* IDElements.swift */,
+			);
+			path = "Text FieldsUITests";
+			sourceTree = "<group>";
+		};
+		1A55385C2760C7480056D3A5 /* Accessibility */ = {
+			isa = PBXGroup;
+			children = (
+				1A55385D2760C7CF0056D3A5 /* MainViewController.swift */,
+				1A5538602761B2FC0056D3A5 /* CustomPassValidation.swift */,
+			);
+			path = Accessibility;
 			sourceTree = "<group>";
 		};
 		1A9A63E0275C7FD200C32557 /* Text FieldsUnitTests */ = {
@@ -300,6 +347,24 @@
 			productReference = 1A03A2D926F5B406007113E5 /* Text Fields.app */;
 			productType = "com.apple.product-type.application";
 		};
+		1A553850275F81370056D3A5 /* Text FieldsUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1A55385B275F81370056D3A5 /* Build configuration list for PBXNativeTarget "Text FieldsUITests" */;
+			buildPhases = (
+				1A55384D275F81370056D3A5 /* Sources */,
+				1A55384E275F81370056D3A5 /* Frameworks */,
+				1A55384F275F81370056D3A5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1A553858275F81370056D3A5 /* PBXTargetDependency */,
+			);
+			name = "Text FieldsUITests";
+			productName = "Text FieldsUITests";
+			productReference = 1A553851275F81370056D3A5 /* Text FieldsUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		1A9A63DE275C7FD200C32557 /* Text FieldsUnitTests */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1A9A63E7275C7FD200C32557 /* Build configuration list for PBXNativeTarget "Text FieldsUnitTests" */;
@@ -330,6 +395,10 @@
 					1A03A2D826F5B406007113E5 = {
 						CreatedOnToolsVersion = 12.5;
 					};
+					1A553850275F81370056D3A5 = {
+						CreatedOnToolsVersion = 13.1;
+						TestTargetID = 1A03A2D826F5B406007113E5;
+					};
 					1A9A63DE275C7FD200C32557 = {
 						CreatedOnToolsVersion = 13.1;
 						TestTargetID = 1A03A2D826F5B406007113E5;
@@ -355,6 +424,7 @@
 			targets = (
 				1A03A2D826F5B406007113E5 /* Text Fields */,
 				1A9A63DE275C7FD200C32557 /* Text FieldsUnitTests */,
+				1A553850275F81370056D3A5 /* Text FieldsUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -376,6 +446,13 @@
 				1A03A2F726F6EA0E007113E5 /* CustomView.xib in Resources */,
 				1A37ED63275A150300653E29 /* NoDigit.storyboard in Resources */,
 				1A37ED65275A191700653E29 /* LimitCharacter.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1A55384F275F81370056D3A5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -487,13 +564,25 @@
 				1A77260B274DD26600851677 /* String+StringComparison.swift in Sources */,
 				1A37ED5B2758F72200653E29 /* LimitCharacter.swift in Sources */,
 				1AA344DE2732622600F8F6BA /* String+NSDataDetector.swift in Sources */,
+				1A55385E2760C7CF0056D3A5 /* MainViewController.swift in Sources */,
 				1A03A2DF26F5B406007113E5 /* SceneDelegate.swift in Sources */,
 				1AD11E9D2750BE4B00D255A2 /* Localization.swift in Sources */,
 				1A471EDA271B4D440066CCB5 /* UILabel+SafeText.swift in Sources */,
 				1A37ED5F2758F75700653E29 /* Link.swift in Sources */,
+				1A5538612761B2FC0056D3A5 /* CustomPassValidation.swift in Sources */,
 				1A03A2FA26F6EE53007113E5 /* CustomView.swift in Sources */,
 				1A03868E272325CF00C281A4 /* Models.swift in Sources */,
 				1A37ED5D2758F73C00653E29 /* OnlyCharacter.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1A55384D275F81370056D3A5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1A553856275F81370056D3A5 /* Text_FieldsUITestsLaunchTests.swift in Sources */,
+				1A5538632761D49C0056D3A5 /* IDElements.swift in Sources */,
+				1A553854275F81370056D3A5 /* Text_FieldsUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -508,6 +597,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		1A553858275F81370056D3A5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1A03A2D826F5B406007113E5 /* Text Fields */;
+			targetProxy = 1A553857275F81370056D3A5 /* PBXContainerItemProxy */;
+		};
 		1A9A63E4275C7FD200C32557 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 1A03A2D826F5B406007113E5 /* Text Fields */;
@@ -706,6 +800,52 @@
 			};
 			name = Release;
 		};
+		1A553859275F81370056D3A5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2TFP9B86SX;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Inan.Text-FieldsUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Text Fields";
+			};
+			name = Debug;
+		};
+		1A55385A275F81370056D3A5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2TFP9B86SX;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Inan.Text-FieldsUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Text Fields";
+			};
+			name = Release;
+		};
 		1A9A63E5275C7FD200C32557 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -771,6 +911,15 @@
 			buildConfigurations = (
 				1A03A2EE26F5B407007113E5 /* Debug */,
 				1A03A2EF26F5B407007113E5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1A55385B275F81370056D3A5 /* Build configuration list for PBXNativeTarget "Text FieldsUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1A553859275F81370056D3A5 /* Debug */,
+				1A55385A275F81370056D3A5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

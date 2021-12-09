@@ -26,5 +26,5 @@
 "Min_1_digit." = "- Мин 1 цыфра.";
 "Min_1_lowercase." = "- Мин 1 строчный символ.";
 "Min_1_capital_required." = "- Мин 1 заглавный символ.";
-"special_characters_are_not_allowed" = "❌ Cпецсимволы недопустимы";
-"only English characters" = "❌ Tолько английские символы";
+"special_characters_are_not_allowed" = "✘ Cпецсимволы недопустимы";
+"only English characters" = "✘ Tолько английские символы";

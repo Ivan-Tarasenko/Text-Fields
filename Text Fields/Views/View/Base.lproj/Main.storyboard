@@ -125,6 +125,7 @@
                     <navigationItem key="navigationItem" title="All Text Field" id="SqA-fI-7VQ"/>
                     <size key="freeformSize" width="375" height="812"/>
                     <connections>
+                        <outlet property="goTabBar" destination="a2c-bT-oya" id="DCa-QM-JXL"/>
                         <outlet property="inputLimitView" destination="lFG-fH-3nO" id="laL-CC-H4f"/>
                         <outlet property="linkView" destination="FVI-XQ-GE5" id="lfx-QI-ZFB"/>
                         <outlet property="noDigitsView" destination="390-VM-9Xv" id="jS2-LW-aHx"/>
@@ -215,6 +216,7 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="W1S-OK-Yj5"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="RpI-4d-H8K">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>

@@ -25,5 +25,5 @@
 "Min_1_digit." = "- Мін. 1 цифра.";
 "Min_1_lowercase." = "- Мін. 1 нижній регістр.";
 "Min_1_capital_required." = "- Мінімальний потрібен капітал.";
-"special_characters_are_not_allowed" = "❌ Спеціальні символи не допускаються";
-"only English characters" = "❌ Тільки англійські символи";
+"special_characters_are_not_allowed" = "✘ Спеціальні символи не допускаються";
+"only English characters" = "✘ Тільки англійські символи";
