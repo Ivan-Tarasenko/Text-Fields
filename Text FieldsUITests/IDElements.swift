@@ -43,4 +43,3 @@ struct AccessibilityIdentifierMainVC {
 
     let goTabBar = "Button_TabBar"
 }
-

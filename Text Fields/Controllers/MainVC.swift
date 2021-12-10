@@ -16,12 +16,13 @@ class ViewController: UIViewController {
     @IBOutlet weak var linkView: CustomView!
     @IBOutlet weak var validationRulesView: CustomView!
 
-    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var mainView: UIView!
     @IBOutlet weak var goTabBar: UIButton!
 
     //    let changeLanguage = ChangeLanguage()
     let localString = Localization()
     let customPassValid = CustomPassValid()
+    let titleView = TitleView()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,12 +31,20 @@ class ViewController: UIViewController {
         onlyCharactersView.settingView(type: .onlyCharacters)
         linkView.settingView(type: .link)
         validationRulesView.settingView(type: .validationRules)
-
-        titleLabel.textTitle = localString.titleLabel
         //        settingChangeLanguage()
         createAccesibilityIdentifiersMainVC()
+        setTitle()
     }
 
+    func setTitle() {
+        titleView.title.textTitle = localString.titleLabelAll
+        mainView.addSubview(titleView.title)
+        titleView.title.snp.makeConstraints { make in
+            make.top.equalToSuperview().inset(31)
+            make.right.left.equalToSuperview().inset(16)
+        }
+//        titleView.setTitle()
+    }
     //    func settingChangeLanguage() {
     //        let constraintX = 50
     //        view.addSubview(changeLanguage.englishButton)

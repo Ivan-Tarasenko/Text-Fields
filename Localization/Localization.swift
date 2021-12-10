@@ -9,7 +9,12 @@ import UIKit
 class Localization {
 
     // Localization title.
-    var titleLabel  = R.string.localizable.text_Fields()
+    var titleLabelAll  = R.string.localizable.text_Fields_All()
+    var titleLabelNoDigit  = R.string.localizable.text_Fields_NoDigit()
+    var titleLabelLimit  = R.string.localizable.text_Fields_LimitChar()
+    var titleLabelOnlyChar  = R.string.localizable.text_Fields_OnlyChar()
+    var titleLabelLink  = R.string.localizable.text_Fields_Link()
+    var titleLabelPass  = R.string.localizable.text_Fields_Password()
 
     // Localization Text Fields.
     let noDigit = R.string.localizable.no_Digits_field()

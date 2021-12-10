@@ -32,10 +32,11 @@
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="dZf-kv-yvb" secondAttribute="trailing" constant="16" id="lmc-dv-zgD"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Limit" image="arrow.right.to.line.circle" selectedImage="arrow.right.to.line.circle" catalog="system" id="ocI-8f-4eR"/>
+                    <tabBarItem key="tabBarItem" title="Limit" image="arrow.right.to.line.circle" catalog="system" selectedImage="arrow.right.to.line.circle" id="ocI-8f-4eR"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="customViewLimit" destination="dZf-kv-yvb" id="Qjs-nI-Kww"/>
+                        <outlet property="mainView" destination="5EZ-qb-Rvc" id="VAQ-HY-VNS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -44,7 +45,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="arrow.right.to.line.circle" width="128" height="128"/>
         <image name="arrow.right.to.line.circle" catalog="system" width="128" height="121"/>
         <systemColor name="systemGreenColor">
             <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

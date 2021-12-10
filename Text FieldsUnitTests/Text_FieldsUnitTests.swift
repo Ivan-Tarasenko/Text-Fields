@@ -30,7 +30,6 @@ class TextFieldsUnitTests: XCTestCase {
         let string1 = ""
         let string2 = "qwerty"
         let string3 = "123Fdf45"
-
         XCTAssertNotNil(sut.noDigit(string: string1))
         XCTAssertTrue(sut.noDigit(string: string2))
         XCTAssertFalse(sut.noDigit(string: string3))
@@ -43,7 +42,6 @@ class TextFieldsUnitTests: XCTestCase {
         let limitNotExceeded = "4/\(limit)"
         let limitExceeded = "23/\(limit)"
         let limitChar = sut.getLimit(string: string, limit: limit)
-
         XCTAssertNotNil(limitChar)
         XCTAssertEqual(limitChar, limitNotExceeded)
         XCTAssertNotEqual(limitChar, limitExceeded)
@@ -57,7 +55,6 @@ class TextFieldsUnitTests: XCTestCase {
         let string3 = "qwert-12345"
         let string4 = "qwert-trewq"
         let string5 = "qwert-123456789"
-
         XCTAssertNotNil(sut.validCharacter(text: string1, replacement: string0))
         XCTAssertTrue(sut.validCharacter(text: string1, replacement: string0))
         XCTAssertFalse(sut.validCharacter(text: string2, replacement: string0))
@@ -71,12 +68,11 @@ class TextFieldsUnitTests: XCTestCase {
         let string1 = "there is a link here google.com"
         let string2 = "there isn't a link here http://google"
         let string3 = "here another link www.google.com"
-        let link1 = "https://google.com"
-        let link2 = "https://www.google.com"
-
+        let link1 = "google.com"
+        let link2 = "www.google.com"
         XCTAssertNotNil(sut.detectedLink(string: string1))
-        XCTAssertEqual(sut.detectedLink(string: string1), link1)
         XCTAssertNotEqual(sut.detectedLink(string: string2), link1)
+        XCTAssertEqual(sut.detectedLink(string: string1), link1)
         XCTAssertEqual(sut.detectedLink(string: string3), link2)
     }
 
@@ -91,7 +87,6 @@ class TextFieldsUnitTests: XCTestCase {
         let checkTwo = "[0-9]"
         let checkThree = "[a-z]"
         let checkFour = "[A-Z]"
-
         let stringOne = ""
         let stringTwo = "Qwerty123"
         XCTAssertNotNil(sut.checkingPasswordRules(string:rule:))

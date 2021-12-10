@@ -1,5 +1,10 @@
 // Localization title label.
-"Text_Fields" = "Text Fields";
+"Text_Fields_All" = "Text Fields";
+"Text_Fields_NoDigit" = "Text Field without numbers";
+"Text_Fields_LimitChar" = "Restricted text field";
+"Text_Fields_OnlyChar" = "Text Tield for characters only";
+"Text_Fields_Link" = "Text Tield for the link";
+"Text_Fields_Password" = "Password text field";
 
 // No Digits.
 "NO_Digits_field" = "NO Digits field";

@@ -1,5 +1,10 @@
 // Localization title label.
-"Text_Fields" = "Текстовые поля";
+"Text_Fields_All" = "Текстовые поля";
+"Text_Fields_NoDigit" = "Текстовое поле без цифр";
+"Text_Fields_LimitChar" = "Ограниченное текстовое поле";
+"Text_Fields_OnlyChar" = "Текстовое поле только для символов";
+"Text_Fields_Link" = "Текстовое поле для ссылки";
+"Text_Fields_Password" = "Текстовое поле пароля";
 
 // No Digits.
 "NO_Digits_field" = "БЕЗ цифр";

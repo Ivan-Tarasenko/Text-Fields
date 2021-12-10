@@ -36,6 +36,7 @@
 		1A55385E2760C7CF0056D3A5 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A55385D2760C7CF0056D3A5 /* MainViewController.swift */; };
 		1A5538612761B2FC0056D3A5 /* CustomPassValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5538602761B2FC0056D3A5 /* CustomPassValidation.swift */; };
 		1A5538632761D49C0056D3A5 /* IDElements.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5538622761D49C0056D3A5 /* IDElements.swift */; };
+		1A55386527636CA60056D3A5 /* TitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A55386427636CA60056D3A5 /* TitleView.swift */; };
 		1A553FB7273CB345001A03AF /* RegularExpression+Matches.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A553FB6273CB345001A03AF /* RegularExpression+Matches.swift */; };
 		1A772609274BBE4E00851677 /* CustomPasswordValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A772608274BBE4E00851677 /* CustomPasswordValidation.swift */; };
 		1A77260B274DD26600851677 /* String+StringComparison.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A77260A274DD26600851677 /* String+StringComparison.swift */; };
@@ -98,6 +99,7 @@
 		1A55385D2760C7CF0056D3A5 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		1A5538602761B2FC0056D3A5 /* CustomPassValidation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPassValidation.swift; sourceTree = "<group>"; };
 		1A5538622761D49C0056D3A5 /* IDElements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IDElements.swift; sourceTree = "<group>"; };
+		1A55386427636CA60056D3A5 /* TitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleView.swift; sourceTree = "<group>"; };
 		1A553FB6273CB345001A03AF /* RegularExpression+Matches.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RegularExpression+Matches.swift"; sourceTree = "<group>"; };
 		1A772608274BBE4E00851677 /* CustomPasswordValidation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPasswordValidation.swift; sourceTree = "<group>"; };
 		1A77260A274DD26600851677 /* String+StringComparison.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+StringComparison.swift"; sourceTree = "<group>"; };
@@ -106,7 +108,6 @@
 		1AA344DD2732622600F8F6BA /* String+NSDataDetector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+NSDataDetector.swift"; sourceTree = "<group>"; };
 		1AC2F1A12754D3B0009B3009 /* zh-HK */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-HK"; path = "zh-HK.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		1AD11E8C274FA87E00D255A2 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
-		1AD11E90274FBA8800D255A2 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		1AD11E95274FBD8000D255A2 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		1AD11E9B2750B82800D255A2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		1AD11E9C2750BE4B00D255A2 /* Localization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localization.swift; sourceTree = "<group>"; };
@@ -228,6 +229,7 @@
 			children = (
 				1A03A2F926F6EE53007113E5 /* CustomView.swift */,
 				1AD3FB2B275252BD00540165 /* Change Language.swift */,
+				1A55386427636CA60056D3A5 /* TitleView.swift */,
 			);
 			path = "Custom View";
 			sourceTree = "<group>";
@@ -566,6 +568,7 @@
 				1AA344DE2732622600F8F6BA /* String+NSDataDetector.swift in Sources */,
 				1A55385E2760C7CF0056D3A5 /* MainViewController.swift in Sources */,
 				1A03A2DF26F5B406007113E5 /* SceneDelegate.swift in Sources */,
+				1A55386527636CA60056D3A5 /* TitleView.swift in Sources */,
 				1AD11E9D2750BE4B00D255A2 /* Localization.swift in Sources */,
 				1A471EDA271B4D440066CCB5 /* UILabel+SafeText.swift in Sources */,
 				1A37ED5F2758F75700653E29 /* Link.swift in Sources */,
@@ -622,7 +625,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				1A03A2E826F5B407007113E5 /* Base */,
-				1AD11E90274FBA8800D255A2 /* ru */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";

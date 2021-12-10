@@ -168,12 +168,13 @@ let accessibility = AccessibilityIdentifierMainVC()
     }
 
    func testRulesPasswordValidationInputForbiddenCharacters() {
-       let stringInput1 = "!АБВгде"
-//       let stringInput2 = "АБВгде"
+       let stringInput1 = "!@#"
+       let stringInput2 = "АБВгде"
        validationRulesTextField.tap()
-       app.buttons["Next keyboard"].tap()
        validationRulesTextField.typeText(stringInput1)
-//       validationRulesTextField.typeText(stringInput2)
+       app.buttons["Next keyboard"].tap()
+       validationRulesTextField.typeText(stringInput2)
+       app.buttons["Next keyboard"].tap()
        XCTAssertTrue(notSpecialChar.exists)
        XCTAssertTrue(onlyEnglishChar.exists)
        XCTAssertEqual(notSpecialChar.label, "✘ Special characters are not allowed")
@@ -181,6 +182,18 @@ let accessibility = AccessibilityIdentifierMainVC()
 
    }
 
+    func testCompletionProgressBar() {
+        validationRulesTextField.tap()
+        validationRulesTextField.typeText("1")
+        XCTAssertEqual(progressView.value as? String, "25%")
+        validationRulesTextField.typeText("Q")
+        XCTAssertEqual(progressView.value as? String, "50%")
+        validationRulesTextField.typeText("w")
+        XCTAssertEqual(progressView.value as? String, "75%")
+        validationRulesTextField.typeText("erty123")
+        XCTAssertEqual(progressView.value as? String, "100%")
+    }
+    
     func testLaunchPerformance() throws {
         if #available(macOS 10.15, iOS 13.0, tvOS 13.0, watchOS 7.0, *) {
             // This measures how long it takes to launch your application.

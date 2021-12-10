@@ -1,5 +1,10 @@
 // Localization title label.
-"Text_Fields" = "文本字段";
+"Text_Fields_All" = "文本字段";
+"Text_Fields_NoDigit" = "没有数字的文本字段";
+"Text_Fields_LimitChar" = "受限文本字段";
+"Text_Fields_OnlyChar" = "仅用于字符的文本字段";
+"Text_Fields_Link" = "链接的文本字段";
+"Text_Fields_Password" = "密码文本字段";
 
 // No Digits.
 "NO_Digits_field" = "無數字字段";
