@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct AccessibilityIdentifierMainVC {
+struct AccessibilityIdentifier {
 
     let titleLabel = "TextField_Title"
 
@@ -18,7 +18,7 @@ struct AccessibilityIdentifierMainVC {
     let inputLimitView = "InputLimit_Vew"
     let inputLimitTitle = "InputLimit_Title"
     let inputLimitLabel = "InputLimit_LimitLabel"
-    let inputLimitViewTextField = "InputLimit_TextField"
+    let inputLimitTextField = "InputLimit_TextField"
 
     let onlyCharactersView = "OnlyChar_View"
     let onlyCharactersTitle = "OnlyChar_Title"

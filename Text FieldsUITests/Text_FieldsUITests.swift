@@ -8,7 +8,7 @@
 import XCTest
 
 class TextFieldsUITests: XCTestCase {
-let accessibility = AccessibilityIdentifierMainVC()
+    let accessibility = AccessibilityIdentifier()
 
     var app: XCUIApplication!
 
@@ -60,7 +60,7 @@ let accessibility = AccessibilityIdentifierMainVC()
         inputLimitView = app.otherElements[accessibility.inputLimitView]
         inputLimitTitle = app.staticTexts[accessibility.inputLimitTitle]
         inputLimitLabel = app.staticTexts[accessibility.inputLimitLabel]
-        inputLimitTextField = app.textFields[accessibility.inputLimitViewTextField]
+        inputLimitTextField = app.textFields[accessibility.inputLimitTextField]
 
         onlyCharactersView = app.otherElements[accessibility.onlyCharactersView]
         onlyCharactersTitle = app.staticTexts[accessibility.onlyCharactersTitle]
@@ -125,8 +125,8 @@ let accessibility = AccessibilityIdentifierMainVC()
     }
 
     func testNoInputDigit() {
-        let stringInput = "qwert123yu"
-        let stringOut = "qwertyu"
+        let stringInput = "qwert123yu!@#"
+        let stringOut = "qwertyu!@#"
         noDigitsTextField.tap()
         noDigitsTextField.typeText(stringInput)
         XCTAssertEqual(noDigitsTextField.value as? String, stringOut)
@@ -193,7 +193,7 @@ let accessibility = AccessibilityIdentifierMainVC()
         validationRulesTextField.typeText("erty123")
         XCTAssertEqual(progressView.value as? String, "100%")
     }
-    
+
     func testLaunchPerformance() throws {
         if #available(macOS 10.15, iOS 13.0, tvOS 13.0, watchOS 7.0, *) {
             // This measures how long it takes to launch your application.

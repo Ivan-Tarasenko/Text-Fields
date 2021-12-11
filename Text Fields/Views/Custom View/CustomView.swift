@@ -217,7 +217,6 @@ extension CustomView: UITextFieldDelegate {
         if customPassValid.progressView.progress == 0 {
             customPassValid.progressView.isHidden = true
         }
-        textField.string = model.detectedLink(string: textField.string)
     }
     // MARK: - Working with regular expressions.
     func textField(_ textField: UITextField,

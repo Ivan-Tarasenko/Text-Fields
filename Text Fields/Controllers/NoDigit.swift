@@ -18,6 +18,7 @@ class NoDigit: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         customViewNoDigit.settingView(type: .noDigits)
+        createAccesibilityIdentifiersNoDigitVC()
         setTitle()
     }
 

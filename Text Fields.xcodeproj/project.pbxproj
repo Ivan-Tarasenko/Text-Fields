@@ -43,6 +43,10 @@
 		1A7C75F82737F32B002634F1 /* Pods_Text_Fields.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 98F835EF893B7EA92357512D /* Pods_Text_Fields.framework */; };
 		1A9A63E2275C7FD200C32557 /* Text_FieldsUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A9A63E1275C7FD200C32557 /* Text_FieldsUnitTests.swift */; };
 		1AA344DE2732622600F8F6BA /* String+NSDataDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AA344DD2732622600F8F6BA /* String+NSDataDetector.swift */; };
+		1AB8951E2764732900DC9216 /* NoDigitVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB8951D2764732900DC9216 /* NoDigitVC.swift */; };
+		1AB895202764743800DC9216 /* TestNoDigit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB8951F2764743800DC9216 /* TestNoDigit.swift */; };
+		1AB8952227649A1500DC9216 /* LimitCharacter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB8952127649A1500DC9216 /* LimitCharacter.swift */; };
+		1AB8952427649B8300DC9216 /* LimitCharacterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB8952327649B8300DC9216 /* LimitCharacterVC.swift */; };
 		1AD11E8D274FA87E00D255A2 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AD11E8C274FA87E00D255A2 /* R.generated.swift */; };
 		1AD11E94274FBD8000D255A2 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1AD11E96274FBD8000D255A2 /* Localizable.strings */; };
 		1AD11E9D2750BE4B00D255A2 /* Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AD11E9C2750BE4B00D255A2 /* Localization.swift */; };
@@ -106,6 +110,10 @@
 		1A9A63DF275C7FD200C32557 /* Text FieldsUnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Text FieldsUnitTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A9A63E1275C7FD200C32557 /* Text_FieldsUnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Text_FieldsUnitTests.swift; sourceTree = "<group>"; };
 		1AA344DD2732622600F8F6BA /* String+NSDataDetector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+NSDataDetector.swift"; sourceTree = "<group>"; };
+		1AB8951D2764732900DC9216 /* NoDigitVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoDigitVC.swift; sourceTree = "<group>"; };
+		1AB8951F2764743800DC9216 /* TestNoDigit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestNoDigit.swift; sourceTree = "<group>"; };
+		1AB8952127649A1500DC9216 /* LimitCharacter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LimitCharacter.swift; sourceTree = "<group>"; };
+		1AB8952327649B8300DC9216 /* LimitCharacterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LimitCharacterVC.swift; sourceTree = "<group>"; };
 		1AC2F1A12754D3B0009B3009 /* zh-HK */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-HK"; path = "zh-HK.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		1AD11E8C274FA87E00D255A2 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
 		1AD11E95274FBD8000D255A2 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -275,6 +283,8 @@
 		1A553852275F81370056D3A5 /* Text FieldsUITests */ = {
 			isa = PBXGroup;
 			children = (
+				1AB8952127649A1500DC9216 /* LimitCharacter.swift */,
+				1AB8951F2764743800DC9216 /* TestNoDigit.swift */,
 				1A553853275F81370056D3A5 /* Text_FieldsUITests.swift */,
 				1A553855275F81370056D3A5 /* Text_FieldsUITestsLaunchTests.swift */,
 				1A5538622761D49C0056D3A5 /* IDElements.swift */,
@@ -286,6 +296,8 @@
 			isa = PBXGroup;
 			children = (
 				1A55385D2760C7CF0056D3A5 /* MainViewController.swift */,
+				1AB8951D2764732900DC9216 /* NoDigitVC.swift */,
+				1AB8952327649B8300DC9216 /* LimitCharacterVC.swift */,
 				1A5538602761B2FC0056D3A5 /* CustomPassValidation.swift */,
 			);
 			path = Accessibility;
@@ -554,11 +566,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				1A772609274BBE4E00851677 /* CustomPasswordValidation.swift in Sources */,
+				1AB8951E2764732900DC9216 /* NoDigitVC.swift in Sources */,
 				1A37ED612758F77300653E29 /* PasswordValidation.swift in Sources */,
 				1AD11E8D274FA87E00D255A2 /* R.generated.swift in Sources */,
 				1AD3FB2C275252BD00540165 /* Change Language.swift in Sources */,
 				1A37ED592758F6E800653E29 /* NoDigit.swift in Sources */,
 				1A03A2E126F5B406007113E5 /* MainVC.swift in Sources */,
+				1AB8952427649B8300DC9216 /* LimitCharacterVC.swift in Sources */,
 				1A03A2DD26F5B406007113E5 /* AppDelegate.swift in Sources */,
 				1A03A30226FC543E007113E5 /* UIView+NibLoading+Border.swift in Sources */,
 				1A553FB7273CB345001A03AF /* RegularExpression+Matches.swift in Sources */,
@@ -584,7 +598,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				1A553856275F81370056D3A5 /* Text_FieldsUITestsLaunchTests.swift in Sources */,
+				1AB8952227649A1500DC9216 /* LimitCharacter.swift in Sources */,
 				1A5538632761D49C0056D3A5 /* IDElements.swift in Sources */,
+				1AB895202764743800DC9216 /* TestNoDigit.swift in Sources */,
 				1A553854275F81370056D3A5 /* Text_FieldsUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
