@@ -10,14 +10,15 @@ import XCTest
 class LimitCharacter: XCTestCase {
 
     let accessibility = AccessibilityIdentifier()
+    let accessibilityTB = AccessibilityIdentifierTabBar()
 
     var app: XCUIApplication!
 
     var goTabBar: XCUIElement!
     var tabBar: XCUIElement!
-    var itemLimit:XCUIElement!
+    var itemNoDigit: XCUIElement!
+    var itemLimit: XCUIElement!
     var titleLabel: XCUIElement!
-
     var inputLimitView: XCUIElement!
     var inputLimitTitle: XCUIElement!
     var inputLimitLabel: XCUIElement!
@@ -27,9 +28,10 @@ class LimitCharacter: XCTestCase {
         continueAfterFailure = false
         app = XCUIApplication()
         app.launch()
-        tabBar = app.tabBars.element
-//        itemLimit = app.tabBars
+        tabBar = app.tabBars[accessibilityTB.tabBar]
         goTabBar = app.buttons[accessibility.goTabBar]
+        itemLimit = tabBar.buttons[accessibilityTB.itemLimitChar]
+        itemNoDigit = tabBar.buttons[accessibilityTB.itemNoDigit]
         titleLabel = app.staticTexts[accessibility.titleLabel]
         inputLimitView = app.otherElements[accessibility.inputLimitView]
         inputLimitTitle = app.staticTexts[accessibility.inputLimitTitle]
@@ -42,9 +44,10 @@ class LimitCharacter: XCTestCase {
     }
 
     func testForPresenceOfElements() throws {
+        app.swipeUp()
         goTabBar.tap()
+        itemNoDigit.tap()
         itemLimit.tap()
-        XCTAssertTrue(tabBar.exists)
         XCTAssertTrue(titleLabel.exists)
         XCTAssertTrue(inputLimitView.exists)
         XCTAssertTrue(inputLimitTitle.exists)
@@ -55,9 +58,10 @@ class LimitCharacter: XCTestCase {
     func testInputLimitCharacters() {
         let stringInput = "Checking limit character"
         let stringOut = "-14/10"
+        app.swipeUp()
         goTabBar.tap()
+        itemNoDigit.tap()
         itemLimit.tap()
-        tabBar.tap()
         inputLimitTextField.tap()
         inputLimitTextField.typeText(stringInput)
         XCTAssertEqual(inputLimitLabel.label, stringOut)

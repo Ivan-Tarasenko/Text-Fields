@@ -85,7 +85,7 @@ class Model {
     }
 
     func detectedLink (string: String) -> String {
-
+        let checkDomenName = "https://"
         let detector = try! NSDataDetector(types: NSTextCheckingResult.CheckingType.link.rawValue)
         let matches = detector.matches(in: string, options: [], range: NSRange(location: 0, length: string.utf16.count))
         var urlLink = String()
@@ -94,6 +94,9 @@ class Model {
             let url = string[range]
             urlLink = String(url)
             print(url)
+        }
+        if !(urlLink ~= checkDomenName) {
+            urlLink.insert(contentsOf: "https://", at: urlLink.startIndex)
         }
         return urlLink
     }

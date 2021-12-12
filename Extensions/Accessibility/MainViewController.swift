@@ -32,6 +32,7 @@ extension ViewController {
         validationRulesView.accessibilityIdentifier = "ValidationRules_View"
         validationRulesView.title.accessibilityIdentifier = "ValidationRules_Title"
         validationRulesView.textField.accessibilityIdentifier = "ValidationRules_TextField"
+        
         goTabBar.accessibilityIdentifier = "Button_TabBar"
     }
 

@@ -46,6 +46,8 @@ class TextFieldsUITests: XCTestCase {
 
     var goTabBar: XCUIElement!
 
+    var returnButton: XCUIElement!
+
     override func setUpWithError() throws {
         continueAfterFailure = false
         app = XCUIApplication()
@@ -84,6 +86,8 @@ class TextFieldsUITests: XCTestCase {
         onlyEnglishChar = app.staticTexts[accessibility.onlyEnglishChar]
 
         goTabBar = app.buttons[accessibility.goTabBar]
+
+        returnButton = app.keyboards.buttons[accessibility.returnButton]
 
     }
 
@@ -153,7 +157,8 @@ class TextFieldsUITests: XCTestCase {
         let stringOut = "https://www.google.com"
         linkTextField.tap()
         linkTextField.typeText(stringInput)
-        linkTitle.tap()
+        returnButton.tap()
+        app.activate()
         XCTAssertEqual(linkTextField.value as? String, stringOut)
     }
 

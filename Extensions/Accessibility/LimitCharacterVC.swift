@@ -9,7 +9,7 @@ import Foundation
 
 extension LimitCharacter {
     func createAccesibilityIdentifiersLimitVC () {
-        customViewLimit.title.accessibilityIdentifier = "TextField_Title"
+        titleView.title.accessibilityIdentifier = "TextField_Title"
         customViewLimit.accessibilityIdentifier = "InputLimit_Vew"
         customViewLimit.title.accessibilityIdentifier = "InputLimit_Title"
         customViewLimit.limitLabel.accessibilityIdentifier = "InputLimit_LimitLabel"

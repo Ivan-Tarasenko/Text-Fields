@@ -23,6 +23,7 @@ class Link: UIViewController {
 
     func setTitle() {
         titleView.title.textTitle = localString.titleLabelLink
+        createAccesibilityIdentifierslinkVC()
         mainView.addSubview(titleView.title)
         titleView.setTitle()
     }

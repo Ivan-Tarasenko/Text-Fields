@@ -42,4 +42,18 @@ struct AccessibilityIdentifier {
     let onlyEnglishChar = "onlyEnglishChar"
 
     let goTabBar = "Button_TabBar"
+
+    let returnButton = "Return"
+
+    let nextKeyboard = "Next keyboard"
+}
+
+struct AccessibilityIdentifierTabBar {
+
+    let tabBar = "Tab Bar"
+    let itemNoDigit = "NoDigit"
+    let itemLimitChar = "Limit"
+    let itemOnlyChar = "OnlyChar"
+    let itemLink = "Link"
+    let itemPassword = "Password"
 }

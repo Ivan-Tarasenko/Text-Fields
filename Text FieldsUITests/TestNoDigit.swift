@@ -10,10 +10,11 @@ import XCTest
 class TestNoDigit: XCTestCase {
 
     let accessibility = AccessibilityIdentifier()
-
+    let accessibilityTB = AccessibilityIdentifierTabBar()
     var app: XCUIApplication!
     
     var tabBar: XCUIElement!
+    var itemNoDigit: XCUIElement!
     var goTabBar: XCUIElement!
     var titleLabel: XCUIElement!
 
@@ -25,7 +26,8 @@ class TestNoDigit: XCTestCase {
         continueAfterFailure = false
         app = XCUIApplication()
         app.launch()
-        tabBar = app.tabBars.element
+        tabBar = app.tabBars[accessibilityTB.tabBar]
+        itemNoDigit = tabBar.buttons[accessibilityTB.itemNoDigit]
         goTabBar = app.buttons[accessibility.goTabBar]
         titleLabel = app.staticTexts[accessibility.titleLabel]
         noDigitsView = app.otherElements[accessibility.noDigitsView]
@@ -38,8 +40,8 @@ class TestNoDigit: XCTestCase {
     }
 
     func testForPresenceOfElements() throws {
+        app.swipeUp()
         goTabBar.tap()
-        XCTAssertTrue(tabBar.exists)
         XCTAssertTrue(titleLabel.exists)
         XCTAssertTrue(noDigitsView.exists)
         XCTAssertTrue(noDigitsTitle.exists)
@@ -49,8 +51,9 @@ class TestNoDigit: XCTestCase {
     func testNoInputDigit() throws {
         let stringInput = "qwert123yu!@#"
         let stringOut = "qwertyu!@#"
+        app.swipeUp()
         goTabBar.tap()
-        tabBar.tap()
+        itemNoDigit.tap()
         noDigitsTextField.tap()
         noDigitsTextField.typeText(stringInput)
         XCTAssertEqual(noDigitsTextField.value as? String, stringOut)

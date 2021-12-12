@@ -18,6 +18,7 @@ class LimitCharacter: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         customViewLimit.settingView(type: .inputLimit)
+        createAccesibilityIdentifiersLimitVC()
         setTitle()
     }
 

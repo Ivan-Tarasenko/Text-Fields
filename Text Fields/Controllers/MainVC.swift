@@ -42,6 +42,7 @@ class ViewController: UIViewController {
         titleView.title.snp.makeConstraints { make in
             make.top.equalToSuperview().inset(31)
             make.right.left.equalToSuperview().inset(16)
+            make.bottom.equalTo(noDigitsView).inset(100)
         }
 //        titleView.setTitle()
     }

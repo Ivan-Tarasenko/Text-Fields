@@ -45,12 +45,18 @@
 		1AA344DE2732622600F8F6BA /* String+NSDataDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AA344DD2732622600F8F6BA /* String+NSDataDetector.swift */; };
 		1AB8951E2764732900DC9216 /* NoDigitVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB8951D2764732900DC9216 /* NoDigitVC.swift */; };
 		1AB895202764743800DC9216 /* TestNoDigit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB8951F2764743800DC9216 /* TestNoDigit.swift */; };
-		1AB8952227649A1500DC9216 /* LimitCharacter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB8952127649A1500DC9216 /* LimitCharacter.swift */; };
+		1AB8952227649A1500DC9216 /* TestLimitCharacter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB8952127649A1500DC9216 /* TestLimitCharacter.swift */; };
 		1AB8952427649B8300DC9216 /* LimitCharacterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB8952327649B8300DC9216 /* LimitCharacterVC.swift */; };
 		1AD11E8D274FA87E00D255A2 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AD11E8C274FA87E00D255A2 /* R.generated.swift */; };
 		1AD11E94274FBD8000D255A2 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1AD11E96274FBD8000D255A2 /* Localizable.strings */; };
 		1AD11E9D2750BE4B00D255A2 /* Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AD11E9C2750BE4B00D255A2 /* Localization.swift */; };
 		1AD3FB2C275252BD00540165 /* Change Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AD3FB2B275252BD00540165 /* Change Language.swift */; };
+		1AE534F6276610D300E07F83 /* OnlyCharVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE534F5276610D300E07F83 /* OnlyCharVC.swift */; };
+		1AE534F82766118900E07F83 /* TestOnlyChat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE534F72766118900E07F83 /* TestOnlyChat.swift */; };
+		1AE534FA2766156800E07F83 /* LinkVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE534F92766156800E07F83 /* LinkVC.swift */; };
+		1AE534FC276615DF00E07F83 /* TestLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE534FB276615DF00E07F83 /* TestLink.swift */; };
+		1AE534FE27662B3F00E07F83 /* PasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE534FD27662B3F00E07F83 /* PasswordVC.swift */; };
+		1AE5350027662BDA00E07F83 /* TestPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE534FF27662BDA00E07F83 /* TestPassword.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -112,7 +118,7 @@
 		1AA344DD2732622600F8F6BA /* String+NSDataDetector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+NSDataDetector.swift"; sourceTree = "<group>"; };
 		1AB8951D2764732900DC9216 /* NoDigitVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoDigitVC.swift; sourceTree = "<group>"; };
 		1AB8951F2764743800DC9216 /* TestNoDigit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestNoDigit.swift; sourceTree = "<group>"; };
-		1AB8952127649A1500DC9216 /* LimitCharacter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LimitCharacter.swift; sourceTree = "<group>"; };
+		1AB8952127649A1500DC9216 /* TestLimitCharacter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestLimitCharacter.swift; sourceTree = "<group>"; };
 		1AB8952327649B8300DC9216 /* LimitCharacterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LimitCharacterVC.swift; sourceTree = "<group>"; };
 		1AC2F1A12754D3B0009B3009 /* zh-HK */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-HK"; path = "zh-HK.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		1AD11E8C274FA87E00D255A2 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
@@ -122,6 +128,12 @@
 		1AD11E9F2750CBA000D255A2 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 		1AD11EA12750CE7F00D255A2 /* uk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = uk; path = uk.lproj/Localizable.strings; sourceTree = "<group>"; };
 		1AD3FB2B275252BD00540165 /* Change Language.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Change Language.swift"; sourceTree = "<group>"; };
+		1AE534F5276610D300E07F83 /* OnlyCharVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnlyCharVC.swift; sourceTree = "<group>"; };
+		1AE534F72766118900E07F83 /* TestOnlyChat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestOnlyChat.swift; sourceTree = "<group>"; };
+		1AE534F92766156800E07F83 /* LinkVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkVC.swift; sourceTree = "<group>"; };
+		1AE534FB276615DF00E07F83 /* TestLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestLink.swift; sourceTree = "<group>"; };
+		1AE534FD27662B3F00E07F83 /* PasswordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordVC.swift; sourceTree = "<group>"; };
+		1AE534FF27662BDA00E07F83 /* TestPassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestPassword.swift; sourceTree = "<group>"; };
 		98F835EF893B7EA92357512D /* Pods_Text_Fields.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Text_Fields.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCC8C73A26850CED292C1E43 /* Pods-Text Fields.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Text Fields.release.xcconfig"; path = "Target Support Files/Pods-Text Fields/Pods-Text Fields.release.xcconfig"; sourceTree = "<group>"; };
 		D94EB36A461526E9999CB28F /* Pods-Text Fields.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Text Fields.debug.xcconfig"; path = "Target Support Files/Pods-Text Fields/Pods-Text Fields.debug.xcconfig"; sourceTree = "<group>"; };
@@ -283,9 +295,12 @@
 		1A553852275F81370056D3A5 /* Text FieldsUITests */ = {
 			isa = PBXGroup;
 			children = (
-				1AB8952127649A1500DC9216 /* LimitCharacter.swift */,
-				1AB8951F2764743800DC9216 /* TestNoDigit.swift */,
 				1A553853275F81370056D3A5 /* Text_FieldsUITests.swift */,
+				1AB8951F2764743800DC9216 /* TestNoDigit.swift */,
+				1AB8952127649A1500DC9216 /* TestLimitCharacter.swift */,
+				1AE534F72766118900E07F83 /* TestOnlyChat.swift */,
+				1AE534FB276615DF00E07F83 /* TestLink.swift */,
+				1AE534FF27662BDA00E07F83 /* TestPassword.swift */,
 				1A553855275F81370056D3A5 /* Text_FieldsUITestsLaunchTests.swift */,
 				1A5538622761D49C0056D3A5 /* IDElements.swift */,
 			);
@@ -298,6 +313,9 @@
 				1A55385D2760C7CF0056D3A5 /* MainViewController.swift */,
 				1AB8951D2764732900DC9216 /* NoDigitVC.swift */,
 				1AB8952327649B8300DC9216 /* LimitCharacterVC.swift */,
+				1AE534F5276610D300E07F83 /* OnlyCharVC.swift */,
+				1AE534F92766156800E07F83 /* LinkVC.swift */,
+				1AE534FD27662B3F00E07F83 /* PasswordVC.swift */,
 				1A5538602761B2FC0056D3A5 /* CustomPassValidation.swift */,
 			);
 			path = Accessibility;
@@ -571,10 +589,12 @@
 				1AD11E8D274FA87E00D255A2 /* R.generated.swift in Sources */,
 				1AD3FB2C275252BD00540165 /* Change Language.swift in Sources */,
 				1A37ED592758F6E800653E29 /* NoDigit.swift in Sources */,
+				1AE534F6276610D300E07F83 /* OnlyCharVC.swift in Sources */,
 				1A03A2E126F5B406007113E5 /* MainVC.swift in Sources */,
 				1AB8952427649B8300DC9216 /* LimitCharacterVC.swift in Sources */,
 				1A03A2DD26F5B406007113E5 /* AppDelegate.swift in Sources */,
 				1A03A30226FC543E007113E5 /* UIView+NibLoading+Border.swift in Sources */,
+				1AE534FE27662B3F00E07F83 /* PasswordVC.swift in Sources */,
 				1A553FB7273CB345001A03AF /* RegularExpression+Matches.swift in Sources */,
 				1A03A30526FDA596007113E5 /* UITextField+Border.swift in Sources */,
 				1A77260B274DD26600851677 /* String+StringComparison.swift in Sources */,
@@ -584,6 +604,7 @@
 				1A03A2DF26F5B406007113E5 /* SceneDelegate.swift in Sources */,
 				1A55386527636CA60056D3A5 /* TitleView.swift in Sources */,
 				1AD11E9D2750BE4B00D255A2 /* Localization.swift in Sources */,
+				1AE534FA2766156800E07F83 /* LinkVC.swift in Sources */,
 				1A471EDA271B4D440066CCB5 /* UILabel+SafeText.swift in Sources */,
 				1A37ED5F2758F75700653E29 /* Link.swift in Sources */,
 				1A5538612761B2FC0056D3A5 /* CustomPassValidation.swift in Sources */,
@@ -597,11 +618,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1AE5350027662BDA00E07F83 /* TestPassword.swift in Sources */,
 				1A553856275F81370056D3A5 /* Text_FieldsUITestsLaunchTests.swift in Sources */,
-				1AB8952227649A1500DC9216 /* LimitCharacter.swift in Sources */,
+				1AB8952227649A1500DC9216 /* TestLimitCharacter.swift in Sources */,
 				1A5538632761D49C0056D3A5 /* IDElements.swift in Sources */,
+				1AE534F82766118900E07F83 /* TestOnlyChat.swift in Sources */,
 				1AB895202764743800DC9216 /* TestNoDigit.swift in Sources */,
 				1A553854275F81370056D3A5 /* Text_FieldsUITests.swift in Sources */,
+				1AE534FC276615DF00E07F83 /* TestLink.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

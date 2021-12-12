@@ -18,6 +18,7 @@ class PasswordValidation: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         customViewPassValid.settingView(type: .validationRules)
+        createAccesibilityIdentifiersPassVC()
         setTitle()
     }
 

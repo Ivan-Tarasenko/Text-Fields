@@ -68,8 +68,8 @@ class TextFieldsUnitTests: XCTestCase {
         let string1 = "there is a link here google.com"
         let string2 = "there isn't a link here http://google"
         let string3 = "here another link www.google.com"
-        let link1 = "google.com"
-        let link2 = "www.google.com"
+        let link1 = "https://google.com"
+        let link2 = "https://www.google.com"
         XCTAssertNotNil(sut.detectedLink(string: string1))
         XCTAssertNotEqual(sut.detectedLink(string: string2), link1)
         XCTAssertEqual(sut.detectedLink(string: string1), link1)

@@ -18,6 +18,7 @@ class OnlyCharacter: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         customViewOnlyChar.settingView(type: .onlyCharacters)
+        createAccesibilityIdentifiersOnlyCharVC()
         setTitle()
     }
 
