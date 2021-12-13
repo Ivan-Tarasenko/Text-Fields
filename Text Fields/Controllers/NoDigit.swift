@@ -10,10 +10,21 @@ import UIKit
 class NoDigit: UIViewController {
 
     @IBOutlet weak var customViewNoDigit: CustomView!
+    @IBOutlet var mainView: UIView!
+
+    let titleView = TitleView()
+    let localString = Localization()
+
     override func viewDidLoad() {
         super.viewDidLoad()
-
         customViewNoDigit.settingView(type: .noDigits)
+        createAccesibilityIdentifiersNoDigitVC()
+        setTitle()
+    }
 
+    func setTitle() {
+        titleView.title.textTitle = localString.titleLabelNoDigit
+        mainView.addSubview(titleView.title)
+        titleView.setTitle()
     }
 }

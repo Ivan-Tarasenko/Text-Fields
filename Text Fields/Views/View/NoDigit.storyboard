@@ -36,6 +36,7 @@
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="customViewNoDigit" destination="lk5-cn-LZ9" id="24w-TR-zRb"/>
+                        <outlet property="mainView" destination="5EZ-qb-Rvc" id="xMa-9R-WsW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

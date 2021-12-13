@@ -7,11 +7,6 @@
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="SFProDisplay-Bold.ttf">
-            <string>SFProDisplay-Bold</string>
-        </array>
-    </customFonts>
     <scenes>
         <!--All Text Field-->
         <scene sceneID="tne-QT-ifu">
@@ -55,12 +50,6 @@
                                                     <constraint firstAttribute="height" constant="66" id="J5a-Bu-qeb"/>
                                                 </constraints>
                                             </view>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Text Fields" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Fb-3a-eaK">
-                                                <rect key="frame" x="16" y="30.999999999999996" width="343" height="40.666666666666657"/>
-                                                <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="34"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
                                             <view tag="5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cxl-NB-McR" customClass="CustomView" customModule="Text_Fields" customModuleProvider="target">
                                                 <rect key="frame" x="16" y="456" width="343" height="66"/>
                                                 <color key="backgroundColor" red="0.76566820855092521" green="0.22744273911351284" blue="0.29935946716503914" alpha="0.8723354718543046" colorSpace="custom" customColorSpace="displayP3"/>
@@ -82,22 +71,18 @@
                                             <constraint firstItem="FVI-XQ-GE5" firstAttribute="leading" secondItem="lVr-1D-FhD" secondAttribute="leading" constant="16" id="2SX-Kl-JKK"/>
                                             <constraint firstItem="a2c-bT-oya" firstAttribute="top" secondItem="cxl-NB-McR" secondAttribute="bottom" constant="118" id="6fc-OH-fol"/>
                                             <constraint firstItem="FVI-XQ-GE5" firstAttribute="top" secondItem="fqq-jX-cHa" secondAttribute="bottom" constant="24" id="9BF-zp-PWT"/>
-                                            <constraint firstAttribute="trailing" secondItem="3Fb-3a-eaK" secondAttribute="trailing" constant="16" id="Cnk-7k-ZRg"/>
                                             <constraint firstItem="cxl-NB-McR" firstAttribute="leading" secondItem="lVr-1D-FhD" secondAttribute="leading" constant="16" id="D2o-E5-nua"/>
                                             <constraint firstItem="cxl-NB-McR" firstAttribute="top" secondItem="FVI-XQ-GE5" secondAttribute="bottom" constant="24" id="DLn-OD-gY3"/>
                                             <constraint firstItem="fqq-jX-cHa" firstAttribute="top" secondItem="lFG-fH-3nO" secondAttribute="bottom" constant="24" id="FF2-lO-pdH"/>
                                             <constraint firstAttribute="trailing" secondItem="fqq-jX-cHa" secondAttribute="trailing" constant="16" id="K0P-xP-uhc"/>
                                             <constraint firstItem="cxl-NB-McR" firstAttribute="centerY" secondItem="lVr-1D-FhD" secondAttribute="centerY" constant="102" id="MvI-Oo-z3m"/>
-                                            <constraint firstItem="3Fb-3a-eaK" firstAttribute="leading" secondItem="lVr-1D-FhD" secondAttribute="leading" constant="16" id="PpH-0h-MRc"/>
                                             <constraint firstItem="a2c-bT-oya" firstAttribute="centerX" secondItem="lVr-1D-FhD" secondAttribute="centerX" id="Tby-pQ-2DD"/>
-                                            <constraint firstItem="390-VM-9Xv" firstAttribute="top" secondItem="3Fb-3a-eaK" secondAttribute="bottom" constant="24.329999999999998" id="VuB-hX-hNf"/>
                                             <constraint firstAttribute="trailing" secondItem="FVI-XQ-GE5" secondAttribute="trailing" constant="16" id="ZaR-Qp-UEp"/>
                                             <constraint firstAttribute="trailing" secondItem="lFG-fH-3nO" secondAttribute="trailing" constant="16" id="bAO-0Q-8pT"/>
                                             <constraint firstAttribute="trailing" secondItem="cxl-NB-McR" secondAttribute="trailing" constant="16" id="czD-3g-2Nr"/>
                                             <constraint firstAttribute="trailing" secondItem="390-VM-9Xv" secondAttribute="trailing" constant="16" id="gdy-Z5-utH"/>
                                             <constraint firstItem="fqq-jX-cHa" firstAttribute="leading" secondItem="lVr-1D-FhD" secondAttribute="leading" constant="16" id="gsG-B9-lkm"/>
                                             <constraint firstItem="390-VM-9Xv" firstAttribute="leading" secondItem="lVr-1D-FhD" secondAttribute="leading" constant="16" id="h9J-lq-PG7"/>
-                                            <constraint firstItem="3Fb-3a-eaK" firstAttribute="top" secondItem="lVr-1D-FhD" secondAttribute="top" constant="31" id="pHy-D2-5fr"/>
                                             <constraint firstItem="lFG-fH-3nO" firstAttribute="top" secondItem="390-VM-9Xv" secondAttribute="bottom" constant="24" id="wdj-PI-1T7"/>
                                             <constraint firstItem="lFG-fH-3nO" firstAttribute="leading" secondItem="lVr-1D-FhD" secondAttribute="leading" constant="16" id="yBi-S7-Mu6"/>
                                         </constraints>
@@ -125,11 +110,12 @@
                     <navigationItem key="navigationItem" title="All Text Field" id="SqA-fI-7VQ"/>
                     <size key="freeformSize" width="375" height="812"/>
                     <connections>
+                        <outlet property="goTabBar" destination="a2c-bT-oya" id="DCa-QM-JXL"/>
                         <outlet property="inputLimitView" destination="lFG-fH-3nO" id="laL-CC-H4f"/>
                         <outlet property="linkView" destination="FVI-XQ-GE5" id="lfx-QI-ZFB"/>
+                        <outlet property="mainView" destination="lVr-1D-FhD" id="0MA-Ny-uef"/>
                         <outlet property="noDigitsView" destination="390-VM-9Xv" id="jS2-LW-aHx"/>
                         <outlet property="onlyCharactersView" destination="fqq-jX-cHa" id="W5v-V5-iUf"/>
-                        <outlet property="titleLabel" destination="3Fb-3a-eaK" id="KbX-T3-EW3"/>
                         <outlet property="validationRulesView" destination="cxl-NB-McR" id="kKM-gH-eXu"/>
                     </connections>
                 </viewController>
@@ -215,6 +201,7 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="W1S-OK-Yj5"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="RpI-4d-H8K">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>

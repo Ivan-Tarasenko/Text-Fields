@@ -1,5 +1,10 @@
 // Localization title label.
-"Text_Fields" = "Текстові поля";
+"Text_Fields_All" = "Текстові поля";
+"Text_Fields_NoDigit" = "Текстове поле без цифр";
+"Text_Fields_LimitChar" = "Обмежене текстове поле";
+"Text_Fields_OnlyChar" = "Текстове поле тільки для символів";
+"Text_Fields_Link" = "Текстове поле для посилання";
+"Text_Fields_Password" = "Текстове поле пароля";
 
 // No Digits.
 "NO_Digits_field" = "БЕЗ цифр";
@@ -25,5 +30,5 @@
 "Min_1_digit." = "- Мін. 1 цифра.";
 "Min_1_lowercase." = "- Мін. 1 нижній регістр.";
 "Min_1_capital_required." = "- Мінімальний потрібен капітал.";
-"special_characters_are_not_allowed" = "❌ Спеціальні символи не допускаються";
-"only English characters" = "❌ Тільки англійські символи";
+"special_characters_are_not_allowed" = "✘ Спеціальні символи не допускаються";
+"only English characters" = "✘ Тільки англійські символи";

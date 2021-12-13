@@ -53,6 +53,8 @@ class CustomView: UIView {
         customPassValid.showLabelForPasswordValidation = true
         customPassValid.progressView.isHidden = true
         customPassValid.showLabelForbiddenChar = true
+        
+        customPassValid.createAccesibilityIdentifiersPS()
     }
     
     // MARK: - Action for textField connected as editing changed
@@ -190,7 +192,6 @@ extension CustomView: UITextFieldDelegate {
     // MARK: - Perform reverse by button "Return"
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         if switchTextField == .link {
-            print(model.linkUrl(url: model.detectedLink(string: textField.string)))
             model.linkUrl(url: model.detectedLink(string: textField.string))
         }
         self.endEditing(true)
@@ -209,6 +210,10 @@ extension CustomView: UITextFieldDelegate {
         tuneBorderForTextField = false
         if customPassValid.progressView.progress == 0 {
             customPassValid.progressView.isHidden = true
+        }
+        if switchTextField == .link {
+            guard !textField.string.isEmpty else { return }
+            textField.string = model.detectedLink(string: textField.string)
         }
     }
     // MARK: - Working with regular expressions.

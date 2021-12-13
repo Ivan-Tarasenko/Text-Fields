@@ -1,5 +1,10 @@
 // Localization title label.
-"Text_Fields" = "Текстовые поля";
+"Text_Fields_All" = "Текстовые поля";
+"Text_Fields_NoDigit" = "Текстовое поле без цифр";
+"Text_Fields_LimitChar" = "Ограниченное текстовое поле";
+"Text_Fields_OnlyChar" = "Текстовое поле только для символов";
+"Text_Fields_Link" = "Текстовое поле для ссылки";
+"Text_Fields_Password" = "Текстовое поле пароля";
 
 // No Digits.
 "NO_Digits_field" = "БЕЗ цифр";
@@ -26,5 +31,5 @@
 "Min_1_digit." = "- Мин 1 цыфра.";
 "Min_1_lowercase." = "- Мин 1 строчный символ.";
 "Min_1_capital_required." = "- Мин 1 заглавный символ.";
-"special_characters_are_not_allowed" = "❌ Cпецсимволы недопустимы";
-"only English characters" = "❌ Tолько английские символы";
+"special_characters_are_not_allowed" = "✘ Cпецсимволы недопустимы";
+"only English characters" = "✘ Tолько английские символы";
