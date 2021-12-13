@@ -31,7 +31,7 @@ class ViewController: UIViewController {
         onlyCharactersView.settingView(type: .onlyCharacters)
         linkView.settingView(type: .link)
         validationRulesView.settingView(type: .validationRules)
-        //        settingChangeLanguage()
+
         createAccesibilityIdentifiersMainVC()
         setTitle()
     }
@@ -44,43 +44,5 @@ class ViewController: UIViewController {
             make.right.left.equalToSuperview().inset(16)
             make.bottom.equalTo(noDigitsView).inset(100)
         }
-//        titleView.setTitle()
     }
-    //    func settingChangeLanguage() {
-    //        let constraintX = 50
-    //        view.addSubview(changeLanguage.englishButton)
-    //        view.addSubview(changeLanguage.russianButton)
-    //        view.addSubview(changeLanguage.spanishButton)
-    //        view.addSubview(changeLanguage.ukrainianButton)
-    //        view.addSubview(changeLanguage.chineseButton)
-    //
-    //        changeLanguage.englishButton.snp.makeConstraints { make in
-    //            make.top.equalTo(validationRulesView).inset(170)
-    //            make.left.equalToSuperview().inset(constraintX)
-    //        }
-    //        changeLanguage.russianButton.snp.makeConstraints { make in
-    //            make.top.equalTo(validationRulesView).inset(170)
-    //            make.left.equalTo(changeLanguage.englishButton).inset(constraintX)
-    //        }
-    //        changeLanguage.spanishButton.snp.makeConstraints { make in
-    //            make.top.equalTo(validationRulesView).inset(170)
-    //            make.left.equalTo(changeLanguage.russianButton).inset(constraintX)
-    //        }
-    //        changeLanguage.ukrainianButton.snp.makeConstraints { make in
-    //            make.top.equalTo(validationRulesView).inset(170)
-    //            make.left.equalTo(changeLanguage.spanishButton).inset(constraintX)
-    //        }
-    //        changeLanguage.chineseButton.snp.makeConstraints { make in
-    //            make.top.equalTo(validationRulesView).inset(170)
-    //            make.left.equalTo(changeLanguage.ukrainianButton).inset(constraintX)
-    //        }
-    //    }
-    //
-    //    // Restart button view.
-    //    @IBAction func resetVC(_ sender: Any) {
-    //        let vc1 = self.storyboard?.instantiateViewController(withIdentifier: "vc1") as! ViewController
-    //        let appDlg = UIApplication.shared.delegate as? AppDelegate
-    //        appDlg?.window?.rootViewController = vc1
-    //        print("push reset")
-    //    }
 }

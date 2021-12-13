@@ -50,7 +50,6 @@
 		1AD11E8D274FA87E00D255A2 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AD11E8C274FA87E00D255A2 /* R.generated.swift */; };
 		1AD11E94274FBD8000D255A2 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1AD11E96274FBD8000D255A2 /* Localizable.strings */; };
 		1AD11E9D2750BE4B00D255A2 /* Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AD11E9C2750BE4B00D255A2 /* Localization.swift */; };
-		1AD3FB2C275252BD00540165 /* Change Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AD3FB2B275252BD00540165 /* Change Language.swift */; };
 		1AE534F6276610D300E07F83 /* OnlyCharVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE534F5276610D300E07F83 /* OnlyCharVC.swift */; };
 		1AE534F82766118900E07F83 /* TestOnlyChat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE534F72766118900E07F83 /* TestOnlyChat.swift */; };
 		1AE534FA2766156800E07F83 /* LinkVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE534F92766156800E07F83 /* LinkVC.swift */; };
@@ -127,7 +126,6 @@
 		1AD11E9C2750BE4B00D255A2 /* Localization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localization.swift; sourceTree = "<group>"; };
 		1AD11E9F2750CBA000D255A2 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 		1AD11EA12750CE7F00D255A2 /* uk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = uk; path = uk.lproj/Localizable.strings; sourceTree = "<group>"; };
-		1AD3FB2B275252BD00540165 /* Change Language.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Change Language.swift"; sourceTree = "<group>"; };
 		1AE534F5276610D300E07F83 /* OnlyCharVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnlyCharVC.swift; sourceTree = "<group>"; };
 		1AE534F72766118900E07F83 /* TestOnlyChat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestOnlyChat.swift; sourceTree = "<group>"; };
 		1AE534F92766156800E07F83 /* LinkVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkVC.swift; sourceTree = "<group>"; };
@@ -248,7 +246,6 @@
 			isa = PBXGroup;
 			children = (
 				1A03A2F926F6EE53007113E5 /* CustomView.swift */,
-				1AD3FB2B275252BD00540165 /* Change Language.swift */,
 				1A55386427636CA60056D3A5 /* TitleView.swift */,
 			);
 			path = "Custom View";
@@ -587,7 +584,6 @@
 				1AB8951E2764732900DC9216 /* NoDigitVC.swift in Sources */,
 				1A37ED612758F77300653E29 /* PasswordValidation.swift in Sources */,
 				1AD11E8D274FA87E00D255A2 /* R.generated.swift in Sources */,
-				1AD3FB2C275252BD00540165 /* Change Language.swift in Sources */,
 				1A37ED592758F6E800653E29 /* NoDigit.swift in Sources */,
 				1AE534F6276610D300E07F83 /* OnlyCharVC.swift in Sources */,
 				1A03A2E126F5B406007113E5 /* MainVC.swift in Sources */,

@@ -164,6 +164,7 @@ class TextFieldsUITests: XCTestCase {
 
     func testRulesPasswordValidetion() {
         let stringInput = "123QWErty"
+        app.swipeUp()
         validationRulesTextField.tap()
         validationRulesTextField.typeText(stringInput)
         XCTAssertEqual(minOneDigit.label, "✓ Min 1 digit.")
@@ -175,6 +176,7 @@ class TextFieldsUITests: XCTestCase {
    func testRulesPasswordValidationInputForbiddenCharacters() {
        let stringInput1 = "!@#"
        let stringInput2 = "АБВгде"
+       app.swipeUp()
        validationRulesTextField.tap()
        validationRulesTextField.typeText(stringInput1)
        app.buttons["Next keyboard"].tap()
@@ -188,6 +190,7 @@ class TextFieldsUITests: XCTestCase {
    }
 
     func testCompletionProgressBar() {
+        app.swipeUp()
         validationRulesTextField.tap()
         validationRulesTextField.typeText("1")
         XCTAssertEqual(progressView.value as? String, "25%")
