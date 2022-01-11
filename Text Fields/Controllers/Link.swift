@@ -18,12 +18,12 @@ class Link: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         customViewLink.settingView(type: .link)
+        createAccesibilityIdentifierslinkVC()
         setTitle()
     }
 
     func setTitle() {
         titleView.title.textTitle = localString.titleLabelLink
-        createAccesibilityIdentifierslinkVC()
         mainView.addSubview(titleView.title)
         titleView.setTitle()
     }

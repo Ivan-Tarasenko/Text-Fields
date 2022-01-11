@@ -19,7 +19,6 @@ class ViewController: UIViewController {
     @IBOutlet weak var mainView: UIView!
     @IBOutlet weak var goTabBar: UIButton!
 
-    //    let changeLanguage = ChangeLanguage()
     let localString = Localization()
     let customPassValid = CustomPassValid()
     let titleView = TitleView()
