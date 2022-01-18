@@ -191,7 +191,7 @@
 		1A03A2DB26F5B406007113E5 /* Text Fields */ = {
 			isa = PBXGroup;
 			children = (
-				1A03A2F226F5B477007113E5 /* Models */,
+				1A53F6E5279667170044F02D /* Custom TextField */,
 				1A03A2F126F5B465007113E5 /* Views */,
 				1A03A2F026F5B444007113E5 /* Controllers */,
 			);
@@ -245,7 +245,6 @@
 		1A03A2F826F6EDF4007113E5 /* Custom View */ = {
 			isa = PBXGroup;
 			children = (
-				1A03A2F926F6EE53007113E5 /* CustomView.swift */,
 				1A55386427636CA60056D3A5 /* TitleView.swift */,
 			);
 			path = "Custom View";
@@ -264,12 +263,6 @@
 			isa = PBXGroup;
 			children = (
 				1A55385C2760C7480056D3A5 /* Accessibility */,
-				1A03A30126FC543E007113E5 /* UIView+NibLoading+Border.swift */,
-				1A03A30426FDA596007113E5 /* UITextField+Border.swift */,
-				1A471ED9271B4D440066CCB5 /* UILabel+SafeText.swift */,
-				1AA344DD2732622600F8F6BA /* String+NSDataDetector.swift */,
-				1A553FB6273CB345001A03AF /* RegularExpression+Matches.swift */,
-				1A77260A274DD26600851677 /* String+StringComparison.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -283,10 +276,33 @@
 				1A37ED66275A38D100653E29 /* OnlyCharacter.storyboard */,
 				1A37ED68275A38E500653E29 /* Link.storyboard */,
 				1A37ED6A275A38F600653E29 /* Password.storyboard */,
-				1A03A2F626F6EA0E007113E5 /* CustomView.xib */,
 				1A03A2E726F5B407007113E5 /* LaunchScreen.storyboard */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		1A53F6E5279667170044F02D /* Custom TextField */ = {
+			isa = PBXGroup;
+			children = (
+				1A03A2F226F5B477007113E5 /* Models */,
+				1A53F6E6279667880044F02D /* Extension */,
+				1A03A2F926F6EE53007113E5 /* CustomView.swift */,
+				1A03A2F626F6EA0E007113E5 /* CustomView.xib */,
+			);
+			path = "Custom TextField";
+			sourceTree = "<group>";
+		};
+		1A53F6E6279667880044F02D /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				1A03A30126FC543E007113E5 /* UIView+NibLoading+Border.swift */,
+				1A03A30426FDA596007113E5 /* UITextField+Border.swift */,
+				1A471ED9271B4D440066CCB5 /* UILabel+SafeText.swift */,
+				1AA344DD2732622600F8F6BA /* String+NSDataDetector.swift */,
+				1A553FB6273CB345001A03AF /* RegularExpression+Matches.swift */,
+				1A77260A274DD26600851677 /* String+StringComparison.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 		1A553852275F81370056D3A5 /* Text FieldsUITests */ = {

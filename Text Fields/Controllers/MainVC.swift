@@ -33,6 +33,7 @@ class ViewController: UIViewController {
 
         createAccesibilityIdentifiersMainVC()
         setTitle()
+
     }
 
     func setTitle() {

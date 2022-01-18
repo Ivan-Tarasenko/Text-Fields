@@ -121,4 +121,28 @@ class Model {
             break
         }
     }
+
+    // Localization Text Fields.
+    let noDigit = "NO Digits field"
+    let noDigitPlaceholder = "Type here"
+
+    let limitCharTitle = "Input limit"
+    let limitCharPlaceholder = "Type here"
+
+    let onlyChar = "Only characters"
+    let onlyCharPlaceholder = "wwwww-ddddd"
+
+    let link = "Link"
+    let linkPlaceholder = "www.example.com"
+
+    let password = "Validation rules"
+    let passwordPlaceholder = "Password"
+
+    // Localization label password validation.
+    let minChar = "- Min length 8 characters."
+    let minOneDigit = "- Min 1 digit."
+    let minOneLowercase = "- Min 1 lowercase."
+    let minOneCapitalRequired = "- Min 1 capital required."
+    let notSpecialChar = "✘ Special characters are not allowed"
+    let onlyEnglishChar = "✘ Only English characters"
 }

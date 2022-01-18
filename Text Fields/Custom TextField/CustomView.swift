@@ -119,7 +119,7 @@ class CustomView: UIView {
         case .inputLimit:
             limitLabel.textTitle = "\(model.limitChar)/\(model.limitChar)"
             textField.setDefaultBorder()
-            title.textTitle = localizing.limitChar
+            title.textTitle = localizing.limitCharTitle
             textField.placeholder = localizing.limitCharPlaceholder
         case .onlyCharacters:
             textField.setDefaultBorder()
