@@ -42,18 +42,33 @@ class CustomView: UIView {
             textField.setBorder(radius: 10, color: UIColor.systemBlue)
         }
     }
+
+    // Расскаментировать в случае использования без View в Storyboard //
+    
+//    override init(frame: CGRect) {
+//        super.init(frame: frame)
+//        configureView()
+//        textField.delegate = self
+//
+//        addLabelPasswordValidation()
+//        addProgressBar()
+//        customPassValid.showLabelForPasswordValidation = true
+//        customPassValid.progressView.isHidden = true
+//        customPassValid.showLabelForbiddenChar = true
+//
+//    }
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
         configureView()
         textField.delegate = self
-        
+
         addLabelPasswordValidation()
         addProgressBar()
         customPassValid.showLabelForPasswordValidation = true
         customPassValid.progressView.isHidden = true
         customPassValid.showLabelForbiddenChar = true
-        
+
         customPassValid.createAccesibilityIdentifiersPS()
     }
     
@@ -83,7 +98,7 @@ class CustomView: UIView {
     }
     // MARK: - Configure CustomView
     func configureView() {
-        guard let view = loadViewFromNib(nibName: "CustomView") else { return }
+        guard let view = loadViewFromNib(nibName: "TextField") else { return }
         view.frame = bounds
         addSubview(view)
     }
