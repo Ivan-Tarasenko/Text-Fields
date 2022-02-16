@@ -10,18 +10,15 @@ import XCTest
 
 class TextFieldsUnitTests: XCTestCase {
 
-    var sut: Model!
-    var mut: ViewController!
+    var sut: ModelTextField!
 
     override func setUpWithError() throws {
         try super.setUpWithError()
-        sut = Model()
-        mut = ViewController()
+        sut = ModelTextField()
     }
 
     override func tearDownWithError() throws {
-        sut = Model()
-        mut = ViewController()
+        sut = ModelTextField()
         try super.tearDownWithError()
     }
 

@@ -15,7 +15,7 @@ class CustomView: UIView {
     @IBOutlet weak var limitLabel: UILabel!
     
     var switchTextField: TextFields = .noDigits
-    let model = Model()
+    let model = ModelTextField()
     let customPassValid = CustomPassValid()
     let localizing = Localization()
     
@@ -44,7 +44,6 @@ class CustomView: UIView {
     }
 
     // Расскаментировать в случае использования без View в Storyboard //
-    
 //    override init(frame: CGRect) {
 //        super.init(frame: frame)
 //        configureView()
