@@ -8,6 +8,7 @@
 import Foundation
 
 extension NSRegularExpression {
+    
     convenience init(_ pattern: String) {
         do {
             try self.init(pattern: pattern)
