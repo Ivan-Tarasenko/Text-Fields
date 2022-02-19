@@ -7,7 +7,6 @@
 
 import UIKit
 import SnapKit
-import Rswift
 
 class CustomPassValid {
 
@@ -15,10 +14,12 @@ class CustomPassValid {
     var minOneDigit = UILabel()
     var minOneLowercase = UILabel()
     var minCapitalRequired = UILabel()
+    var notSpecialChar = UILabel()
+    var onlyEnglishChar = UILabel()
 
     var progressView = UIProgressView()
 
-    let localizator = Localization()
+    let localizing = Localization()
 
     var switchForMinChar: Bool = false {
         didSet {
@@ -26,11 +27,11 @@ class CustomPassValid {
                 progressView.progress += 0.25
                 minLengthChar.textColor = .systemGreen
                 minLengthChar.textTitle =
-                localizator.minChar.replacingOccurrences(of: "-", with: "✓")
+                localizing.minChar.replacingOccurrences(of: "-", with: "✓")
             } else {
                 minLengthChar.textColor = .black
                 minLengthChar.textTitle =
-                localizator.minChar.replacingOccurrences(of: "✓", with: "-")
+                localizing.minChar.replacingOccurrences(of: "✓", with: "-")
             }
         }
     }
@@ -41,11 +42,11 @@ class CustomPassValid {
                 progressView.progress += 0.25
                 minOneDigit.textColor = .systemGreen
                 minOneDigit.textTitle =
-                localizator.minOneDigit.replacingOccurrences(of: "-", with: "✓")
+                localizing.minOneDigit.replacingOccurrences(of: "-", with: "✓")
             } else {
                 minOneDigit.textColor = .black
                 minOneDigit.textTitle =
-                localizator.minOneDigit.replacingOccurrences(of: "✓", with: "-")
+                localizing.minOneDigit.replacingOccurrences(of: "✓", with: "-")
             }
         }
     }
@@ -56,11 +57,11 @@ class CustomPassValid {
                 progressView.progress += 0.25
                 minOneLowercase.textColor = .systemGreen
                 minOneLowercase.textTitle =
-                localizator.minOneLowercase.replacingOccurrences(of: "-", with: "✓")
+                localizing.minOneLowercase.replacingOccurrences(of: "-", with: "✓")
             } else {
                 minOneLowercase.textColor = .black
                 minOneLowercase.textTitle =
-                localizator.minOneLowercase.replacingOccurrences(of: "✓", with: "-")
+                localizing.minOneLowercase.replacingOccurrences(of: "✓", with: "-")
             }
         }
     }
@@ -71,27 +72,41 @@ class CustomPassValid {
                 progressView.progress += 0.25
                 minCapitalRequired.textColor = .systemGreen
                 minCapitalRequired.textTitle =
-                localizator.minOneCapitalRequired.replacingOccurrences(of: "-", with: "✓")
+                localizing.minOneCapitalRequired.replacingOccurrences(of: "-", with: "✓")
             } else {
                 minCapitalRequired.textColor = .black
                 minCapitalRequired.textTitle =
-                localizator.minOneCapitalRequired.replacingOccurrences(of: "✓", with: "-")
+                localizing.minOneCapitalRequired.replacingOccurrences(of: "✓", with: "-")
             }
         }
     }
 
-    var showLabelForPasswordValidetion: Bool = true {
+    var showLabelForPasswordValidation: Bool = true {
         didSet {
-            if showLabelForPasswordValidetion {
+            if showLabelForPasswordValidation {
                 minLengthChar.isHidden = true
                 minOneDigit.isHidden = true
                 minOneLowercase.isHidden = true
                 minCapitalRequired.isHidden = true
+                notSpecialChar.isHidden = true
+                onlyEnglishChar.isHidden = true
             } else {
                 minLengthChar.isHidden = false
                 minOneDigit.isHidden = false
                 minOneLowercase.isHidden = false
                 minCapitalRequired.isHidden = false
+            }
+        }
+    }
+
+    var showLabelForbiddenChar: Bool = true {
+        didSet {
+            if showLabelForbiddenChar {
+                notSpecialChar.isHidden = true
+                onlyEnglishChar.isHidden = true
+            } else {
+                notSpecialChar.isHidden = false
+                onlyEnglishChar.isHidden = false
             }
         }
     }
@@ -109,32 +124,49 @@ class CustomPassValid {
         let constraintY = 22
 
         let labelFont = R.font.sfProDisplayRegular(size: 13)
+
         minLengthChar.font = labelFont
-        minLengthChar.textTitle = localizator.minChar
+        minLengthChar.textTitle = localizing.minChar
         minLengthChar.snp.makeConstraints { make in
             make.left.equalToSuperview().inset(constraintX)
             make.top.equalToSuperview().inset(85)
         }
 
         minOneDigit.font = labelFont
-        minOneDigit.textTitle = localizator.minOneDigit
+        minOneDigit.textTitle = localizing.minOneDigit
         minOneDigit.snp.makeConstraints { make in
             make.left.equalToSuperview().inset(constraintX)
             make.top.equalTo(minLengthChar).inset(constraintY)
         }
 
         minOneLowercase.font = labelFont
-        minOneLowercase.textTitle = localizator.minOneLowercase
+        minOneLowercase.textTitle = localizing.minOneLowercase
         minOneLowercase.snp.makeConstraints { make in
             make.left.equalToSuperview().inset(constraintX)
             make.top.equalTo(minOneDigit).inset(constraintY)
         }
 
         minCapitalRequired.font = labelFont
-        minCapitalRequired.textTitle = localizator.minOneCapitalRequired
+        minCapitalRequired.textTitle = localizing.minOneCapitalRequired
         minCapitalRequired.snp.makeConstraints { make in
             make.left.equalToSuperview().inset(constraintX)
             make.top.equalTo(minOneLowercase).inset(constraintY)
+        }
+
+        notSpecialChar.font = labelFont
+        notSpecialChar.textTitle = localizing.notSpecialChar
+        notSpecialChar.textColor = .systemRed
+        notSpecialChar.snp.makeConstraints { make in
+            make.right.equalToSuperview().inset(20)
+            make.top.equalToSuperview().inset(103)
+        }
+
+        onlyEnglishChar.font = labelFont
+        onlyEnglishChar.textTitle = localizing.onlyEnglishChar
+        onlyEnglishChar.textColor = .systemRed
+        onlyEnglishChar.snp.makeConstraints { make in
+            make.right.equalToSuperview().inset(20)
+            make.top.equalTo(notSpecialChar).inset(20)
         }
     }
 }

@@ -2,7 +2,7 @@
 //  Models.swift
 //  Text Fields
 //
-//  Created by Иван Тарасенко on 22.10.2021.
+//  Created by Иван Тарасенко on 22.10.T2021.
 //
 
 import UIKit
@@ -16,7 +16,31 @@ enum TextFields {
     case validationRules
 }
 
-class Model {
+class ModelTextField {
+
+    // Text Fields.
+    let noDigit = "NO Digits field"
+    let noDigitPlaceholder = "Type here"
+
+    let limitCharTitle = "Input limit"
+    let limitCharPlaceholder = "Type here"
+
+    let onlyChar = "Only characters"
+    let onlyCharPlaceholder = "wwwww-ddddd"
+
+    let link = "Link"
+    let linkPlaceholder = "www.example.com"
+
+    let password = "Validation rules"
+    let passwordPlaceholder = "Password"
+
+    // Title label password validation.
+    let minChar = "- Min length 8 characters."
+    let minOneDigit = "- Min 1 digit."
+    let minOneLowercase = "- Min 1 lowercase."
+    let minOneCapitalRequired = "- Min 1 capital required."
+    let notSpecialChar = "✘ Special characters are not allowed"
+    let onlyEnglishChar = "✘ Only English characters"
 
     // MARK: - No digits character
     func noDigit(string: String) -> Bool {
@@ -33,15 +57,30 @@ class Model {
 
         switch string.count {
         case nil:
-            countLimit = "0/\(limit)"
+            countLimit = "\(limit)/\(limit)"
         case 0...limit:
-            countLimit = "\(string.count)/\(limit)"
+            countLimit = "\(limit - string.count)/\(limit)"
         case limit...string.count:
             countLimit = "\(limit - string.count)/\(limit)"
         default:
             break
         }
         return countLimit
+    }
+
+    func changeColorAfterLimit(string: String) -> NSMutableAttributedString {
+        let mutableString = NSMutableAttributedString(string: string)
+        if string.count > limitChar {
+            mutableString.addAttribute(.foregroundColor,
+                                       value: UIColor.black,
+                                       range: NSRange(location: 0, length: limitChar)
+            )
+            mutableString.addAttribute(.foregroundColor,
+                                       value: UIColor.red,
+                                       range: NSRange(location: limitChar, length: string.count - limitChar)
+            )
+        }
+        return mutableString
     }
 
     // MARK: - Only characters
@@ -63,14 +102,14 @@ class Model {
         return sting.isEmpty || NSPredicate(format: format, regex).evaluate(with: text)
     }
 
-    // MARK: - link validaty check and transition on it
+    // MARK: - link validity check and transition on it
     func linkUrl(url: String) {
         guard let url = URL(string: url) else { return }
         UIApplication.shared.open(url, options: [:], completionHandler: nil)
-
     }
 
     func detectedLink (string: String) -> String {
+        let checkDomenName = "https://"
         let detector = try! NSDataDetector(types: NSTextCheckingResult.CheckingType.link.rawValue)
         let matches = detector.matches(in: string, options: [], range: NSRange(location: 0, length: string.utf16.count))
         var urlLink = String()
@@ -80,10 +119,18 @@ class Model {
             urlLink = String(url)
             print(url)
         }
+        if !(urlLink ~= checkDomenName) {
+            urlLink.insert(contentsOf: "https://", at: urlLink.startIndex)
+        }
         return urlLink
     }
+
+    // MARK: - Rules password validation.
+    func checkingPasswordRules(string: String, rule: String) -> Bool {
+        string ~= rule
+    }
     
-    // MARK: - Tuneing  progressBar.
+    // MARK: - Tuning  progressBar.
     func progressBar(setProgressBar: UIProgressView) {
         switch setProgressBar.progress {
         case 0...0.25:

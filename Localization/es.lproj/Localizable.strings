@@ -1,11 +1,16 @@
 // Localization title label.
-"Text_Fields" = "Campos de texto";
+"Text_Fields_All" = "Campos de texto";
+"Text_Fields_NoDigit" = "Campo de texto sin números";
+"Text_Fields_LimitChar" = "Campo de texto restringido";
+"Text_Fields_OnlyChar" = "Campo de texto solo para caracteres";
+"Text_Fields_Link" = "Campo de texto para el enlace";
+"Text_Fields_Password" = "Campo de texto de contraseña";
 
-// No Digtits.
+// No Digits.
 "NO_Digits_field" = "Sin campo de dígitos";
 "Type_here" = "Escriba aquí";
 
-//Imput Limit.
+//Input Limit.
 "Input_limit" = "Límite de entrada";
 
 // Only characters.
@@ -25,8 +30,5 @@
 "Min_1_digit." = "- Mínimo 1 dígito.";
 "Min_1_lowercase." = "- Min 1 minúscula.";
 "Min_1_capital_required." = "- Mínimo 1 capital requerido.";
-
-//Localization label and button changer laguage.
-"Change_languange" = "Skipta um tungumál";
-"Label_Change" = "ES";
-
+"special_characters_are_not_allowed" = "✘ No se permiten caracteres especiales";
+"only English characters" = "✘ Solo Caracteres en inglés";

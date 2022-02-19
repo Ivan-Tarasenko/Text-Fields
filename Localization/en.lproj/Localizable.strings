@@ -1,11 +1,16 @@
 // Localization title label.
-"Text_Fields" = "Text Fields";
+"Text_Fields_All" = "Text Fields";
+"Text_Fields_NoDigit" = "Text Field without numbers";
+"Text_Fields_LimitChar" = "Restricted text field";
+"Text_Fields_OnlyChar" = "Text Tield for characters only";
+"Text_Fields_Link" = "Text Tield for the link";
+"Text_Fields_Password" = "Password text field";
 
-// No Digtits.
+// No Digits.
 "NO_Digits_field" = "NO Digits field";
 "Type_here" = "Type here";
 
-//Imput Limit.
+//Input Limit.
 "Input_limit" = "Input limit";
 
 // Only characters.
@@ -25,7 +30,5 @@
 "Min_1_digit." = "- Min 1 digit.";
 "Min_1_lowercase." = "- Min 1 lowercase.";
 "Min_1_capital_required." = "- Min 1 capital required.";
-
-//Localization label and button changer laguage.
-"Change_languange" = "Change laguange";
-"Label_Change" = "EN";
+"special_characters_are_not_allowed" = "✘ Special characters are not allowed";
+"only English characters" = "✘ Only English characters";
