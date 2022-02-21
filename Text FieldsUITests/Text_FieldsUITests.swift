@@ -6,6 +6,7 @@
 //
 
 import XCTest
+import Text_Fields
 
 class TextFieldsUITests: XCTestCase {
     let accessibility = AccessibilityIdentifier()
@@ -88,7 +89,6 @@ class TextFieldsUITests: XCTestCase {
         goTabBar = app.buttons[accessibility.goTabBar]
 
         returnButton = app.keyboards.buttons[accessibility.returnButton]
-
     }
 
     override func tearDownWithError() throws {
@@ -129,16 +129,42 @@ class TextFieldsUITests: XCTestCase {
     }
 
     func testNoInputDigit() {
-        let stringInput = "qwert123yu!@#"
-        let stringOut = "qwertyu!@#"
+        var stringInput = String()
+        var stringOut = String()
+        let localTitle = localizedString(key: "Text_Fields_All")
+        let localStrInput = localizedString(key: "NoDigitstrInput")
+        let localStrOut = localizedString(key: "NoDigitstrOut")
+
+        if titleLabel.label == localTitle {
+            stringInput = localStrInput
+            stringOut = localStrOut
+        } else {
+            print(accessibility.errorString)
+        }
         noDigitsTextField.tap()
         noDigitsTextField.typeText(stringInput)
         XCTAssertEqual(noDigitsTextField.value as? String, stringOut)
     }
 
     func testInputLimitCharacters() {
-        let stringInput = "Checking limit character"
-        let stringOut = "-14/10"
+        var stringInput = String()
+        var stringOut = String()
+        let localTitle = localizedString(key: "Text_Fields_All")
+        let localStrInput = localizedString(key: "limitStrInput")
+        let localCount = localizedString(key: "limitStrInput")
+
+        if titleLabel.label == localTitle {
+            var countCharacter = localCount.count - 10
+            stringInput = localStrInput
+            if countCharacter < 0 {
+                countCharacter = -countCharacter
+                stringOut = "\(countCharacter)/10"
+            } else {
+                stringOut = "-\(countCharacter)/10"
+            }
+        } else {
+            print(accessibility.errorString)
+        }
         inputLimitTextField.tap()
         inputLimitTextField.typeText(stringInput)
         XCTAssertEqual(inputLimitLabel.label, stringOut)
@@ -147,59 +173,82 @@ class TextFieldsUITests: XCTestCase {
     func testInputOnlyCharacters() {
         let stringInput = "Qwer13tyui12opE3bk45d79eer%3"
         let stringOut = "Qwert-12345"
+
         onlyCharactersTextField.tap()
         onlyCharactersTextField.typeText(stringInput)
         XCTAssertEqual(onlyCharactersTextField.value as? String, stringOut)
     }
 
     func testInputLink() {
-        let stringInput = "That link https://www.google.com"
-        let stringOut = "https://www.google.com"
+        var stringInput = String()
+        var stringOut = String()
+        let localTitle = localizedString(key: "Text_Fields_All")
+        let localStrInput = localizedString(key: "LinkString")
+
+        if titleLabel.label == localTitle {
+            stringInput = "\(localStrInput) https://www.google.com"
+            stringOut = "https://www.google.com"
+        } else {
+            print(accessibility.errorString)
+        }
         linkTextField.tap()
         linkTextField.typeText(stringInput)
         returnButton.tap()
-        app.activate()
         XCTAssertEqual(linkTextField.value as? String, stringOut)
     }
 
     func testRulesPasswordValidetion() {
         let stringInput = "123QWErty"
+        let minOneDigitLoc = localizedString(key: "Min_1_digitTest")
+        let minOneCapital = localizedString(key: "Min_1_capital_requiredTest")
+        let minOneLowecase = localizedString(key: "Min_1_lowercaseTest")
+        let minLength = localizedString(key: "Min_length_charactersTest")
         app.swipeUp()
         validationRulesTextField.tap()
         validationRulesTextField.typeText(stringInput)
-        XCTAssertEqual(minOneDigit.label, "✓ Min 1 digit.")
-        XCTAssertEqual(minCapitalRequired.label, "✓ Min 1 capital required.")
-        XCTAssertEqual(minOneLowercase.label, "✓ Min 1 lowercase.")
-        XCTAssertEqual(minLengthChar.label, "✓ Min length 8 characters.")
+        XCTAssertEqual(minOneDigit.label, minOneDigitLoc)
+        XCTAssertEqual(minCapitalRequired.label, minOneCapital)
+        XCTAssertEqual(minOneLowercase.label, minOneLowecase)
+        XCTAssertEqual(minLengthChar.label, minLength)
     }
 
-   func testRulesPasswordValidationInputForbiddenCharacters() {
-       let stringInput1 = "!@#"
-       let stringInput2 = "АБВгде"
-       app.swipeUp()
-       validationRulesTextField.tap()
-       validationRulesTextField.typeText(stringInput1)
-       app.buttons["Next keyboard"].tap()
-       validationRulesTextField.typeText(stringInput2)
-       app.buttons["Next keyboard"].tap()
-       XCTAssertTrue(notSpecialChar.exists)
-       XCTAssertTrue(onlyEnglishChar.exists)
-       XCTAssertEqual(notSpecialChar.label, "✘ Special characters are not allowed")
-       XCTAssertEqual(onlyEnglishChar.label, "✘ Only English characters")
+    func testRulesPasswordValidationInputForbiddenCharacters() {
+        let stringInput1 = "!@#"
+        let stringInput2 = "АБВгде"
+        let localButtonTitle = localizedString(key: "NextKeyboard")
+        let localStrInput = localizedString(key: "special_characters_are_not_allowed")
+        let localStrOut = localizedString(key: "only English characters")
 
-   }
-
-    func testCompletionProgressBar() {
         app.swipeUp()
         validationRulesTextField.tap()
-        validationRulesTextField.typeText("1")
-        XCTAssertEqual(progressView.value as? String, "25%")
+        if app.buttons["Return"].label == "return" {
+            app.buttons[localButtonTitle].tap()
+        }
+        validationRulesTextField.typeText(stringInput1)
+        validationRulesTextField.typeText(stringInput2)
+        XCTAssertTrue(notSpecialChar.exists)
+        XCTAssertTrue(onlyEnglishChar.exists)
+        XCTAssertEqual(notSpecialChar.label, localStrInput)
+        XCTAssertEqual(onlyEnglishChar.label, localStrOut)
+
+    }
+
+    func testCompletionProgressBar() {
+        let twentyFive = localizedString(key: "25%")
+        let fifty = localizedString(key: "50%")
+        let seventyFive = localizedString(key: "75%")
+        let hundred = localizedString(key: "100%")
+        
+        app.swipeUp()
+        validationRulesTextField.tap()
+        validationRulesTextField.typeText("1111")
+        XCTAssertEqual(progressView.value as? String, twentyFive)
         validationRulesTextField.typeText("Q")
-        XCTAssertEqual(progressView.value as? String, "50%")
+        XCTAssertEqual(progressView.value as? String, fifty)
         validationRulesTextField.typeText("w")
-        XCTAssertEqual(progressView.value as? String, "75%")
+        XCTAssertEqual(progressView.value as? String, seventyFive)
         validationRulesTextField.typeText("erty123")
-        XCTAssertEqual(progressView.value as? String, "100%")
+        XCTAssertEqual(progressView.value as? String, hundred)
     }
 
     func testLaunchPerformance() throws {
@@ -210,4 +259,14 @@ class TextFieldsUITests: XCTestCase {
             }
         }
     }
+}
+
+extension XCTest {
+    // Geting localizatin strings.
+    func localizedString(key: String) -> String {
+        let localizationBundle = Bundle(path: Bundle(for: TextFieldsUITests.self).bundlePath)
+        let result = NSLocalizedString(key, bundle: localizationBundle!, comment: "")
+        return result
+    }
+
 }

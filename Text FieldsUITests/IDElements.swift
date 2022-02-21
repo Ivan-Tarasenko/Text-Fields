@@ -46,6 +46,8 @@ struct AccessibilityIdentifier {
     let returnButton = "Return"
 
     let nextKeyboard = "Next keyboard"
+
+    let errorString = "change the language in the test settings: edit Scheme -> test"
 }
 
 struct AccessibilityIdentifierTabBar {

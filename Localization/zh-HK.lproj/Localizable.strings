@@ -33,3 +33,28 @@
 "special_characters_are_not_allowed" = "✘ 不允许使用特殊字符";
 "only English characters" = "✘ 只有英文字符";
 
+// Localization string for test "no digit"
+"NoDigitstrInput" = "你好！123!@#";
+"NoDigitstrOut" = "你好！!@#";
+
+// Localization string for test "Limit character"
+"limitStrInput" = "检查限制字符";
+
+
+// Localization string for test "Link"
+"LinkString" = "这里有一个链接";
+
+// Localization string for test "Password validation"
+"Min_length_charactersTest" = "✓ 最小長度為 8 個字符。.";
+"Min_1_digitTest" = "✓ 最少 1 位數字。.";
+"Min_1_lowercaseTest" = "✓ 最少 1 個小寫字母。.";
+"Min_1_capital_requiredTest" = "✓ 最少需要 1 個資本。.";
+
+// Localization for incorrect characters.
+"NextKeyboard" = "下一個鍵盤";
+
+// test progress bar.
+"25%" = "25%";
+"50%" = "50%";
+"75%" = "75%";
+"100%" = "100%";

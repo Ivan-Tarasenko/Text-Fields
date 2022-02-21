@@ -15,7 +15,6 @@ class TestPassword: XCTestCase {
     var app: XCUIApplication!
 
     var goTabBar: XCUIElement!
-    var tabBar: XCUIElement!
     var itemNoDigit: XCUIElement!
     var itemPassword: XCUIElement!
     var titleLabel: XCUIElement!
@@ -38,10 +37,9 @@ class TestPassword: XCTestCase {
         continueAfterFailure = false
         app = XCUIApplication()
         app.launch()
-        tabBar = app.tabBars[accessibilityTB.tabBar]
         goTabBar = app.buttons[accessibility.goTabBar]
-        itemPassword = tabBar.buttons[accessibilityTB.itemPassword]
-        itemNoDigit = tabBar.buttons[accessibilityTB.itemNoDigit]
+        itemPassword = app.buttons[accessibilityTB.itemPassword]
+        itemNoDigit = app.buttons[accessibilityTB.itemNoDigit]
         titleLabel = app.staticTexts[accessibility.titleLabel]
         passwordView = app.otherElements[accessibility.validationRulesView]
         passwordTitle = app.staticTexts[accessibility.validationRulesTitle]
@@ -55,7 +53,6 @@ class TestPassword: XCTestCase {
         minCapitalRequired = app.staticTexts[accessibility.minCapitalRequired]
         notSpecialChar = app.staticTexts[accessibility.notSpecialChar]
         onlyEnglishChar = app.staticTexts[accessibility.onlyEnglishChar]
-        switchKeyboardButton = app.buttons[accessibility.nextKeyboard]
     }
 
     override func tearDownWithError() throws {
@@ -75,50 +72,63 @@ class TestPassword: XCTestCase {
 
     func testRulesPasswordValidetion() {
         let stringInput = "123QWErty"
+        let minOneDigitLoc = localizedString(key: "Min_1_digitTest")
+        let minOneCapital = localizedString(key: "Min_1_capital_requiredTest")
+        let minOneLowecase = localizedString(key: "Min_1_lowercaseTest")
+        let minLength = localizedString(key: "Min_length_charactersTest")
         app.swipeUp()
         goTabBar.tap()
         itemNoDigit.tap()
         itemPassword.tap()
         passwordTextField.tap()
         passwordTextField.typeText(stringInput)
-        XCTAssertEqual(minOneDigit.label, "✓ Min 1 digit.")
-        XCTAssertEqual(minCapitalRequired.label, "✓ Min 1 capital required.")
-        XCTAssertEqual(minOneLowercase.label, "✓ Min 1 lowercase.")
-        XCTAssertEqual(minLengthChar.label, "✓ Min length 8 characters.")
+        XCTAssertEqual(minOneDigit.label, minOneDigitLoc)
+        XCTAssertEqual(minCapitalRequired.label, minOneCapital)
+        XCTAssertEqual(minOneLowercase.label, minOneLowecase)
+        XCTAssertEqual(minLengthChar.label, minLength)
     }
 
    func testRulesPasswordValidationInputForbiddenCharacters() {
        let stringInput1 = "!@#"
        let stringInput2 = "АБВгде"
+       let localButtonTitle = localizedString(key: "NextKeyboard")
+       let localStrInput = localizedString(key: "special_characters_are_not_allowed")
+       let localStrOut = localizedString(key: "only English characters")
+
        app.swipeUp()
        goTabBar.tap()
        itemNoDigit.tap()
        itemPassword.tap()
        passwordTextField.tap()
+       if app.buttons["Return"].label == "return" {
+           app.buttons[localButtonTitle].tap()
+       }
        passwordTextField.typeText(stringInput1)
-       switchKeyboardButton.tap()
        passwordTextField.typeText(stringInput2)
-       switchKeyboardButton.tap()
        XCTAssertTrue(notSpecialChar.exists)
        XCTAssertTrue(onlyEnglishChar.exists)
-       XCTAssertEqual(notSpecialChar.label, "✘ Special characters are not allowed")
-       XCTAssertEqual(onlyEnglishChar.label, "✘ Only English characters")
-
+       XCTAssertEqual(notSpecialChar.label, localStrInput)
+       XCTAssertEqual(onlyEnglishChar.label, localStrOut)
    }
 
     func testCompletionProgressBar() {
+        let twentyFive = localizedString(key: "25%")
+        let fifty = localizedString(key: "50%")
+        let seventyFive = localizedString(key: "75%")
+        let hundred = localizedString(key: "100%")
+
         app.swipeUp()
         goTabBar.tap()
         itemNoDigit.tap()
         itemPassword.tap()
         passwordTextField.tap()
-        passwordTextField.typeText("1")
-        XCTAssertEqual(progressView.value as? String, "25%")
+        passwordTextField.typeText("1111")
+        XCTAssertEqual(progressView.value as? String, twentyFive)
         passwordTextField.typeText("Q")
-        XCTAssertEqual(progressView.value as? String, "50%")
+        XCTAssertEqual(progressView.value as? String, fifty)
         passwordTextField.typeText("w")
-        XCTAssertEqual(progressView.value as? String, "75%")
+        XCTAssertEqual(progressView.value as? String, seventyFive)
         passwordTextField.typeText("erty123")
-        XCTAssertEqual(progressView.value as? String, "100%")
+        XCTAssertEqual(progressView.value as? String, hundred)
     }
 }

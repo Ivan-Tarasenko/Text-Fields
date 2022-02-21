@@ -32,3 +32,31 @@
 "Min_1_capital_required." = "- Мінімальний потрібен капітал.";
 "special_characters_are_not_allowed" = "✘ Спеціальні символи не допускаються";
 "only English characters" = "✘ Тільки англійські символи";
+
+// Localization string for test "no digit"
+"NoDigitstrInput" = "йцуке123нг!@#";
+"NoDigitstrOut" = "йцукенг!@#";
+
+// Localization string for test "Limit character"
+"limitStrInput" = "Перевірка граничного символу";
+
+
+// Localization string for test "Link"
+"LinkString" = "Тут є посилання";
+
+// Localization string for test "Password validation"
+"Min_length_charactersTest" = "✓ Мінімальна довжина 8 символів.";
+"Min_1_digitTest" = "✓ Мін. 1 цифра.";
+"Min_1_lowercaseTest" = "✓ Мін. 1 нижній регістр.";
+"Min_1_capital_requiredTest" = "✓ Мінімальний потрібен капітал.";
+
+
+// Localization for incorrect characters.
+"NextKeyboard" = "Наступна клавіатура";
+
+// test progress bar.
+"25%" = "25%";
+"50%" = "50%";
+"75%" = "75%";
+"100%" = "100%";
+

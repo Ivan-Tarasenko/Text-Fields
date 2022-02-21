@@ -15,7 +15,6 @@ class TestOnlyChat: XCTestCase {
     var app: XCUIApplication!
 
     var goTabBar: XCUIElement!
-    var tabBar: XCUIElement!
     var itemNoDigit: XCUIElement!
     var itemOnlyChar: XCUIElement!
     var titleLabel: XCUIElement!
@@ -27,10 +26,9 @@ class TestOnlyChat: XCTestCase {
         continueAfterFailure = false
         app = XCUIApplication()
         app.launch()
-        tabBar = app.tabBars[accessibilityTB.tabBar]
         goTabBar = app.buttons[accessibility.goTabBar]
-        itemOnlyChar = tabBar.buttons[accessibilityTB.itemOnlyChar]
-        itemNoDigit = tabBar.buttons[accessibilityTB.itemNoDigit]
+        itemOnlyChar = app.buttons[accessibilityTB.itemOnlyChar]
+        itemNoDigit = app.buttons[accessibilityTB.itemNoDigit]
         titleLabel = app.staticTexts[accessibility.titleLabel]
         onlyCharView = app.otherElements[accessibility.onlyCharactersView]
         onlyCharTitle = app.staticTexts[accessibility.onlyCharactersTitle]

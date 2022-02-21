@@ -32,3 +32,29 @@
 "Min_1_capital_required." = "- Min 1 capital required.";
 "special_characters_are_not_allowed" = "✘ Special characters are not allowed";
 "only English characters" = "✘ Only English characters";
+
+// Localization string for test "no digit"
+"NoDigitstrInput" = "qwert123yu!@#";
+"NoDigitstrOut" = "qwertyu!@#";
+
+// Localization string for test "Limit character"
+"limitStrInput" = "Checking limit character";
+
+// Localization string for test "Link"
+"LinkString" = "There is a link here";
+
+// Localization string for test "Password validation"
+"Min_length_charactersTest" = "✓ Min length 8 characters.";
+"Min_1_digitTest" = "✓ Min 1 digit.";
+"Min_1_lowercaseTest" = "✓ Min 1 lowercase.";
+"Min_1_capital_requiredTest" = "✓ Min 1 capital required.";
+
+// Localization for incorrect characters.
+"NextKeyboard" = "Next keyboard";
+
+// Localization for test progress bar.
+"25%" = "25%";
+"50%" = "50%";
+"75%" = "75%";
+"100%" = "100%";
+
