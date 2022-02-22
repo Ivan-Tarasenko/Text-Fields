@@ -74,8 +74,6 @@ class LimitCharacter: XCTestCase {
             } else {
                 stringOut = "-\(countCharacter)/10"
             }
-        } else {
-            print(accessibility.errorString)
         }
         inputLimitTextField.tap()
         inputLimitTextField.typeText(stringInput)

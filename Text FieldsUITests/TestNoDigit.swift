@@ -60,8 +60,6 @@ class TestNoDigit: XCTestCase {
         if titleLabel.label == localTitle {
             stringInput = localStrInput
             stringOut = localStrOut
-        } else {
-            print(accessibility.errorString)
         }
         noDigitsTextField.tap()
         noDigitsTextField.typeText(stringInput)

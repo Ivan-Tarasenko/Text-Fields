@@ -138,8 +138,6 @@ class TextFieldsUITests: XCTestCase {
         if titleLabel.label == localTitle {
             stringInput = localStrInput
             stringOut = localStrOut
-        } else {
-            print(accessibility.errorString)
         }
         noDigitsTextField.tap()
         noDigitsTextField.typeText(stringInput)
@@ -162,8 +160,6 @@ class TextFieldsUITests: XCTestCase {
             } else {
                 stringOut = "-\(countCharacter)/10"
             }
-        } else {
-            print(accessibility.errorString)
         }
         inputLimitTextField.tap()
         inputLimitTextField.typeText(stringInput)
@@ -188,8 +184,6 @@ class TextFieldsUITests: XCTestCase {
         if titleLabel.label == localTitle {
             stringInput = "\(localStrInput) https://www.google.com"
             stringOut = "https://www.google.com"
-        } else {
-            print(accessibility.errorString)
         }
         linkTextField.tap()
         linkTextField.typeText(stringInput)

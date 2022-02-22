@@ -65,8 +65,6 @@ class TestLink: XCTestCase {
         if titleLabel.label == localTitle {
             stringInput = "\(localStrInput) https://www.google.com"
             stringOut = "https://www.google.com"
-        } else {
-            print(accessibility.errorString)
         }
         linkTextField.tap()
         linkTextField.typeText(stringInput)
