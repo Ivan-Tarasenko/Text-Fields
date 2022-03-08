@@ -33,3 +33,28 @@
 "Min_1_capital_required." = "- Мин 1 заглавный символ.";
 "special_characters_are_not_allowed" = "✘ Cпецсимволы недопустимы";
 "only English characters" = "✘ Tолько английские символы";
+
+// Localization string for test "no digit"
+"NoDigitstrInput" = "йцуке123нг!@#";
+"NoDigitstrOut" = "йцукенг!@#";
+
+// Localization string for test "Limit character"
+"limitStrInput" = "Проверка количества символов";
+
+// Localization string for test "Link"
+"LinkString" = "Тут есть ссылка";
+
+// Localization string for test "Password validation"
+"Min_length_charactersTest" = "✓ Мин 8 символов.";
+"Min_1_digitTest" = "✓ Мин 1 цыфра.";
+"Min_1_lowercaseTest" = "✓ Мин 1 строчный символ.";
+"Min_1_capital_requiredTest" = "✓ Мин 1 заглавный символ.";
+
+// Localization for incorrect characters.
+"NextKeyboard" = "Следующая клавиатура";
+
+// test progress bar.
+"25%" = "25 %";
+"50%" = "50 %";
+"75%" = "75 %";
+"100%" = "100 %";

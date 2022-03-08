@@ -15,7 +15,6 @@ class LimitCharacter: XCTestCase {
     var app: XCUIApplication!
 
     var goTabBar: XCUIElement!
-    var tabBar: XCUIElement!
     var itemNoDigit: XCUIElement!
     var itemLimit: XCUIElement!
     var titleLabel: XCUIElement!
@@ -28,10 +27,9 @@ class LimitCharacter: XCTestCase {
         continueAfterFailure = false
         app = XCUIApplication()
         app.launch()
-        tabBar = app.tabBars[accessibilityTB.tabBar]
         goTabBar = app.buttons[accessibility.goTabBar]
-        itemLimit = tabBar.buttons[accessibilityTB.itemLimitChar]
-        itemNoDigit = tabBar.buttons[accessibilityTB.itemNoDigit]
+        itemLimit = app.buttons[accessibilityTB.itemLimitChar]
+        itemNoDigit = app.buttons[accessibilityTB.itemNoDigit]
         titleLabel = app.staticTexts[accessibility.titleLabel]
         inputLimitView = app.otherElements[accessibility.inputLimitView]
         inputLimitTitle = app.staticTexts[accessibility.inputLimitTitle]
@@ -56,12 +54,27 @@ class LimitCharacter: XCTestCase {
     }
 
     func testInputLimitCharacters() {
-        let stringInput = "Checking limit character"
-        let stringOut = "-14/10"
+        var stringInput = String()
+        var stringOut = String()
+        let localTitle = localizedString(key: "Text_Fields_LimitChar")
+        let localStrInput = localizedString(key: "limitStrInput")
+        let localCount = localizedString(key: "limitStrInput")
+
         app.swipeUp()
         goTabBar.tap()
         itemNoDigit.tap()
         itemLimit.tap()
+
+        if titleLabel.label == localTitle {
+            var countCharacter = localCount.count - 10
+            stringInput = localStrInput
+            if countCharacter < 0 {
+                countCharacter = -countCharacter
+                stringOut = "\(countCharacter)/10"
+            } else {
+                stringOut = "-\(countCharacter)/10"
+            }
+        }
         inputLimitTextField.tap()
         inputLimitTextField.typeText(stringInput)
         XCTAssertEqual(inputLimitLabel.label, stringOut)

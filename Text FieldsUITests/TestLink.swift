@@ -15,7 +15,6 @@ class TestLink: XCTestCase {
     var app: XCUIApplication!
 
     var goTabBar: XCUIElement!
-    var tabBar: XCUIElement!
     var itemNoDigit: XCUIElement!
     var itemLink: XCUIElement!
     var titleLabel: XCUIElement!
@@ -29,10 +28,9 @@ class TestLink: XCTestCase {
         app = XCUIApplication()
         app.launch()
         returnButton = app.keyboards.buttons[accessibility.returnButton]
-        tabBar = app.tabBars[accessibilityTB.tabBar]
         goTabBar = app.buttons[accessibility.goTabBar]
-        itemLink = tabBar.buttons[accessibilityTB.itemLink]
-        itemNoDigit = tabBar.buttons[accessibilityTB.itemNoDigit]
+        itemLink = app.buttons[accessibilityTB.itemLink]
+        itemNoDigit = app.buttons[accessibilityTB.itemNoDigit]
         titleLabel = app.staticTexts[accessibility.titleLabel]
         linkView = app.otherElements[accessibility.linkView]
         linkTitle = app.staticTexts[accessibility.linkTitle]
@@ -55,16 +53,22 @@ class TestLink: XCTestCase {
     }
 
     func testInputLink() {
-        let stringInput = "That link https://www.google.com"
-        let stringOut = "https://www.google.com"
+        var stringInput = String()
+        var stringOut = String()
+        let localTitle = localizedString(key: "Text_Fields_Link")
+        let localStrInput = localizedString(key: "LinkString")
+
         app.swipeUp()
         goTabBar.tap()
         itemNoDigit.tap()
         itemLink.tap()
+        if titleLabel.label == localTitle {
+            stringInput = "\(localStrInput) https://www.google.com"
+            stringOut = "https://www.google.com"
+        }
         linkTextField.tap()
         linkTextField.typeText(stringInput)
         returnButton.tap()
-        app.activate() // <--- Go back to app
         XCTAssertEqual(linkTextField.value as? String, stringOut)
     }
 }
