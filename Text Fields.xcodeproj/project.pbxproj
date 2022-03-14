@@ -126,7 +126,7 @@
 		1AB8952127649A1500DC9216 /* TestLimitCharacter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestLimitCharacter.swift; sourceTree = "<group>"; };
 		1AB8952327649B8300DC9216 /* LimitCharacterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LimitCharacterVC.swift; sourceTree = "<group>"; };
 		1AC2F1A12754D3B0009B3009 /* zh-HK */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-HK"; path = "zh-HK.lproj/Localizable.strings"; sourceTree = "<group>"; };
-		1AD11E8C274FA87E00D255A2 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
+		1AD11E8C274FA87E00D255A2 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = R.generated.swift; path = Resources/R.generated.swift; sourceTree = SOURCE_ROOT; };
 		1AD11E95274FBD8000D255A2 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		1AD11E9B2750B82800D255A2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		1AD11E9C2750BE4B00D255A2 /* Localization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localization.swift; sourceTree = "<group>"; };
@@ -173,9 +173,8 @@
 			isa = PBXGroup;
 			children = (
 				1A03A2DB26F5B406007113E5 /* Text Fields */,
-				1A03A30026FC53FE007113E5 /* Extensions */,
-				1A03A2F326F5B4A4007113E5 /* Supporting */,
-				1AD11E91274FBC4700D255A2 /* Localization */,
+				1A03A2F326F5B4A4007113E5 /* Supporting Files */,
+				1AF00E6B27DF578800486607 /* Resources */,
 				1A9A63E0275C7FD200C32557 /* Text FieldsUnitTests */,
 				1A553852275F81370056D3A5 /* Text FieldsUITests */,
 				1A03A2DA26F5B406007113E5 /* Products */,
@@ -235,17 +234,14 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
-		1A03A2F326F5B4A4007113E5 /* Supporting */ = {
+		1A03A2F326F5B4A4007113E5 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				1A03A2FB26F6F3C0007113E5 /* Fonts */,
 				1A03A2EA26F5B407007113E5 /* Info.plist */,
-				1A03A2E526F5B407007113E5 /* Assets.xcassets */,
 				1A03A2DE26F5B406007113E5 /* SceneDelegate.swift */,
 				1A03A2DC26F5B406007113E5 /* AppDelegate.swift */,
-				1AD11E8C274FA87E00D255A2 /* R.generated.swift */,
 			);
-			path = Supporting;
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		1A03A2F826F6EDF4007113E5 /* Custom View */ = {
@@ -364,6 +360,18 @@
 				1AD11E9C2750BE4B00D255A2 /* Localization.swift */,
 			);
 			path = Localization;
+			sourceTree = "<group>";
+		};
+		1AF00E6B27DF578800486607 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				1AD11E8C274FA87E00D255A2 /* R.generated.swift */,
+				1A03A2E526F5B407007113E5 /* Assets.xcassets */,
+				1A03A2FB26F6F3C0007113E5 /* Fonts */,
+				1A03A30026FC53FE007113E5 /* Extensions */,
+				1AD11E91274FBC4700D255A2 /* Localization */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		1FF03A75C22B41C84F892071 /* Frameworks */ = {
@@ -850,7 +858,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2TFP9B86SX;
-				INFOPLIST_FILE = "$(SRCROOT)/Supporting/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -870,7 +878,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2TFP9B86SX;
-				INFOPLIST_FILE = "$(SRCROOT)/Supporting/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
