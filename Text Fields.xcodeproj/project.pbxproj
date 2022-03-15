@@ -196,30 +196,21 @@
 		1A03A2DB26F5B406007113E5 /* Text Fields */ = {
 			isa = PBXGroup;
 			children = (
+				1AF00E7027E0B10900486607 /* Main Screen */,
+				1AF00E7127E0B11900486607 /* No Digit Screen */,
+				1AF00E7227E0B14C00486607 /* Limit Char Screen */,
+				1AF00E7327E0B17D00486607 /* Only Char Screen */,
+				1AF00E7427E0B19100486607 /* Link Screen */,
+				1AF00E7527E0B1B500486607 /* Password Screen */,
 				1A53F6E5279667170044F02D /* Custom TextField */,
 				1A03A2F126F5B465007113E5 /* Views */,
-				1A03A2F026F5B444007113E5 /* Controllers */,
 			);
 			path = "Text Fields";
-			sourceTree = "<group>";
-		};
-		1A03A2F026F5B444007113E5 /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				1A03A2E026F5B406007113E5 /* MainVC.swift */,
-				1A37ED582758F6E800653E29 /* NoDigit.swift */,
-				1A37ED5A2758F72200653E29 /* LimitCharacter.swift */,
-				1A37ED5C2758F73C00653E29 /* OnlyCharacter.swift */,
-				1A37ED5E2758F75700653E29 /* Link.swift */,
-				1A37ED602758F77300653E29 /* PasswordValidation.swift */,
-			);
-			path = Controllers;
 			sourceTree = "<group>";
 		};
 		1A03A2F126F5B465007113E5 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				1A37ED6C275A3D1600653E29 /* View */,
 				1A03A2F826F6EDF4007113E5 /* Custom View */,
 			);
 			path = Views;
@@ -237,6 +228,7 @@
 		1A03A2F326F5B4A4007113E5 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				1A03A2E726F5B407007113E5 /* LaunchScreen.storyboard */,
 				1A03A2EA26F5B407007113E5 /* Info.plist */,
 				1A03A2DE26F5B406007113E5 /* SceneDelegate.swift */,
 				1A03A2DC26F5B406007113E5 /* AppDelegate.swift */,
@@ -267,20 +259,6 @@
 				1A55385C2760C7480056D3A5 /* Accessibility */,
 			);
 			path = Extensions;
-			sourceTree = "<group>";
-		};
-		1A37ED6C275A3D1600653E29 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				1A03A2E226F5B406007113E5 /* Main.storyboard */,
-				1A37ED62275A150300653E29 /* NoDigit.storyboard */,
-				1A37ED64275A191700653E29 /* LimitCharacter.storyboard */,
-				1A37ED66275A38D100653E29 /* OnlyCharacter.storyboard */,
-				1A37ED68275A38E500653E29 /* Link.storyboard */,
-				1A37ED6A275A38F600653E29 /* Password.storyboard */,
-				1A03A2E726F5B407007113E5 /* LaunchScreen.storyboard */,
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		1A53F6E5279667170044F02D /* Custom TextField */ = {
@@ -372,6 +350,108 @@
 				1AD11E91274FBC4700D255A2 /* Localization */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		1AF00E7027E0B10900486607 /* Main Screen */ = {
+			isa = PBXGroup;
+			children = (
+				1AF00E7627E0B25A00486607 /* Controller */,
+			);
+			path = "Main Screen";
+			sourceTree = "<group>";
+		};
+		1AF00E7127E0B11900486607 /* No Digit Screen */ = {
+			isa = PBXGroup;
+			children = (
+				1AF00E7727E0B27000486607 /* Controller */,
+			);
+			path = "No Digit Screen";
+			sourceTree = "<group>";
+		};
+		1AF00E7227E0B14C00486607 /* Limit Char Screen */ = {
+			isa = PBXGroup;
+			children = (
+				1AF00E7827E0B27900486607 /* Controller */,
+			);
+			path = "Limit Char Screen";
+			sourceTree = "<group>";
+		};
+		1AF00E7327E0B17D00486607 /* Only Char Screen */ = {
+			isa = PBXGroup;
+			children = (
+				1AF00E7927E0B28300486607 /* Controller */,
+			);
+			path = "Only Char Screen";
+			sourceTree = "<group>";
+		};
+		1AF00E7427E0B19100486607 /* Link Screen */ = {
+			isa = PBXGroup;
+			children = (
+				1AF00E7A27E0B28D00486607 /* Controller */,
+			);
+			path = "Link Screen";
+			sourceTree = "<group>";
+		};
+		1AF00E7527E0B1B500486607 /* Password Screen */ = {
+			isa = PBXGroup;
+			children = (
+				1AF00E7B27E0B29500486607 /* Controller */,
+			);
+			path = "Password Screen";
+			sourceTree = "<group>";
+		};
+		1AF00E7627E0B25A00486607 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				1A03A2E226F5B406007113E5 /* Main.storyboard */,
+				1A03A2E026F5B406007113E5 /* MainVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		1AF00E7727E0B27000486607 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				1A37ED62275A150300653E29 /* NoDigit.storyboard */,
+				1A37ED582758F6E800653E29 /* NoDigit.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		1AF00E7827E0B27900486607 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				1A37ED64275A191700653E29 /* LimitCharacter.storyboard */,
+				1A37ED5A2758F72200653E29 /* LimitCharacter.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		1AF00E7927E0B28300486607 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				1A37ED66275A38D100653E29 /* OnlyCharacter.storyboard */,
+				1A37ED5C2758F73C00653E29 /* OnlyCharacter.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		1AF00E7A27E0B28D00486607 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				1A37ED68275A38E500653E29 /* Link.storyboard */,
+				1A37ED5E2758F75700653E29 /* Link.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		1AF00E7B27E0B29500486607 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				1A37ED6A275A38F600653E29 /* Password.storyboard */,
+				1A37ED602758F77300653E29 /* PasswordValidation.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		1FF03A75C22B41C84F892071 /* Frameworks */ = {
