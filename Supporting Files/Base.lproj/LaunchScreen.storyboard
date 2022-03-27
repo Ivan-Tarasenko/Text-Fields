@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -22,12 +22,10 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.86078917980194092" green="0.5469526098531301" blue="0.45679533027211744" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstItem="bqy-dI-gro" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="57" id="Je7-zr-LT2"/>
-                            <constraint firstItem="bqy-dI-gro" firstAttribute="width" secondItem="Ze5-6b-2t3" secondAttribute="width" multiplier="0.724638" id="eFY-6I-Nhq"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bqy-dI-gro" secondAttribute="trailing" constant="57" id="euj-AG-mOx"/>
-                            <constraint firstItem="bqy-dI-gro" firstAttribute="height" secondItem="Ze5-6b-2t3" secondAttribute="height" multiplier="0.334821" id="msb-ip-YzR"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="bqy-dI-gro" secondAttribute="bottom" constant="393" id="q0g-ik-jhN"/>
-                            <constraint firstItem="bqy-dI-gro" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="125" id="vVd-B5-M4C"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bqy-dI-gro" secondAttribute="trailing" constant="57" id="Y9M-j5-f3c"/>
+                            <constraint firstItem="bqy-dI-gro" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="57" id="czP-RM-cjG"/>
+                            <constraint firstItem="bqy-dI-gro" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="125" id="mvU-Vx-QUd"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="bqy-dI-gro" secondAttribute="bottom" constant="393" id="zMp-dK-KuH"/>
                         </constraints>
                     </view>
                 </viewController>

@@ -14,7 +14,7 @@ class CustomView: UIView {
     @IBOutlet weak var textField: UITextField!
     @IBOutlet weak var limitLabel: UILabel!
     
-    var switchTextField: TextFields = .noDigits
+    var switchTextField: TextFieldModel = .noDigits
     let model = ModelTextField()
     let customPassValid = CustomPassValid()
     let localizing = Localization()
@@ -42,20 +42,6 @@ class CustomView: UIView {
             textField.setBorder(radius: 10, color: UIColor.systemBlue)
         }
     }
-
-    // Расскаментировать в случае использования без View в Storyboard //
-//    override init(frame: CGRect) {
-//        super.init(frame: frame)
-//        configureView()
-//        textField.delegate = self
-//
-//        addLabelPasswordValidation()
-//        addProgressBar()
-//        customPassValid.showLabelForPasswordValidation = true
-//        customPassValid.progressView.isHidden = true
-//        customPassValid.showLabelForbiddenChar = true
-//
-//    }
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
@@ -97,12 +83,12 @@ class CustomView: UIView {
     }
     // MARK: - Configure CustomView
     func configureView() {
-        guard let view = loadViewFromNib(nibName: "TextField") else { return }
+        guard let view = loadViewFromNib(nibName: "CustomView") else { return }
         view.frame = bounds
         addSubview(view)
     }
     // MARK: - Setting CustomView
-    func settingView(type: TextFields) {
+    func settingView(type: TextFieldModel) {
         switchTextField = type
         configureTextFields()
     }

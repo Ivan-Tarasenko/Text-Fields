@@ -7,15 +7,6 @@
 
 import UIKit
 
-// MARK: - Listing of all text fields.
-enum TextFields {
-    case noDigits
-    case inputLimit
-    case onlyCharacters
-    case link
-    case validationRules
-}
-
 class ModelTextField {
 
     // Text Fields.

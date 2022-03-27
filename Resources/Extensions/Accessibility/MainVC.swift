@@ -7,7 +7,7 @@
 
 import Foundation
 
-extension ViewController {
+extension MainViewController {
 
     func createAccesibilityIdentifiersMainVC () {
         titleView.title.accessibilityIdentifier = "TextField_Title"
