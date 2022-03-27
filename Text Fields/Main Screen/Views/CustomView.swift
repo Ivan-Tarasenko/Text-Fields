@@ -11,10 +11,10 @@ import SnapKit
 class CustomView: UIView {
     
     @IBOutlet weak var title: UILabel!
-    @IBOutlet weak var textField: TextField!
+    @IBOutlet weak var textField: UITextField!
     @IBOutlet weak var limitLabel: UILabel!
     
-    var switchTextField: TextFields = .noDigits
+    var switchTextField: TextFieldModel = .noDigits
     let model = ModelTextField()
     let customPassValid = CustomPassValid()
     let localizing = Localization()
@@ -42,20 +42,6 @@ class CustomView: UIView {
             textField.setBorder(radius: 10, color: UIColor.systemBlue)
         }
     }
-
-    // Расскаментировать в случае использования без View в Storyboard //
-//    override init(frame: CGRect) {
-//        super.init(frame: frame)
-//        configureView()
-//        textField.delegate = self
-//
-//        addLabelPasswordValidation()
-//        addProgressBar()
-//        customPassValid.showLabelForPasswordValidation = true
-//        customPassValid.progressView.isHidden = true
-//        customPassValid.showLabelForbiddenChar = true
-//
-//    }
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
@@ -97,12 +83,12 @@ class CustomView: UIView {
     }
     // MARK: - Configure CustomView
     func configureView() {
-        guard let view = loadViewFromNib(nibName: "TextField") else { return }
+        guard let view = loadViewFromNib(nibName: "CustomView") else { return }
         view.frame = bounds
         addSubview(view)
     }
     // MARK: - Setting CustomView
-    func settingView(type: TextFields) {
+    func settingView(type: TextFieldModel) {
         switchTextField = type
         configureTextFields()
     }
@@ -127,29 +113,29 @@ class CustomView: UIView {
     func configureTextFields() {
         switch switchTextField {
         case .noDigits:
-//            textField.setDefaultBorder()
+            textField.setDefaultBorder()
             title.textTitle = localizing.noDigit
-//            textField.placeholder = localizing.noDigitPlaceholder
+            textField.placeholder = localizing.noDigitPlaceholder
         case .inputLimit:
             limitLabel.textTitle = "\(model.limitChar)/\(model.limitChar)"
-//            textField.setDefaultBorder()
+            textField.setDefaultBorder()
             title.textTitle = localizing.limitCharTitle
-//            textField.placeholder = localizing.limitCharPlaceholder
+            textField.placeholder = localizing.limitCharPlaceholder
         case .onlyCharacters:
-//            textField.setDefaultBorder()
+            textField.setDefaultBorder()
             title.textTitle = localizing.onlyChar
-//            textField.placeholder = localizing.onlyCharPlaceholder
-//            textField.autocapitalizationType = .words
+            textField.placeholder = localizing.onlyCharPlaceholder
+            textField.autocapitalizationType = .words
         case .link:
-//            textField.setDefaultBorder()
+            textField.setDefaultBorder()
             title.textTitle = localizing.link
-//            textField.placeholder = localizing.linkPlaceholder
+            textField.placeholder = localizing.linkPlaceholder
         case .validationRules:
-//            textField.setDefaultBorder()
+            textField.setDefaultBorder()
             title.textTitle = localizing.password
-//            textField.placeholder = localizing.passwordPlaceholder
-//            textField.textContentType = .password
-//            textField.isSecureTextEntry = true
+            textField.placeholder = localizing.passwordPlaceholder
+            textField.textContentType = .password
+            textField.isSecureTextEntry = true
             customPassValid.showLabelForPasswordValidation = false
         }
     }

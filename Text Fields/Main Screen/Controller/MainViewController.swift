@@ -1,5 +1,5 @@
 //
-//  MainVC.swift
+//  MainViewController.swift
 //  Text Fields
 //
 //  Created by Иван Тарасенко on 18.09.2021.
@@ -8,7 +8,7 @@
 import UIKit
 import SnapKit
 
-class ViewController: UIViewController {
+class MainViewController: UIViewController {
 
     @IBOutlet weak var noDigitsView: CustomView!
     @IBOutlet weak var inputLimitView: CustomView!
