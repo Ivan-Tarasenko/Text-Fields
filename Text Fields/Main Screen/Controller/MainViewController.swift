@@ -21,7 +21,7 @@ class MainViewController: UIViewController {
 
     let localString = Localization()
     let customPassValid = CustomPassValid()
-    let titleView = TitleView()
+    let screenTitle = ScreenTitle()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,16 +33,20 @@ class MainViewController: UIViewController {
 
         createAccesibilityIdentifiersMainVC()
         setTitle()
-
+        setTitleBackButton()
     }
 
     func setTitle() {
-        titleView.title.textTitle = localString.titleLabelAll
-        mainView.addSubview(titleView.title)
-        titleView.title.snp.makeConstraints { make in
+        screenTitle.title.textTitle = localString.titleLabelAll
+        mainView.addSubview(screenTitle.title)
+        screenTitle.title.snp.makeConstraints { make in
             make.top.equalToSuperview().inset(31)
             make.right.left.equalToSuperview().inset(16)
             make.bottom.equalTo(noDigitsView).inset(100)
         }
+    }
+
+    private func setTitleBackButton() {
+        navigationItem.backButtonTitle = localString.titleLabelAll
     }
 }

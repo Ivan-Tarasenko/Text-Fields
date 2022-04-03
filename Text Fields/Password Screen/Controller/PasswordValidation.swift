@@ -12,7 +12,7 @@ class PasswordValidation: UIViewController {
     @IBOutlet weak var customViewPassValid: CustomView!
     @IBOutlet var mainView: UIView!
 
-    let titleView = TitleView()
+    let titleView = ScreenTitle()
     let localString = Localization()
 
     override func viewDidLoad() {

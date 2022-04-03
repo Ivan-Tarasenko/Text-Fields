@@ -17,7 +17,7 @@
 		1A03A2FA26F6EE53007113E5 /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A03A2F926F6EE53007113E5 /* CustomView.swift */; };
 		1A03A2FE26F6F4C2007113E5 /* SFProDisplay-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1A03A2FC26F6F4C2007113E5 /* SFProDisplay-Regular.ttf */; };
 		1A03A2FF26F6F4C2007113E5 /* SFProDisplay-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1A03A2FD26F6F4C2007113E5 /* SFProDisplay-Bold.ttf */; };
-		1A03A30226FC543E007113E5 /* UIView+NibLoading+Border.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A03A30126FC543E007113E5 /* UIView+NibLoading+Border.swift */; };
+		1A03A30226FC543E007113E5 /* UIView+NibLoading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A03A30126FC543E007113E5 /* UIView+NibLoading.swift */; };
 		1A03A30526FDA596007113E5 /* UITextField+Border.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A03A30426FDA596007113E5 /* UITextField+Border.swift */; };
 		1A37ED592758F6E800653E29 /* NoDigit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A37ED582758F6E800653E29 /* NoDigit.swift */; };
 		1A37ED5B2758F72200653E29 /* LimitCharacter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A37ED5A2758F72200653E29 /* LimitCharacter.swift */; };
@@ -35,7 +35,7 @@
 		1A55385E2760C7CF0056D3A5 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A55385D2760C7CF0056D3A5 /* MainVC.swift */; };
 		1A5538612761B2FC0056D3A5 /* CustomPassValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5538602761B2FC0056D3A5 /* CustomPassValidation.swift */; };
 		1A5538632761D49C0056D3A5 /* IDElements.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5538622761D49C0056D3A5 /* IDElements.swift */; };
-		1A55386527636CA60056D3A5 /* CustomTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A55386427636CA60056D3A5 /* CustomTitleView.swift */; };
+		1A55386527636CA60056D3A5 /* ScreenTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A55386427636CA60056D3A5 /* ScreenTitle.swift */; };
 		1A553FB7273CB345001A03AF /* RegularExpression+Matches.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A553FB6273CB345001A03AF /* RegularExpression+Matches.swift */; };
 		1A63CEB627C0AE6F005FE3D6 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1A63CEB427C0AE6F005FE3D6 /* Localizable.strings */; };
 		1A772609274BBE4E00851677 /* CustomPasswordValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A772608274BBE4E00851677 /* CustomPasswordValidation.swift */; };
@@ -92,7 +92,7 @@
 		1A03A2F926F6EE53007113E5 /* CustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
 		1A03A2FC26F6F4C2007113E5 /* SFProDisplay-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFProDisplay-Regular.ttf"; sourceTree = "<group>"; };
 		1A03A2FD26F6F4C2007113E5 /* SFProDisplay-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFProDisplay-Bold.ttf"; sourceTree = "<group>"; };
-		1A03A30126FC543E007113E5 /* UIView+NibLoading+Border.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+NibLoading+Border.swift"; sourceTree = "<group>"; };
+		1A03A30126FC543E007113E5 /* UIView+NibLoading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+NibLoading.swift"; sourceTree = "<group>"; };
 		1A03A30426FDA596007113E5 /* UITextField+Border.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Border.swift"; sourceTree = "<group>"; };
 		1A37ED582758F6E800653E29 /* NoDigit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoDigit.swift; sourceTree = "<group>"; };
 		1A37ED5A2758F72200653E29 /* LimitCharacter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LimitCharacter.swift; sourceTree = "<group>"; };
@@ -111,7 +111,7 @@
 		1A55385D2760C7CF0056D3A5 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		1A5538602761B2FC0056D3A5 /* CustomPassValidation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPassValidation.swift; sourceTree = "<group>"; };
 		1A5538622761D49C0056D3A5 /* IDElements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IDElements.swift; sourceTree = "<group>"; };
-		1A55386427636CA60056D3A5 /* CustomTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTitleView.swift; sourceTree = "<group>"; };
+		1A55386427636CA60056D3A5 /* ScreenTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenTitle.swift; sourceTree = "<group>"; };
 		1A553FB6273CB345001A03AF /* RegularExpression+Matches.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RegularExpression+Matches.swift"; sourceTree = "<group>"; };
 		1A63CEB527C0AE6F005FE3D6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = Localization/en.lproj/Localizable.strings; sourceTree = SOURCE_ROOT; };
 		1A63CEB727C0AE77005FE3D6 /* zh-HK */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-HK"; path = "../Localization/zh-HK.lproj/Localizable.strings"; sourceTree = "<group>"; };
@@ -242,7 +242,7 @@
 		1A53F6E6279667880044F02D /* Extension */ = {
 			isa = PBXGroup;
 			children = (
-				1A03A30126FC543E007113E5 /* UIView+NibLoading+Border.swift */,
+				1A03A30126FC543E007113E5 /* UIView+NibLoading.swift */,
 				1A03A30426FDA596007113E5 /* UITextField+Border.swift */,
 				1A471ED9271B4D440066CCB5 /* UILabel+SafeText.swift */,
 				1AA344DD2732622600F8F6BA /* String+NSDataDetector.swift */,
@@ -297,7 +297,7 @@
 				1A03A2F926F6EE53007113E5 /* CustomView.swift */,
 				1A88862927E1EB8F0088699E /* CustomTextField.swift */,
 				1A772608274BBE4E00851677 /* CustomPasswordValidation.swift */,
-				1A55386427636CA60056D3A5 /* CustomTitleView.swift */,
+				1A55386427636CA60056D3A5 /* ScreenTitle.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -691,7 +691,7 @@
 				1A03A2E126F5B406007113E5 /* MainViewController.swift in Sources */,
 				1AB8952427649B8300DC9216 /* LimitCharacterVC.swift in Sources */,
 				1A03A2DD26F5B406007113E5 /* AppDelegate.swift in Sources */,
-				1A03A30226FC543E007113E5 /* UIView+NibLoading+Border.swift in Sources */,
+				1A03A30226FC543E007113E5 /* UIView+NibLoading.swift in Sources */,
 				1AE534FE27662B3F00E07F83 /* PasswordVC.swift in Sources */,
 				1A553FB7273CB345001A03AF /* RegularExpression+Matches.swift in Sources */,
 				1A03A30526FDA596007113E5 /* UITextField+Border.swift in Sources */,
@@ -701,7 +701,7 @@
 				1AA344DE2732622600F8F6BA /* String+NSDataDetector.swift in Sources */,
 				1A55385E2760C7CF0056D3A5 /* MainVC.swift in Sources */,
 				1A03A2DF26F5B406007113E5 /* SceneDelegate.swift in Sources */,
-				1A55386527636CA60056D3A5 /* CustomTitleView.swift in Sources */,
+				1A55386527636CA60056D3A5 /* ScreenTitle.swift in Sources */,
 				1AD11E9D2750BE4B00D255A2 /* Localization.swift in Sources */,
 				1AE534FA2766156800E07F83 /* LinkVC.swift in Sources */,
 				1A471EDA271B4D440066CCB5 /* UILabel+SafeText.swift in Sources */,
