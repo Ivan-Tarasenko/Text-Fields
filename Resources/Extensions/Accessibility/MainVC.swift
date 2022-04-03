@@ -10,7 +10,7 @@ import Foundation
 extension MainViewController {
 
     func createAccesibilityIdentifiersMainVC () {
-        titleView.title.accessibilityIdentifier = "TextField_Title"
+        screenTitle.title.accessibilityIdentifier = "TextField_Title"
 
         noDigitsView.accessibilityIdentifier = "NoDigit_View"
         noDigitsView.title.accessibilityIdentifier = "NoDigit_Title"

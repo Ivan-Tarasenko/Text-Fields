@@ -11,7 +11,7 @@ import SnapKit
 class CustomView: UIView {
     
     @IBOutlet weak var title: UILabel!
-    @IBOutlet weak var textField: UITextField!
+    @IBOutlet weak var textField: CustomTextField!
     @IBOutlet weak var limitLabel: UILabel!
     
     var switchTextField: TextFieldModel = .noDigits
@@ -26,18 +26,18 @@ class CustomView: UIView {
     private let checkSpecialChar = "[!-)@^*]"
     private let checkEnglishChar = "[а-яА-Я]"
     
-    private var tuneBorderForTextField: Bool = false {
+    private var changeColorBorder: Bool = false {
         didSet {
-            tuneBorderForTextField ?
+            changeColorBorder ?
             textField.setBorder(radius: 10, color: UIColor.systemBlue) :
-            textField.setBorder(radius: 10, color: UIColor.systemGray6)
+            textField.setDefaultBorder()
             
         }
     }
     
-    private var tuneBorderFromFieldLimitChar: Bool = false {
+    private var changeBorderColorIfLimitExceeded: Bool = false {
         didSet {
-            tuneBorderFromFieldLimitChar ?
+            changeBorderColorIfLimitExceeded ?
             textField.setBorder(radius: 10, color: UIColor.systemRed) :
             textField.setBorder(radius: 10, color: UIColor.systemBlue)
         }
@@ -65,9 +65,9 @@ class CustomView: UIView {
         case .inputLimit:       //  - Rules for limit character and change border
             limitLabel.textTitle = model.getLimit(string: text, limit: model.limitChar)
             if text.count > model.limitChar {
-                tuneBorderFromFieldLimitChar = true
+                changeBorderColorIfLimitExceeded = true
             } else {
-                tuneBorderFromFieldLimitChar = false
+                changeBorderColorIfLimitExceeded = false
             }
             sender.attributedText = model.changeColorAfterLimit(string: sender.string)
             
@@ -113,25 +113,20 @@ class CustomView: UIView {
     func configureTextFields() {
         switch switchTextField {
         case .noDigits:
-            textField.setDefaultBorder()
             title.textTitle = localizing.noDigit
             textField.placeholder = localizing.noDigitPlaceholder
         case .inputLimit:
             limitLabel.textTitle = "\(model.limitChar)/\(model.limitChar)"
-            textField.setDefaultBorder()
             title.textTitle = localizing.limitCharTitle
             textField.placeholder = localizing.limitCharPlaceholder
         case .onlyCharacters:
-            textField.setDefaultBorder()
             title.textTitle = localizing.onlyChar
             textField.placeholder = localizing.onlyCharPlaceholder
             textField.autocapitalizationType = .words
         case .link:
-            textField.setDefaultBorder()
             title.textTitle = localizing.link
             textField.placeholder = localizing.linkPlaceholder
         case .validationRules:
-            textField.setDefaultBorder()
             title.textTitle = localizing.password
             textField.placeholder = localizing.passwordPlaceholder
             textField.textContentType = .password
@@ -197,14 +192,14 @@ extension CustomView: UITextFieldDelegate {
     
     // MARK: - Input tracking
     func textFieldDidBeginEditing(_ textField: UITextField) {
-        tuneBorderForTextField = true
+        changeColorBorder = true
         if switchTextField == .validationRules {
             customPassValid.progressView.isHidden = false
         }
     }
     
     func textFieldDidEndEditing(_ textField: UITextField) {
-        tuneBorderForTextField = false
+        changeColorBorder = false
         if customPassValid.progressView.progress == 0 {
             customPassValid.progressView.isHidden = true
         }

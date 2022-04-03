@@ -1,5 +1,5 @@
 //
-//  TitleView.swift
+//  ScreenTitle.swift
 //  Text Fields
 //
 //  Created by Иван Тарасенко on 10.12.2021.
@@ -8,9 +8,7 @@
 import UIKit
 import SnapKit
 
-class TitleView: UIView {
-
-    let localizing = Localization()
+class ScreenTitle: UILabel {
 
     lazy var title: UILabel = {
         let label = UILabel()
@@ -26,5 +24,4 @@ class TitleView: UIView {
             make.left.right.equalToSuperview().inset(16)
         }
     }
-
 }

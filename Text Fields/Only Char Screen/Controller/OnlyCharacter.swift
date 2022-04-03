@@ -12,7 +12,7 @@ class OnlyCharacter: UIViewController {
     @IBOutlet weak var customViewOnlyChar: CustomView!
     @IBOutlet var mainView: UIView!
 
-    let titleView = TitleView()
+    let titleView = ScreenTitle()
     let localString = Localization()
 
     override func viewDidLoad() {

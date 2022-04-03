@@ -12,7 +12,7 @@ class LimitCharacter: UIViewController {
     @IBOutlet weak var customViewLimit: CustomView!
     @IBOutlet var mainView: UIView!
 
-    let titleView = TitleView()
+    let titleView = ScreenTitle()
     let localString = Localization()
 
     override func viewDidLoad() {
