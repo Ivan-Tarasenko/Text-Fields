@@ -8,11 +8,13 @@
   </div>
  
 <p align="center">
-  <img src="/Preview/launch.png" width="149" height="300"/>
-  <img src="/Preview/MainScreen.png" width="149" height="300"/>
-  <img src="/Preview/Array.gif" width="149" height="300"/>
-  <img src="/Preview/Set.gif" width="149" height="300"/>
-  <img src="/Preview/Dictionary.gif" width="149" height="300"/>
+  <img src="/Preview/loadscreen.png" width="149" height="300"/>
+  <img src="/Preview/allField.gif" width="149" height="300"/>
+  <img src="/Preview/noDigit.gif" width="149" height="300"/>
+  <img src="/Preview/limit.gif" width="149" height="300"/>
+  <img src="/Preview/onlyChar.gif" width="149" height="300"/>
+    <img src="/Preview/link.gif" width="149" height="300"/>
+      <img src="/Preview/password.gif" width="149" height="300"/>
 </p>
 
 ## Getting Started
